@@ -1,5 +1,37 @@
 
 {
+	"eras": [
+		{
+			"start_date": {"year": 1990, "month": 9},
+			"end_date": {"year": 1996, "month": 7},
+			"text": "primary school"
+		},
+		{
+			"start_date": {"year": 1996, "month": 9},
+			"end_date": {"year": 2000, "month": 7},
+			"text": "College"
+		},
+		{
+			"start_date": {"year": 2000, "month": 9},
+			"end_date": {"year": 2003, "month": 7},
+			"text": "high school"
+		},
+		{
+			"start_date": {"year": 2003, "month": 9},
+			"end_date": {"year": 2009, "month": 7},
+			"text": "University"
+		},
+		{
+			"start_date": {"year": 2010, "month": 3},
+			"end_date": {"year": 2013, "month": 11},
+			"text": "PhD."
+		},
+		{
+			"start_date": {"year": 2013, "month": 11},
+			"end_date": {"year": 2018, "month": 7},
+			"text": "Post-docs"
+		}
+	],
 	"title": {
 		"text":{
 			"text":"This page try to sumurize all the  projects I have worked on from my begenning in computer science. Of course the first projects are simplistic ... or stupide... But this timeline well show all the aspects I have touched during the last 25 year of computing."
@@ -35,7 +67,7 @@
 				"headline":"Nostalgy: What's your age ?",
 				"text":"<p>My first program in basic, asking for your age and .... saying that you are old or not ! Whaooo.</p>"
 			},
-			"media": {
+			"media2": {
 				"url":"timeline/images/basic-math.png",
 				"caption":""
 			}
@@ -44,10 +76,10 @@
 			"start_date": { "year":"1995" },
 			"text": {
 				"headline":"Nostalgy: Circle",
-				"text":"<p>Not really a project, but one of the program I have rewriten from a book many many times. It uses cosinus/sinus to draw a circle, but at that time I didn't learned about this at school (I was 10 years old) so it was magic to me so I was facinated by this !</p>"
+				"text":"<p>Not really a project, but one of the program I have rewriten from a book many many times. It uses cosinus/sinus to draw a circle, but at that time I didn't learned about this at school (I was 10 years old) so it was magic to me and was facinated by this !</p>"
 			},
 			"media": {
-				"url":"timeline/images/basic-math.png",
+				"url":"timeline/images/circle.png",
 				"thundnail":"timeline/images/basic-math.png",
 				"caption":""
 			}
@@ -70,8 +102,9 @@
 				"text":"<p>My first game, implementation of a monopoly in text mode. It was not really usable, the board was never drawn, the menu where in text  only. I never really finished it. But it was a nice try !</p>"
 			},
 			"media": {
-				"url":"timeline/images/basic-math.png",
-				"caption":""
+				"url":"timeline/images/monopoly.jpg",
+				"caption":"",
+				"credit": "<a href='http://www.eonline.com/fr/news/740997/le-monopoly-se-modernise-pour-attirer-la-jeune-generation'>eonline</a>"
 			}
 		},
 		{
@@ -92,8 +125,9 @@
 				"text":"<p>Just a stupid script which insert itself on boot command and degrade the machine at each boot until nothing work. Was used only on my own PC.... I was reinstalling everything a lot of time to test it !</p>"
 			},
 			"media": {
-				"url":"timeline/images/basic-math.png",
-				"caption":""
+				"url":"timeline/images/virus.png",
+				"caption":"",
+				"credit": "<a href='http://www.icone-png.com/corps-humain/tete-de-mort/'>www.icone-png.com</a>"
 			}
 		},
 		{
@@ -130,6 +164,28 @@
 			}
 		},
 		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 battelship",
+				"text":"<p>One of my bigest program for Ti-83, battelship playable in network by using cable between two calculators.</p>"
+			},
+			"media": {
+				"url":"timeline/images/touche_coule.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 fight",
+				"text":"<p>You have to fight aginst the computer with weapons and bomb on various terrains.</p>"
+			},
+			"media": {
+				"url":"timeline/images/combat.png",
+				"caption":""
+			}
+		},
+		{
 			"start_date":{ "year": "2001", "month": 8},
 			"text": {
 				"headline":"Ti-Net V1",
@@ -151,6 +207,15 @@
 				"caption":""
 			}
 		},{
+			"start_date":{"year": "2002","month":7,"day":1},
+			"text": {
+				"headline":"Nostalgy: Visual Basic 6",
+				"text":"<p>This was my first real developpement envrionnement, I got it from a friend and behing hacked. I learned a lot on programing on it.</p>"
+			},
+			"media": {
+				"url":"timeline/images/vb6.jpg"
+			}
+		},{
 			"start_date":{"year": "2002","month":10,"day":1},
 			"text": {
 				"headline":"Cyrpt Einstein",
@@ -165,7 +230,7 @@
 				"headline":"simugene",
 				"text":"<p>A gene propagation in population simulator following the lectures in biologie. It was written in Visual Basic.</p>"
 			},
-			"media": {
+			"media2": {
 				"url":"timeline/images/simugen.png",
 				"caption":"TODO"
 			}
@@ -208,8 +273,8 @@
 				"text":"<p>An audio mixer with multiple tracks and a nice GUI in Visual Basic. It provided a mix table to control volume in real time and record levels for exortation. It was handline WAV files as input and output.</p>"
 			},
 			"media": {
-				"url":"timeine/images/audiomix.png",
-				"caption":"TODO"
+				"url":"timeline/images/audiomix.png",
+				"caption":""
 			}
 		},{
 			"start_date":{"year":"2002", "month": 12,"day":30},
@@ -217,9 +282,9 @@
 				"headline":"conduite",
 				"text":"<p>Log of supervised driving for myself. Also made in Visual Basic.</p>"
 			},
-			"asset": {
-				"media":"timeline/images/conduite.png",
-				"caption":"TODO"
+			"media": {
+				"url":"timeline/images/conduite.png",
+				"caption":""
 			}
 		},{
 			"start_date":{"year": "2003","month":10,"day":30},
@@ -227,7 +292,7 @@
 				"headline":"svlib",
 				"text":"<p>For fun and to learn, rewrite my own C++ library : strings, list, vector...</p>"
 			},
-			"media": {
+			"media2": {
 				"url":"timeline/images/svlib.png",
 				"caption":"TODO"
 			}
@@ -247,7 +312,7 @@
 				"headline":"svreg",
 				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totaly successfull.</p>"
 			},
-			"media": {
+			"media2": {
 				"url":"timeine/images/svreg.png",
 				"caption":"TODO"
 			}
@@ -261,6 +326,16 @@
 			"media": {
 				"url":"timeline/images/gentoolinux1.png",
 				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2003", "month": 11},
+			"text": {
+				"headline":"emptd-qt",
+				"text":"<p>Custom project made for my first year at uniersity to balance the unreadable excel timetable provided by univerity. My first real program in QT and C++.</p>"
+			},
+			"media": {
+				"url":"timeline/images/empdt-qt.jpg"
 			}
 		},
 		{
@@ -283,6 +358,16 @@
 				"url":"timeline/images/tutocpp.png",
 				"caption":""
 			}
+		},{
+			"start_date": {"year": "2006","month":1,"day":6},
+			"text": {
+				"headline":"gravit",
+				"text":"<p>A numerical simulation done for bachelor. It simualte the impact of an asteroid on a surface composed of ganual.</p>"
+			},
+			"media": {
+				"url":"timeline/images/gravit.png",
+				"caption":""
+			}
 		},
 		{
 			"start_date":{"year": "2006", "month": 1, "day": 1},
@@ -292,8 +377,8 @@
 				"text":"<p>Tools developped for the Cnet association at university of savoie. It contains: <ul><li>A website</li><li>A quota control system for cups</li><li>Network traffic traking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
 			},
 			"media": {
-				"url":"timeline/images/cnettools.png",
-				"caption":"TODO"
+				"url":"timeline/images/cnet_quota.png",
+				"caption":""
 			}
 		},
 		{
@@ -307,8 +392,37 @@
 				"url":"timeline/images/cortex.png",
 				"caption":""
 			}
-		},
-		{
+		},{
+			"start_date":{"year": "2007","month":8,"day":30},
+			"text": {
+				"headline":"TSA : Track Svn Admin",
+				"text":"<p>Project used at Cnet for two year to handle svn and trac repository. It was the same idea than gitlab but of course largely simpler and developped in perl (I will never redo such a project in perl....).</p>"
+			},
+			"media": {
+				"url":"timeline/images/tsa.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2007","month":11,"day":30},
+			"text": {
+				"headline":"gvDvdRip",
+				"text":"<p>Starting to implement a GUI to RIP DVDs with mencoder. Made in extrem programming with Roland Gaspard using gobby and skype. We never really finished this project.</p>"
+			},
+			"media": {
+				"url":"timeline/images/gvdvdrip.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2008","month":1,"day":30},
+			"text": {
+				"headline":"vzsimu6809",
+				"text":"<p>For one of our physics lab we had to program a microprocessor motorola 6809 to control an oscilloscope. In order to prepare the session we (with Julien Zoubian) implemented an emulator linked to a simulated oscilloscope. Hence we were able to prepare our code before the session. The extra goal we wanted (unachieved) was to print the face of the teacher on the oscilloscope. The emulator came with an assembler implemented in perl.</p>"
+			},
+			"media": {
+				"url":"timeline/images/6809.jpg",
+				"caption":""
+			}
+		},{
 			"start_date":{"year": "2008", "month": 11,"day":14},
 			"end_date":{"year":"2008", "month":12, "day":8},
 			"text": {
@@ -317,8 +431,18 @@
 			},
 			"media": {
 				"url":"timeline/images/crackmd5.png",
-				"caption":"TODO",
+				"caption":"",
 				"credit":"<a href='https://fr.wikipedia.org/wiki/MD5'>Wikipedia</a>"
+			}
+		},{
+			"start_date":{"year":"2008","month":8,"day":30},
+			"text": {
+				"headline":"svMontage",
+				"text":"<p>My father made a long time ago a diaporama with two projectors controles by a magnetoscope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to re-assemble the video. It generate a YUB stream to be send to mencoder. It supported HD video.</p>"
+			},
+			"media": {
+				"url":"timeline/images/svmontage.png",
+				"caption":""
 			}
 		},{
 			"start_date":{"year":"2009","month":1,"day":10},
@@ -327,7 +451,7 @@
 				"headline":"tprsa-m2stic",
 				"text":"<p>Master project at uniersity of savoie to implement RDA protocol.Made with Romain Bouleis.</p>"
 			},
-			"media": {
+			"media2": {
 				"url":"timeline/images/rsa.png",
 				"caption":"TODO"
 			}
@@ -364,8 +488,28 @@
 				"url":"timeline/images/tchoutcou.png",
 				"caption":""
 			}
+		},{
+			"start_date":{"year":"2009", "month": 3, "day":1},
+			"text": {
+				"headline":"VPN spoofing",
+				"text":"<p>For our cryptographic lecture we had to make a talk on security. With Romain Bouleis we chossed to hack thead VPN of the wifi connection of our university. It revealed a mistake in the server configuration permitting to fake the wifi spot and the VPN server. We where able to capture students login and passeword. The issue was present in three university using the same configuration : chambery, grenoble and lyon.</p>"
+			},
+			"media": {
+				"url":"timeline/images/vpn_spoof.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2010", "month": 5},
+			"end_date":{"year":"2010", "month": 7},
+			"text": {
+				"headline":"Virtual Huge Pages",
+				"text":"<p>For my master internship at CEA, I implemented a kernel module to support huge pages and page coloring in order to improve cache usage efficiency.</p>"
+			},
+			"media": {
+				"url":"timeline/images/vhp.png",
+				"caption":""
+			}
 		},
-		
 		{
 			"start_date":{"year": "2010", "month": 1,"day": 26},
 			"end_date":{"year":"2010", "month": 5, "day": 15},
@@ -402,6 +546,18 @@
 			}
 		},
 		{
+			"start_date":{ "year": "2011", "month": 11},
+			"end_date":{"year": 2013, "month": 11},
+			"text": {
+				"headline":"MPC_Allocator",
+				"text":"<p>For my PhD. I impemented a parallel memory allocator explicitly supporting NUMA architectures for the MPC project from CEA.</p><p>The code is embeded into <a href='http://mpc.hpcframework.paratools.com/' target='_blank'>MPC</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/mpc_allocator_cpp.png",
+				"caption":""
+			}
+		},
+		{
 			"start_date":{"year": "2010", "month": 6, "day": 29 },
 			"end_date":{ "year": "2013", "month": 10, "day": 31},
 			"text": {
@@ -410,6 +566,17 @@
 			},
 			"media": {
 				"url":"timeline/images/svunittest.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2012", "month": 11},
+			"text": {
+				"headline":"Kernel patch PLPC",
+				"text":"<p>Process Local Page Cache is an experimental patch I implemented for linux kernel 2.6.26 to avoid memory clearing in the critical path of page faults<p>"
+			},
+			"media": {
+				"url":"timeline/images/zero-page-thp.png",
 				"caption":""
 			}
 		},
@@ -471,133 +638,38 @@
 				"url":"timeline/images/cmr.png",
 				"caption":""
 			}
+		},{
+			"start_date":{ "year": "2013", "month": 11},
+			"end_date":{ "year": "2014", "month": 11},
+			"text": {
+				"headline":"MALT: A Malloc Tracker",
+				"text":"<p>For my first post-doc I developped a memory profiling tool showing where the code allocate the memory and how. It provide source annotation as well as time charts.<p>"
+			},
+			"media": {
+				"url":"timeline/images/malt.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2015", "month": 7},
+			"end_date":{ "year": "2018", "month": 7},
+			"text": {
+				"headline":"DAQPIPE",
+				"text":"<p>As a post-doc at CERN for the LHCb experiment I I developped a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 nodes for the core part and send data to 4000 filter nodes.<p>"
+			},
+			"media": {
+				"url":"timeline/images/daqpipe.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2017", "month": 7},
+			"text": {
+				"headline":"numaprof",
+				"text":"<p>Developped on my free time during my post-doc at CERN, it provide the same approach than MALT with source annotation but to provide information on NUMA memory accesses. It instrument the binary by using pintool.<p>"
+			},
+			"media": {
+				"url":"timeline/images/numaprof.png",
+				"caption":""
+			}
 		}
-	],
-    "timeline":
-    {
-
-        "date": [
-			
-			
-			{
-				"startDate":"2012,06,02",
-				"headline":"Linear Sparse System Pre Compiled",
-				"text":"<p>Une idÃ©e pour essayer de faire mieux que la MKL dans le cas d'une gemm ou le membre de gauche est une petite matrice creuse et le membre de droite une grande matrice reprÃ©sentant un maillage de pluieurs milliers de cellules.</p>",
-				"tag":"HPC",
-				"classname":"H",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			,{
-				"startDate":"2011,11,24",
-				"endDate":"2011,11,19",
-				"headline":"ShellToolKit",
-				"text":"<p>Une librairie C++ pour abstraire la crÃ©ation d'un shell en fournissant notamment une class shtkCommand contenant tout le nÃ©cessaire pour le parsing des commandes ainsi qu'un support de la completion et historique Ã  partir de readline.</p>",
-				"tag":"devtool",
-				"classname":"emptd-php",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			,{
-				"startDate":"2006,11,30",
-				"headline":"simu",
-				"text":"<p>TODO.</p>",
-				"tag":"tool",
-				"classname":"tool",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			
-			,{
-				"startDate":"2008,01,30",
-				"headline":"vzsimu",
-				"text":"<p>TODO.</p>",
-				"tag":"tool",
-				"classname":"tool",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			
-			,{
-				"startDate":"2006,08,30",
-				"headline":"risk",
-				"text":"<p>TODO.</p>",
-				"tag":"game",
-				"classname":"tool",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			
-			,{
-				"startDate":"2008,08,30",
-				"headline":"svMontage",
-				"text":"<p>TODO.</p>",
-				"tag":"media",
-				"classname":"tool",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			
-			,{
-				"startDate":"2007,08,30",
-				"headline":"TSA",
-				"text":"<p>TODO.</p>",
-				"tag":"web",
-				"classname":"tool",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-			
-			,{
-				"startDate":"2007,11,30",
-				"headline":"gvDvdRip",
-				"text":"<p>TODO.</p>",
-				"tag":"media",
-				"classname":"tool",
-				"asset": {
-					"media":"dsfsdf",
-					"thumbnail":"optional-32x32px.jpg",
-					"caption":"Caption text goes here"
-				}
-			}
-
-        ]
-    }
+	]
 }

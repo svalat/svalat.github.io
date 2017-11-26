@@ -1,0 +1,113 @@
+ 
+<!DOCTYPE html>
+<html>
+	<meta>
+		<meta charset="utf-8">
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- Some google fonts -->
+ 		<link href='//fonts.googleapis.com/css?family=Corben:700' rel='stylesheet' type='text/css'/> 
+		<link href="//fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet" type="text/css"/>
+ 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/> 
+		<!-- bootstrap for carousel --> 
+		<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Menu & style -->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</meta>
+	<body>
+		<div class="navbar">
+			<div>
+				<h1 class='title'>Sébastien Valat</h1>
+				<ul class='nav'></ul>
+			</div>
+		</div>
+		
+		<div class='feature-image'>	
+			<div class="photo-circle">
+				<img class="photo" src="images/sebastien.jpg">
+				<!--<img class="flag" src="images/flags/france.png">-->
+			</div>
+		</div>
+		
+		<div class="note">
+			<h3>LHCb DAQPIPE</h3>
+			<p class='meta'>2015 - now</p>
+			<p>
+			</p>
+		</div>
+		
+		<div class="note">
+			<h3>Cartesian Mesh Runtime</h3>
+			<p class='meta'>2013-2014</p>
+			<p>
+			</p>
+		</div>
+		
+		<div class="note">
+			<h3>MALT</h3>
+			<p class='meta'>2014</p>
+			<p>
+			</p>
+		</div>
+		
+		<div class="note">
+			<h3>Avoiding page clearing in Linux kernel</h3>
+			<p class='meta'>2011-2013</p>
+				<p>
+				While studying my memory allocator for MPC we observed that operating system cost can be huge due to the first touch mechanism. Hence, we tried to keep the memory inside the allocator limiting the exchanged with the operating system. This was working but lead to larger memory consumption and loose of NUMA managment granularity.</p>
+				
+				<p>In this third topic of my PhD. we sutied the source of the performance issue inside the Linux kernel. It appears that the major cost on first touch page fault come from the memory clearing required for security reasons. For standard 4 KB pages this represent 40% of the cost but for huge pages (2 MB) it represent 95%.</p>
+				
+				<p>I proposed to apply the same caching appreach than our memory allocator but by implementing this cache inside the kernel and attached it to the process structure. Now the memory pages come from the loal process so we  don't need anymore to clear its content. This must be explicitly asked to not break compatibility but this can easily be done in the memory allocator. Notice that the operating system can now requisition the memory from this cache opposite to what we did in the memory allocator.</p>
+				
+				<center><img width="80%" src="images/zero-page-thp.png"/></center>
+				
+				<p>Thanks to this new approach we were able to see a speed up of a factor 60 on huge pages.
+				On a small NUMA system it shows the same performance than the best tuning with our memory allocator but by not keeping the memory in the user-space anymore.</p>
+				
+				<p>Links :
+				<ul>
+					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD.</a> </li><li><a href='https://doi.org/10.1145/2492408.2492414' target='_blank'>Paper</a></li>
+				</ul></p>
+			</p>
+		</div>
+		
+		<div class="note">
+			<h3>MPC memory allocator</h3>
+			<p class='meta'>2011-2013</p>
+			<p>
+				<p>During my PhD. I worked into the MPC (Multi-Processor Computing) project at CEA. This project aimed at providing a thread base MPI implementation. In order to efficitly run on NUMA nodes I implemented a parallel memory allocator to match the topology of the machine.</p>
+				
+				<p>This allocator address two issues. First we noticed that some big numerical simulation written in C++ were largly (arround 50% of the total runtime) impacted by the cost of first touch page faults. This is even more true when using jemalloc (the allocator from freebsd) which tend to agressibly return the memory to operaing system to keep low memory consumption. In order to avoid this cost, I implemented a cache inside the memory allocator for large memory segments in addition to what is currently done for smalll segments in common allocators. This was a little bit like what append in tcmalloc, the allocator from google.</p>
+				
+				<p>Caching the memory inside the allocator mean that it become responsible of the NUMA mapping of the memory. There is not such support on TCMalloc.</p>
+				
+				<p>I also made the implementation such that there is a minimal lock with minimal contention to make the allocator mostly lock free.</p>
+				
+				<p>Implmenting all these supports showed large performance gains with up to a factor 2 on a big NUMA machine with 16 nodes and 2 NUMA levels.</p>
+				
+				<p>The last work in this allocator was to enable management of custom meomry segment. This can be usefull to manage allocations in a shered segment or to extend the allocator to support new HBM memory on Xeon Phi.</p>
+			</p>
+		</div>
+		
+		<div class="note">
+			<h3>Operating system, cache, memory allocator interactions</h3>
+			<p class='meta'>2011-2013</p>
+			<p>
+			</p>
+		</div>
+		
+		<div class='footer'>
+			<div>Copyright © 2017 Sébastien Valat</div>
+			<div>
+				<a href='http://www.github.com/svalat' class="no-decoration">
+					<i class="fa fa-github fa-lg"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

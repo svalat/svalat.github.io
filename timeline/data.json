@@ -1,0 +1,603 @@
+
+{
+	"title": {
+		"text":{
+			"text":"This page try to sumurize all the  projects I have worked on from my begenning in computer science. Of course the first projects are simplistic ... or stupide... But this timeline well show all the aspects I have touched during the last 25 year of computing."
+		},
+		"media": {
+			"url":"timeline/images/notes.png",
+			"credit":"<a href='http://dribbble.com/shots/221641-iOS-Icon'>iOS Icon by Asher</a>",
+			"caption":""
+		}
+	},
+	"events": [
+		{
+			"start_date": {
+				"year":1994,
+				"month": 12,
+				"day": 25
+			},
+			"text": {
+				"headline":"Nostalgy: Amstrad CPC (Basic)",
+				"text":"My first PC."
+			},
+			"media":
+			{
+				"url":"timeline/images/amstrad_cpc_6128.jpg",
+				"thumbnail": "timeline/images/amstrad_cpc_6128.jpg",
+				"credit":"<a href='http://vesta.homelinux.free.fr/site/wiki/fichier_amstrad_cpc_6128.html'>vesta.homelinux.free.fr</a>",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "1995" },
+			"text": {
+				"headline":"Nostalgy: What's your age ?",
+				"text":"<p>My first program in basic, asking for your age and .... saying that you are old or not ! Whaooo.</p>"
+			},
+			"media": {
+				"url":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date": { "year":"1995" },
+			"text": {
+				"headline":"Nostalgy: Circle",
+				"text":"<p>Not really a project, but one of the program I have rewriten from a book many many times. It uses cosinus/sinus to draw a circle, but at that time I didn't learned about this at school (I was 10 years old) so it was magic to me so I was facinated by this !</p>"
+			},
+			"media": {
+				"url":"timeline/images/basic-math.png",
+				"thundnail":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": 1995 },
+			"text": {
+				"headline":"Basic Math Tool",
+				"text":"<p>My first real progam, it helps to compuse surface and perimeter of selected geometric form, following what I was learning at school.</p>"
+			},
+			"media": {
+				"url":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "1996"},
+			"text": {
+				"headline":"Basic Monopoly Text",
+				"text":"<p>My first game, implementation of a monopoly in text mode. It was not really usable, the board was never drawn, the menu where in text  only. I never really finished it. But it was a nice try !</p>"
+			},
+			"media": {
+				"url":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "1996", "month": 12, "day": 25 },
+			"text": {
+				"headline":"Nostalgy: Amstrad PC1512",
+				"text":"<p>A nice step forward from 8 Khz to 8 Mhz. Discovery of DOS and windows 1.1. Bad luck I had no programing tool on this PC.</p>"
+			},
+			"media": {
+				"url":"timeline/images/amstrad2.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "1998", "month": 8 },
+			"text": {
+				"headline":"Virus script on DOS",
+				"text":"<p>Just a stupid script which insert itself on boot command and degrade the machine at each boot until nothing work. Was used only on my own PC.... I was reinstalling everything a lot of time to test it !</p>"
+			},
+			"media": {
+				"url":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "1998", "month": 12, "day": 25},
+			"text": {
+				"headline":"Nostalgy: PIII +  Win ME",
+				"text":"<p>First brand new PC, Pentium III, 64Mo de RAM, equiped with the totaly buggy Windows ME. Still no programming toosl....</p>"
+			},
+			"media": {
+				"url":"timeline/images/windowsME.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2000", "month": 8} ,
+			"text":{
+				"headline":"Nostalgy: Ti-83",
+				"text":"<p>Return to basic with my first programmable calculator.</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti83.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year":"2001", "month": 1 },
+			"text": {
+				"headline":"Nostalgy: Internet 56K",
+				"text":"<p>First connection to internet with Wanadoo 56K modem. First mails on Outlook !</p>"
+			},
+			"media": {
+				"url":"timeline/images/wanadoo.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001", "month": 8},
+			"text": {
+				"headline":"Ti-Net V1",
+				"text":"<p>First website hosted by wanadoo to distribute my ti-83 programs. Was the time of flashy colors.... horrible from today rules !</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti-net01.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2001", "month": 12},
+			"text": {
+				"headline":"Ti-Net V2",
+				"text":"<p>Progress with nice menu but still flashy yellow colors....</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti-net02.jpg",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2002","month":10,"day":1},
+			"text": {
+				"headline":"Cyrpt Einstein",
+				"text":"<p>A cryptographic software totaly stupid I made for fun. This was my first real program in Visual Basic and my first work with installer on Windows.</p>"
+			},
+			"media": {
+				"url":"timeline/images/cre2.jpg"
+			}
+		},{
+			"start_date":{"year": "2002"},
+			"text": {
+				"headline":"simugene",
+				"text":"<p>A gene propagation in population simulator following the lectures in biologie. It was written in Visual Basic.</p>"
+			},
+			"media": {
+				"url":"timeline/images/simugen.png",
+				"caption":"TODO"
+			}
+		},{
+			"start_date":{"year":"2002", "month":8,"day":1},
+			"text": {
+				"headline":"Meta Edit",
+				"text":"<p>A GUI to handle meta-tag in web pages. It was implemented in Visual Basic.</p>"
+			},
+			"media": {
+				"url":"timeline/images/meta02.jpg"
+			}
+		},
+		{
+			"start_date":{"year": "2003"},
+			"text": {
+				"headline":"Ti-Net V3",
+				"text":"<p>This time a real theme based to Ti calculators.</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti-net03.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2003", "month": 8},
+			"text": {
+				"headline":"Nostalgy: Linux Mandrake",
+				"text":"<p>First step under Linux with a CD I bougth in a magazine (internet was to slow to download with limited monthly data). 3 month of try before succeeding in making my modem working. Had to recompile the related kernel module.</p>"
+			},
+			"media": {
+				"url":"timeline/images/mandrake.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":2003,"month":3,"day":1},
+			"end_date":{"year": "2002","month": 10,"day":1},
+			"text": {
+				"headline":"audiomix",
+				"text":"<p>An audio mixer with multiple tracks and a nice GUI in Visual Basic. It provided a mix table to control volume in real time and record levels for exortation. It was handline WAV files as input and output.</p>"
+			},
+			"media": {
+				"url":"timeine/images/audiomix.png",
+				"caption":"TODO"
+			}
+		},{
+			"start_date":{"year":"2002", "month": 12,"day":30},
+			"text": {
+				"headline":"conduite",
+				"text":"<p>Log of supervised driving for myself. Also made in Visual Basic.</p>"
+			},
+			"asset": {
+				"media":"timeline/images/conduite.png",
+				"caption":"TODO"
+			}
+		},{
+			"start_date":{"year": "2003","month":10,"day":30},
+			"text": {
+				"headline":"svlib",
+				"text":"<p>For fun and to learn, rewrite my own C++ library : strings, list, vector...</p>"
+			},
+			"media": {
+				"url":"timeline/images/svlib.png",
+				"caption":"TODO"
+			}
+		},{
+			"start_date":{"year":"2004","month":8,"day":30},
+			"end_date":{"year":"2006","month":11,"day":30},
+			"text": {
+				"headline":"progranet",
+				"text":"<p>Last version of my website, this time it host my TI programs plus my Visual Basic projects and some tutorial on programming.</p>"
+			},
+			"media": {
+				"url":"timeline/images/progranet.png"
+			}
+		},{
+			"start_date":{"year": "2004","month":5,"day":30},
+			"text": {
+				"headline":"svreg",
+				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totaly successfull.</p>"
+			},
+			"media": {
+				"url":"timeine/images/svreg.png",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2004", "month": 12, "day": 25},
+			"text": {
+				"headline":"Nostalgy: building my first PC, and Gentoo",
+				"text":"<p>Building my first PC with AMD64, NVidia Gforce 6800 LE (unlocking the disabled pipeline to make it like a GT). Moving from Mandrake to Gentoo, only available distribution in 64bit for free. Building my first Linunx Kernel on the fresh new x86_64 platform !</p>"
+			},
+			"media": {
+				"url":"timeline/images/gentoolinux1.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2004", "month": 3, "day": 1},
+			"end_date":{ "year": "2004", "month":6,"day": 31},
+			"text": {
+				"headline":"emptd-php",
+				"text":"<p>Custom project made for my first year at uniersity to balance the unreadable excel timetable provided by univerity.It was used by many student from my promotion at the end of the year. It was written in PHP. Following this project the univerity inversted during the summer to build their own version for all the timetable and all students.</p>"
+			},
+			"media": {
+				"url":"timeline/images/empdt-php.png"
+			}
+		},{
+			"start_date":{"year":"2005","month":8,"day":30},
+			"text": {
+				"headline":"tutocpp",
+				"text":"<p>C++ tutorial for Cnet assocation. We started from list and image manipulation implementation. We then finished by implementation of a widget management system in SDL and added console rendering in ascii art. We provided the textbox component.</p><p>The project is hosted on <a href='https://github.com/svalat/tutocpp' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/tutocpp.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2006", "month": 1, "day": 1},
+			"end_date":{"year": "2008", "month":6,"day": 31},
+			"text": {
+				"headline":"cnet-tools",
+				"text":"<p>Tools developped for the Cnet association at university of savoie. It contains: <ul><li>A website</li><li>A quota control system for cups</li><li>Network traffic traking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
+			},
+			"media": {
+				"url":"timeline/images/cnettools.png",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2007", "month": 1, "day": 1},
+			"end_date":{"year": "2008","month": 6, "day": 31},
+			"text": {
+				"headline":"Cortex",
+				"text":"<p>Cluster based Open MOSIX with for nodes built at Cnet association in 2007-2008. We also used Xen as hyperviseur. Was financed by university.</p>"
+			},
+			"media": {
+				"url":"timeline/images/cortex.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2008", "month": 11,"day":14},
+			"end_date":{"year":"2008", "month":12, "day":8},
+			"text": {
+				"headline":"crackmd5",
+				"text":"<p>Master project to implement rainbow tables to crackmd5. We used SSE in our C++ implementation to compute multiple sum in parallel. Made with Romain Bouleis.</p>"
+			},
+			"media": {
+				"url":"timeline/images/crackmd5.png",
+				"caption":"TODO",
+				"credit":"<a href='https://fr.wikipedia.org/wiki/MD5'>Wikipedia</a>"
+			}
+		},{
+			"start_date":{"year":"2009","month":1,"day":10},
+			"end_date":{"year":"2009", "month":2,"day":1},
+			"text": {
+				"headline":"tprsa-m2stic",
+				"text":"<p>Master project at uniersity of savoie to implement RDA protocol.Made with Romain Bouleis.</p>"
+			},
+			"media": {
+				"url":"timeline/images/rsa.png",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2009", "month": 12, "day" : 1},
+			"text": {
+				"headline":"Chat.Net",
+				"text":"<p>Master 2 project to implement a chat in C# .Net at universty of savoie. Made with Romain Bouleis.</p>"
+			},
+			"media": {
+				"url":"timeline/images/chat_dotnet.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year":"2009","month":1,"day": 15},
+			"end_date":{"year": "2009","month": 1,"day": 19},
+			"text": {
+				"headline":"S&R Hotels",
+				"text":"<p>Master project from uniersity of savoie. The goal was to manage room reservation in J2EE and hibernate. Was done with Romain Bouleis.</p>"
+			},
+			"media": {
+				"url":"timeline/images/sr_hotel.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2009", "month": 10, "day":1},
+			"text": {
+				"headline":"Tchoutchou Modeling",
+				"text":"<p>Master exercises to model (all UMLs) a train simulator.</p>"
+			},
+			"media": {
+				"url":"timeline/images/tchoutcou.png",
+				"caption":""
+			}
+		},
+		
+		{
+			"start_date":{"year": "2010", "month": 1,"day": 26},
+			"end_date":{"year":"2010", "month": 5, "day": 15},
+			"text": {
+				"headline":"KAudioConverter",
+				"text":"<p>A GUI to extract audio files from video using KDE library for the GUI. The backend was based on mencoder/mplayer. This was the first project for witch I made packaging in RPM/DEB.</p><p>The project is hosted on <a href='https://app.assembla.com/spaces/kaudioconverter/wiki/Home' target='_blank'>assembla</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/kaudioconverter.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2011","month":4,"day":3},
+			"end_date":{"year": "2017", "month": 6},
+			"text": {
+				"headline":"HomeLinux",
+				"text":"<p>Provide a source package manager for your home directory. The idea is the use the same approach than Gentoo but to build a prefix into your home without rebuilding the dependencies provided by the host system. It started during my PhD. due to lack of up-to-date linux distribution available in our service. At that time we succeed to install a full KDE on an old centos.</p><p>The project is hosted on <a href='https://github.com/svalat/homelinux' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/homelinux.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2011", "month": 8,"day": 27},
+			"end_date":{"year": "2011", "month": 8, "day": 6},
+			"text": {
+				"headline":"svpgm2txt",
+				"text":"<p>Project of text recongnition into images to extract DVD subtitle. It considered perfect character representaiton hence it require less human intervention than gocr. At some point I tried to implement a kind of neural network to auto-determine the unknown charaters from a database.</p><p>The project is hosted on <a href='https://github.com/svalat/svpgm2txt' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/svpgm2txt.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2010", "month": 6, "day": 29 },
+			"end_date":{ "year": "2013", "month": 10, "day": 31},
+			"text": {
+				"headline":"svUnitTest",
+				"text":"<p>C++ unit test library, similar to CPPunit. It was just before the boom of google unit test, got some ideas similar to it. This is the first project for wich I worked on portability over many systems and compilers : Gentoo, Ubuntu, Fedora, FreeBSD. It was also my second step in unit testing and test driven developpement.</p><p>The code can be found on <a href='https://github.com/svalat/svUnitTest' target='_blank'>Github</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/svunittest.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012","month":3,"day":27},
+			"end_date":{"year": "2013","month":5,"day":9},
+			"text": {
+				"headline":"LBM",
+				"text":"<p>A numerical simulation in MPI + (OpenMP or CUDA) based on the Lattice Bolzmann Method (LBM) to solve the Karman street vorteces It was made for a lab courses in master at university of versailles. The student had to optimize out sub-optimal version.</p>"
+			},
+			"media": {
+				"url":"timeline/images/lbm.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012", "month": 1, "day": 20},
+			"text": {
+				"headline":"ctags2uml",
+				"text":"<p>UML diagram generation from C++ source code (parsing by ctags). The project provide a converter from CTAGS to GRAPHVIZ. The nice thing compared to existing tools is the ability to automatically based class groups by looking on the links, this help to get automatically a nice layout and not a big mess.</p>"
+			},
+			"media": {
+				"url":"timeline/images/ctags2uml.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012", "month": 10, "day": 22},
+			"end_date":{"year": "2012", "month": 11,"day": 14},
+			"text": {
+				"headline":"htopml",
+				"text":"<p>A simple tool like htop but with HTML gui. Can work with slurm and can also spy application internals. It had the nice feature to provide a module to display thread binding on topology. New modules can easyliy be implemented to export applications informations.</p><p>The code can be found on <a href='https://github.com/svalat/htopml' target='_blank'>Github</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/htopml.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2013", "month": 7, "day": 20},
+			"end_date":{"year": 2012, "month": 11, "day": 14},
+			"text": {
+				"headline":"MPC_Allocator_Cpp",
+				"text":"<p>A C++ rewrite (prototype not finished) of MPC_Allocator I developped during my PhD.</p><p>The code can be found on <a href='https://github.com/svalat/mpc_allocator_cpp' target='_blank'>Github</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/mpc_allocator_cpp.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012", "month": 11, "day": 4},
+			"end_date":{"year": "2013", "month": 12, "day": 31},
+			"text": {
+				"headline":"Cartesian Mesh Runtime",
+				"text":"<p>Domain Specific Language based on Latex to implement parallel (OpenMP + MPI) simulation on Cartesian mesh. The idea is to use an abstract language and generate a parallel program plus a detail report on the equations used in the code.</p><p>The code can be found on <a href='https://github.com/svalat/CMR' target='_blank'>Github</a><p>."
+			},
+			"media": {
+				"url":"timeline/images/cmr.png",
+				"caption":""
+			}
+		}
+	],
+    "timeline":
+    {
+
+        "date": [
+			
+			
+			{
+				"startDate":"2012,06,02",
+				"headline":"Linear Sparse System Pre Compiled",
+				"text":"<p>Une idÃ©e pour essayer de faire mieux que la MKL dans le cas d'une gemm ou le membre de gauche est une petite matrice creuse et le membre de droite une grande matrice reprÃ©sentant un maillage de pluieurs milliers de cellules.</p>",
+				"tag":"HPC",
+				"classname":"H",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			,{
+				"startDate":"2011,11,24",
+				"endDate":"2011,11,19",
+				"headline":"ShellToolKit",
+				"text":"<p>Une librairie C++ pour abstraire la crÃ©ation d'un shell en fournissant notamment une class shtkCommand contenant tout le nÃ©cessaire pour le parsing des commandes ainsi qu'un support de la completion et historique Ã  partir de readline.</p>",
+				"tag":"devtool",
+				"classname":"emptd-php",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			,{
+				"startDate":"2006,11,30",
+				"headline":"simu",
+				"text":"<p>TODO.</p>",
+				"tag":"tool",
+				"classname":"tool",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			
+			,{
+				"startDate":"2008,01,30",
+				"headline":"vzsimu",
+				"text":"<p>TODO.</p>",
+				"tag":"tool",
+				"classname":"tool",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			
+			,{
+				"startDate":"2006,08,30",
+				"headline":"risk",
+				"text":"<p>TODO.</p>",
+				"tag":"game",
+				"classname":"tool",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			
+			,{
+				"startDate":"2008,08,30",
+				"headline":"svMontage",
+				"text":"<p>TODO.</p>",
+				"tag":"media",
+				"classname":"tool",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			
+			,{
+				"startDate":"2007,08,30",
+				"headline":"TSA",
+				"text":"<p>TODO.</p>",
+				"tag":"web",
+				"classname":"tool",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+			
+			,{
+				"startDate":"2007,11,30",
+				"headline":"gvDvdRip",
+				"text":"<p>TODO.</p>",
+				"tag":"media",
+				"classname":"tool",
+				"asset": {
+					"media":"dsfsdf",
+					"thumbnail":"optional-32x32px.jpg",
+					"caption":"Caption text goes here"
+				}
+			}
+
+        ]
+    }
+}

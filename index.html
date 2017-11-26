@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<meta>
+		<meta charset="utf-8">
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- Some google fonts -->
+ 		<link href='//fonts.googleapis.com/css?family=Corben:700' rel='stylesheet' type='text/css'/> 
+		<link href="//fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet" type="text/css"/>
+ 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/> 
+		<!-- bootstrap for carousel --> 
+		<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Menu & style -->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</meta>
+	<body>
+		<div class="navbar">
+			<div>
+				<h1 class='title'>Sébastien Valat</h1>
+				<ul class='nav'></ul>
+			</div>
+		</div>
+		
+		<div class='feature-image'>	
+			<div class="photo-circle">
+				<img class="photo" src="images/sebastien.jpg">
+				<!--<img class="flag" src="images/flags/france.png">-->
+			</div>
+		</div>
+		
+		<div class="note">
+			<h3>Current position</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>I'm currently a fellow at <a href="http://www.cern.ch" target="_blank">CERN</a> working on the R&amp;D of the future data acquisition system (DAQ) of <a href='http://lhcb.web.cern.ch/lhcb/'>LHCb</a> in collaboration with Intel. The chalange of this project is making a DAQ without any hardware triggers which will be a first time for such a large detector.</p>
+			<p>Removing the first level hardware trigger will imply the capability of handling 40 Tb/s in the DAQ. In order to manage this high throughtput we currently study hight speed fabrics coming from the HPC field : Intel Omni-Path and Mellanox InfiniBand. Both run at 100 Gb/s.
+			</p>
+			<p>The final system will need to scale on 500 nodes to fulfill the required bandwidth considering 80 Gb/s per node. After being aggregated on those 500 nodes, the data will need to be dispatched on 4000 nodes for trigerring decision before reaching long term storage for physics analysis.
+			</p>
+		</div>
+			
+		<div class="note">
+			<h3>Research topics</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>
+			I'm mostly interested on:
+			<ul>
+				<li>Memory allocators</li>
+				<li>Operating systems</li>
+				<li>Processor caches</li>
+				<li>Memory profiler</li>
+				<li>NUMA architectures</li>
+				<li>Hight speed networks (InfiniBand, Omni-Path)</li>
+			</p>
+		</div>
+
+		<div class="note">
+			<h3>Teaching topics</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>
+			During my PhD and first post-doc I had the chance to teach as assistant :
+			<ul>
+				<li>Parallel optimizations (1st master year) - 2010 - 2013</li>
+				<li>Hardware architectures (2nd year engeneering school) - 2010 - 2013</li>
+				<li>System administration (3rd year engeneering school) - 2013 - 2014</li>
+			</p>
+		</div>
+		
+		<div class="note">
+			<h3>Contact</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>Mail: <a href="mailto:sebastien.valat@cern.ch">sebastien.valat@cern.ch</a></p>
+			<p>Github: <a href='http://www.github.com/svalat/'>here</a>.</p>
+		</div>
+		
+		<div class='footer'>
+			<div>Copyright © 2017 Sébastien Valat</div>
+			<div>
+				<a href='http://www.github.com/svalat' class="no-decoration">
+					<i class="fa fa-github fa-lg"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

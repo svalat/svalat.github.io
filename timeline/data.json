@@ -438,7 +438,7 @@
 			"start_date":{"year":"2008","month":8,"day":30},
 			"text": {
 				"headline":"svMontage",
-				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magneto scope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be send to mencoder. It supported HD video.</p>"
+				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magneto scope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be sent to mencoder. It supported HD video.</p>"
 			},
 			"media": {
 				"url":"timeline/images/svmontage.png",
@@ -449,7 +449,7 @@
 			"end_date":{"year":"2009", "month":2,"day":1},
 			"text": {
 				"headline":"tprsa-m2stic",
-				"text":"<p>Master project at University of Savoy to implement RSA protocol.Made with Romain Bouleis.</p>"
+				"text":"<p>Master project at the University of Savoy to implement RSA protocol.Made with Romain Bouleis.</p>"
 			},
 			"media2": {
 				"url":"timeline/images/rsa.png",
@@ -460,7 +460,7 @@
 			"start_date":{"year": "2009", "month": 12, "day" : 1},
 			"text": {
 				"headline":"Chat.Net",
-				"text":"<p>Master 2 project to implement a chat in C# .Net at University of Savoy. Made with Romain Bouleis.</p>"
+				"text":"<p>Master 2 project to implement a chat in C# .Net at the University of Savoy. Made with Romain Bouleis.</p>"
 			},
 			"media": {
 				"url":"timeline/images/chat_dotnet.png",
@@ -472,7 +472,7 @@
 			"end_date":{"year": "2009","month": 1,"day": 19},
 			"text": {
 				"headline":"S&R Hotels",
-				"text":"<p>Master project from University of Savoy. The goal was to manage room reservation in J2EE and hibernate. Was done with Romain Bouleis.</p>"
+				"text":"<p>Master project from the University of Savoy. The goal was to manage room reservation in J2EE and hibernate. Was done with Romain Bouleis.</p>"
 			},
 			"media": {
 				"url":"timeline/images/sr_hotel.png",
@@ -655,6 +655,16 @@
 			"text": {
 				"headline":"DAQPIPE",
 				"text":"<p>As a postdoc at CERN for the LHCb experiment I developed a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 nodes for the core part and send data to 4000 filter nodes.<p>"
+			},
+			"media": {
+				"url":"timeline/images/daqpipe.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2015", "month": 10},
+			"text": {
+				"headline":"DAQPIPE-GO",
+				"text":"<p>Starting implementation of DAQPIPE in GO, done a big part of the work then take back the cleaner structure into the C++ verson. Never really finished the GO version but it was nice.<p>"
 			},
 			"media": {
 				"url":"timeline/images/daqpipe.png",

@@ -4,6 +4,7 @@ $(document).ready(function() {
 		{title: 'Home', url: 'index.html'},
 		{title: 'Research', url: 'research.html'},
 		{title: 'Projects',url: 'projects.html'},
+		//{title: 'Teaching',url: 'teaching.html'},
 		{title: 'Timeline',url: 'timeline.html'},
 		//{title: 'CV', url: 'docs/2017-11-cv.pdf'},
 		//{title: 'Contribute', url: 'contrib.html'},

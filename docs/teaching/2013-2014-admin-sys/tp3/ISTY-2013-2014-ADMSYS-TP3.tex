@@ -1,0 +1,303 @@
+%
+% Deuxième année ISTY - Module Administration Système
+%
+% Textes de T.D.
+%
+% Historique
+%   1999/07/07 : pda/dntt : création
+%
+
+\documentclass [a4paper,twocolumn,landscape] {report}
+
+	\usepackage[utf8]{inputenc}
+    \usepackage {verbatim}	% pour la macro "listing"
+    \usepackage [9pt,a4,times] {my2e}
+    \usepackage[margin=2cm,landscape,twocolumn]{geometry}
+
+    \setlength {\parskip} {1mm}
+
+    \pagestyle {myheadings}
+
+    \newcommand {\utilitaire} [1] {\texttt {#1}}
+    \newcommand {\fichier} [1] {\texttt {#1}}
+
+    \newcommand {\marquerchapitre} [1]
+    {
+        \addcontentsline {toc} {chapter} {#1}
+        \markboth {#1} {#1}
+    }
+    
+    \newcommand {\chapitresanstitre} [1]
+    {
+        \cleardoublepage
+	\marquerchapitre {#1}
+    }
+
+    \newcommand {\titrechapitre} [1]
+    {
+	\begin {center}
+	    \Large \bf #1
+	\end {center}
+	\bigskip
+	\bigskip
+    }
+
+    \newcommand {\chapitre} [1]
+    {
+        \chapitresanstitre {#1}
+        \titrechapitre {#1}
+    }
+
+    \newcounter {td}
+    \newcounter {question} [td]
+    \renewcommand {\thequestion} {\arabic{td}.\arabic {question}}
+
+    \newcommand {\td} [2]
+    {
+        \cleardoublepage
+        %\refstepcounter {td}
+        \setcounter {td}{#1}
+	\marquerchapitre {TP \thetd\ - 2013/2014 - #2}
+	\titrechapitre {TP \thetd\ - #2}
+    }
+
+    \newcommand {\but}
+    {
+        \bigskip
+        {\Large\bf But}
+        \bigskip
+    }
+
+    \newcommand {\question}
+    {
+        \refstepcounter {question}
+        \bigskip
+%         \vspace {2mm}
+        {\Large\bf Exercice \thequestion} % {\Large\bf Question \thequestion}
+        \nopagebreak
+        % \bigskip
+        \vspace {2mm}
+        \nopagebreak
+    }
+
+    \newcommand {\examen} [2]
+    {
+	\chapitresanstitre {Examen : #2}
+	\input {#1}
+    }
+
+    \newcounter {tp}
+    \newcounter {exercice} [tp]
+    \renewcommand {\theexercice} {\arabic{tp}.\arabic {exercice}}
+
+%     \renewcommand {\fig} [2]
+%     {
+%         \vspace {2mm}
+%         \begin {center}
+%         \input {#1}
+%         \end {center}
+%         \vspace {2mm}
+%     }
+
+    \newcommand {\listing} [1]
+    {
+	{\small\verbatiminput {#1}}
+    }
+
+% \renewcommand {\figps} [2] {
+%     \begin {center}
+%         \epsfig {figure=#1.ps, width=#2}
+%     \end {center}
+% }
+
+
+\begin {document}
+
+\td {3}{Routeur réseau (DHCP, DNS, NAT)}
+
+Pour ce TP on se propose de mettre en place un serveur qui fera office de routeur 
+sur notre réseau (\textit{istycorp.fr}). Nous utiliserons deux machines virtuelles. 
+La première, nommée \textit{client1}, fera office de client et correspondra à la station 
+de travail d'un employé. La machine \textit{router} sera notre point de travail principal
+et devra fournir :
+\begin{itemize}
+  \item La configuration dynamique des IP au client et de leur résolution DNS.
+  \item Un cache DNS.
+  \item Le pond entre internet et le réseau interne.
+\end{itemize}
+
+\section* {Création des machines virtuelles}
+
+Une machine virtuelle vous est fournie pour le TP avec une installation minimaliste Debian. 
+Dupliquez-la pour créer votre client et votre routeur. Assurez-vous de configurer leurs cartes 
+réseaux émulées (configuration dans VirtualBox) de sorte que :
+\begin{enumerate}
+ \item La machine \textit{router} doit avoir deux interfaces :
+    \begin{enumerate}
+     \item Une interface permettant l'accès à internet (NAT).
+     \item Une interface sur le réseau interne simulé (réseau interne : istycorp).
+    \end{enumerate}
+  \item La machine \textit{client1} doit avoir une unique interface sur le réseau interne 
+  et devra passer par le routeur pour accéder à internet.
+\end{enumerate}
+
+\question
+
+Pourquoi ne connecte-t-on pas directement les machines clients sur le réseau internet ? 
+Citez au moins trois raisons.
+
+%[cout des IP, menace internet vers client, contrôle des flux sortant (eg. Torrent...)]
+
+\question
+
+Rappelez le rôle du serveur DHCP et des serveurs DNS.
+
+\section* {Configuration manuelle}
+
+Afin de bien comprendre le rôle des composants nous allons dans un premier temps configurer 
+les IP manuellement, démarrez les deux machines virtuelles.
+
+\question
+
+Afin de faciliter le travail, on pourra installer un serveur SSH sur le routeur et ouvrir 
+la redirection de port sur l'interface publique (dans VirtualBox) pour pouvoir s'y connecter.
+
+\question
+
+L'image fournie est configurée pour le client, commencez par changer le nom d'hôte de la machine 
+et vérifiez le nom de domaine local.
+
+\question
+
+Configurez manuellement (\textit{ifconfig}) le client et le routeur de sorte à avoir :
+\begin{enumerate}
+ \item IP du routeur : 192.168.0.1.
+ \item IP du client : 192.168.0.1.
+\end{enumerate}
+
+Testez le ping entre les deux clients et regardez les deux tables de routages avec la commande
+\textit{route}. Expliquez.
+
+\question
+
+Configurez le DNS du client de manière similaire au routeur. 
+Tester la résolution de nom et l'accès à internet ? Pourquoi ne marche-t-elle pas ?
+
+\section*{Mise en place du NAT}
+
+Afin de partager la connexion internet du routeur avec les clients, il nous faut mettre en place
+le re routage des paquets et le support du NAT.
+
+\question
+
+Rappelez l'objectif du NAT. Que peut apporter ipv6 par rapport à ce problème ?
+
+\question
+
+Activez le routage des paquets sur le routeur en éditant le fichier /etc/sysctl.conf. 
+Vous pouvez aussi activer ce dernier sans redémarrer en utilisant une des deux commandes :
+
+\begin{verbatim}
+sysctl -w net.ipv4.ip_forward=1
+echo 1 > /proc/sys/net/ipv4/ip_forward
+\end{verbatim}
+
+\question
+
+Activez le support du NAT sur le routeur. Ce protocole doit être activer dans \textit{iptables}
+afin d'adapter les règles de routage des paquets.
+
+\begin{verbatim}
+iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
+\end{verbatim}
+
+On peut rendre cette règle persistante en installant le paquet \textit{iptables-persistent}
+et en générant le fichier de configuration :
+
+\begin{verbatim}
+iptables-save > /etc/rules.ipv4
+\end{verbatim}
+
+\question
+
+Sur le client, vous devez rediriger les paquets à destination d'internet vers le routeur, pour cela,
+activez l'utilisation d'une passerelle :
+
+\begin{verbatim}
+route add default gw 192.168.0.1 eth0
+\end{verbatim}
+
+\question
+
+Tester la connexion internet, vous pouvez visualiser le routage à l'aide de l'outil 
+\textit{traceroute} sur le client ou bien avec \textit{tcpdump} sur le routeur.
+
+\question
+
+Si l'on considère des outils tels que \textit{tcpdump} ou \textit{wireshark} sur le routeur,
+quelle remarque pouvez-vous faire quand à la sécurité des protocoles de communications 
+non cryptées (ex. Http) ?
+
+\question
+
+Tester la connexion sur un serveur FTP (par exemple un site miroir de distribution Linux ou du noyau).
+Pourquoi est-ce que le mode actif de FTP ne fonctionne pas ?
+
+\section* {Configuration dynamique : DHCP}
+
+En pratique on utilise habituellement le protocole DHCP pour configurer automatiquement les clients
+de notre réseau.
+
+\question
+
+Installez isc-dhcp-server sur le routeur et configurez-le avec les paramètres suivants :
+\begin{enumerate}
+ \item Plage d'IP : 192.168.0.2 – 192.168.0.10
+ \item Masque d'IP : 255.255.255.0
+ \item Passerelle : 192.168.0.1
+ \item Domaine : istycorp.fr
+ \item DNS : Celui de l'université, regardez dans /etc/resolve.conf
+\end{enumerate}
+
+\question
+
+Validez le fonctionnement en redémarrant le client.
+
+\section* {Cache DNS}
+
+\question
+
+Installez le cache DNS \textit{dnsmasq} de sorte que ce dernier soit intercalé entre 
+votre client et internet.
+
+\question
+
+Définissez proprement les résolutions de noms pour les machines du réseau internes 
+(en éditant /etc/hosts sur le routeur). Vérifiez la propagation au client au travers 
+du cache DNS.
+
+\question
+
+Ajoutez une entrée écrasant la résolution de nom de Google et renvoyant sur un autre site. 
+Que pensez-vous de la sécurité des traductions d'adresse sur un réseau dont on n’est pas 
+maitre ? Comment assurer la sécurité de la connexion dans ce cas ?
+
+\section* {Bonus : serveur NFS}
+
+\question
+
+S'il vous reste du temps installez un serveur NFS et montez-le sur le client pour disposer d'un 
+dossier home centralisé.
+
+\question
+
+Discutez la sécurité des droits utilisateurs dans cette configuration, les restrictions d'accès 
+aux fichiers seront-elles nécessairement toujours vérifiées ?
+
+\section* {Bonus : redirection SSH}
+
+Installez un serveur ssh sur le client et tentez de le rejoindre. Pour cela il faut activer 
+la redirection au niveau du NAT de la VM du routeur et du NAT du routeur lui même. Utilisez 
+le port 2223 pour cela.
+
+\end {document}

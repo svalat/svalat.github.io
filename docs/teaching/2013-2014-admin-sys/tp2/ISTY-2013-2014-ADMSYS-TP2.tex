@@ -1,0 +1,234 @@
+%
+% Deuxième année ISTY - Module Administration Système
+%
+% Textes de T.D.
+%
+% Historique
+%   1999/07/07 : pda/dntt : création
+%
+
+\documentclass [a4paper,twocolumn,landscape] {report}
+
+	\usepackage[utf8]{inputenc}
+    \usepackage {verbatim}	% pour la macro "listing"
+    \usepackage [9pt,a4,times] {my2e}
+    \usepackage[margin=2cm,landscape,twocolumn]{geometry}
+
+    \setlength {\parskip} {1mm}
+
+    \pagestyle {myheadings}
+
+    \newcommand {\utilitaire} [1] {\texttt {#1}}
+    \newcommand {\fichier} [1] {\texttt {#1}}
+
+    \newcommand {\marquerchapitre} [1]
+    {
+        \addcontentsline {toc} {chapter} {#1}
+        \markboth {#1} {#1}
+    }
+    
+    \newcommand {\chapitresanstitre} [1]
+    {
+        \cleardoublepage
+	\marquerchapitre {#1}
+    }
+
+    \newcommand {\titrechapitre} [1]
+    {
+	\begin {center}
+	    \Large \bf #1
+	\end {center}
+	\bigskip
+	\bigskip
+    }
+
+    \newcommand {\chapitre} [1]
+    {
+        \chapitresanstitre {#1}
+        \titrechapitre {#1}
+    }
+
+    \newcounter {td}
+    \newcounter {question} [td]
+    \renewcommand {\thequestion} {\arabic{td}.\arabic {question}}
+
+    \newcommand {\td} [1]
+    {
+        \cleardoublepage
+        \refstepcounter {td}
+	\marquerchapitre {TP \thetd\ - 2013/2014 - #1}
+	\titrechapitre {TP \thetd\ - #1}
+    }
+
+    \newcommand {\but}
+    {
+        \bigskip
+        {\Large\bf But}
+        \bigskip
+    }
+
+    \newcommand {\question}
+    {
+        \refstepcounter {question}
+        \bigskip
+%         \vspace {2mm}
+        {\Large\bf Exercice \thequestion} % {\Large\bf Question \thequestion}
+        \nopagebreak
+        % \bigskip
+        \vspace {2mm}
+        \nopagebreak
+    }
+
+    \newcommand {\examen} [2]
+    {
+	\chapitresanstitre {Examen : #2}
+	\input {#1}
+    }
+
+    \newcounter {tp}
+    \newcounter {exercice} [tp]
+    \renewcommand {\theexercice} {\arabic{tp}.\arabic {exercice}}
+
+%     \renewcommand {\fig} [2]
+%     {
+%         \vspace {2mm}
+%         \begin {center}
+%         \input {#1}
+%         \end {center}
+%         \vspace {2mm}
+%     }
+
+    \newcommand {\listing} [1]
+    {
+	{\small\verbatiminput {#1}}
+    }
+
+% \renewcommand {\figps} [2] {
+%     \begin {center}
+%         \epsfig {figure=#1.ps, width=#2}
+%     \end {center}
+% }
+
+
+\begin {document}
+
+\refstepcounter {td}
+
+\td {Configuration du système}
+
+Lors du TP précédent, nous avons vu la procédure d'installation manuelle d'une distribution
+Linux. Pour cette séance, nous allons poursuivre en finalisant la configuration de notre
+système pour l'adapter à nos besoins et mettre en place l'environnement opérationnel
+pour l'utilisateur.
+
+\section* {Noyau et amorce}
+
+\question
+
+Gentoo est une distribution source vous devez donc recompiler votre propre noyau.
+Si vous avez peu de RAM, téléchargez les sources du noyau sur le site officiel de Linux
+(www.kernel.org) au format tar.gz. Ceux qui ont assez de RAM peuvent laisser 
+\textit{emerge} installer les sources au format tar.xz comme décrit dans la documentation.
+
+\question
+
+Trouvez les commandes permettant de lister le matériel présent afin de savoir comment configurer
+votre noyau, notamment les périphériques PCI, chipset et carte graphique.
+
+\question
+
+La configuration par défaut contient déjà tout le nécessaire pour une machine virtuelle. 
+Vous devez simplement activer la compilation en statique des systèmes de fichiers que vous 
+utilisez et le support de DEVTMPFS (listing 2.3 de la documentation). Afin d'accélérer la 
+compilation et jouer avec les sources, désactivez le support du debuggage du noyau (kacking), 
+le support de wifi et des Mac.
+
+\question
+
+Compilez puis installez le noyau et ses modes. Installez \textit{grub} puis générez son fichier de 
+configuration (/boot/grub/grub.cfg) avec la commande introduite par grub2. Regardez le contenu
+du fichier.
+
+\question
+
+Configurez le mot de passe root et installez \textit{syslog-ng} et \textit{logrotate} pour gérer 
+les logs.
+
+\question
+
+Sortez du chroot, démontez les partitions et redémarrez sur votre installation.
+
+\section* {Configuration}
+
+Maintenant que les fichiers sont en place, configurez votre Linux pour qu'il démarre correctement
+dans votre environnement.
+
+\question
+
+Configuez votre environnement : clavier, localisation utilisant fr\_FR.UTF-8, nom d'hôte,
+heure locale, activation du client dhcp (on utilisera dhcpcd), montage des partitions.
+
+\section* {Utilisateurs}
+
+\question
+
+Créez un utilisateur à votre nom, assurez-vous qu'il puisse effectuer des commandes d'administration
+avec \textit{su}. Installez et configurez la commande \textit{sudo}.
+
+\question
+
+Activez les quotas pour votre utilisateur, limitez-le à 200 Mo et faites un test en tentant de créer
+un fichier plus gros pour obtenir l'erreur.
+
+\section* {Accès distant SSH}
+
+Modifiez la configuration de votre machine virtuelle pour pouvoir
+vous y connecter en ssh (redirection de port sur l'interface réseau). On utilisera le port local 
+2222 sur l'hôte. Redémarrez la VM. Activez le service SSH au démarrage, démarrez-le manuellement et
+testez la connexion.
+
+\section* {Paquets manuels}
+
+Il peut parfois être nécessaire d'installer des programmes sur une station alors que l'on n’est pas
+administrateur. On procède alors généralement en recompilant manuellement le programme depuis ses
+sources et en l'installant dans un dossier de son home.
+
+\question
+
+Téléchargez les sources de hwloc (http://www.open-mpi.org/projects/hwloc/) et installez-les
+dans /home/\${USE}R/usr.
+
+\question
+
+Configuez les variables d'environnements pour pouvoir utiliser \textit{hwloc-ls} comme tout autre commande
+sans devoir utiliser son chemin complet.
+
+\section* {Problème de dimensionnement}
+
+Sur un serveur il arrive fréquemment que les ressources allouées aux utilisateurs soient amenées à évoluer.
+Ceci est notablement vrai pour l'espace disque qui tend à croître avec le temps. Avec le partitionnement
+actuel, il est semble difficile de faire évoluer la taille des partitions sans procéder à une réinstallation
+complète. Pour cela, les développeurs système ont mis au point le système LVM (Logical Volume Manager)
+afin de pouvoir redimensionner plus facilement les partitions de notre système.
+
+\question
+
+Ne le faites pas tout de suite, mais supposez que la partition /home soit trop petite, comment procéderiez-vous ?
+Idem pour / ?
+
+\question
+
+Faites une archive du contenu de /home et supprimez la partition pour la recréer sous une forme basée sur LVM, toujours
+en ext4. Remettez en place les fichiers.
+
+\question
+
+Ajoutez un nouveau disque dur à votre VM, choisissez la taille que vous voulez. Faites en sorte d'étendre la partition
+/home basée sur LVM sur ce deuxième disque dur pour augmenter sa taille.
+
+\question
+
+Quel est le danger du partitionnement tel que nous l'avons mis en place si l'on considère des disques durs physiques à 
+la place de nos disques virtuels ?
+
+\end {document}

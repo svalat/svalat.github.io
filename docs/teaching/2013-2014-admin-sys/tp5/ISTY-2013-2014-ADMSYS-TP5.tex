@@ -1,0 +1,314 @@
+%
+% Deuxième année ISTY - Module Administration Système
+%
+% Textes de T.D.
+%
+% Historique
+%   1999/07/07 : pda/dntt : création
+%
+
+\documentclass [a4paper,twocolumn,landscape] {report}
+
+	\usepackage[utf8]{inputenc}
+    \usepackage {verbatim}	% pour la macro "listing"
+    \usepackage [9pt,a4,times] {my2e}
+    \usepackage[margin=2cm,landscape,twocolumn]{geometry}
+    \usepackage{hyperref}
+
+    \setlength {\parskip} {1mm}
+
+    \pagestyle {myheadings}
+
+    \newcommand {\utilitaire} [1] {\texttt {#1}}
+    \newcommand {\fichier} [1] {\texttt {#1}}
+
+    \newcommand {\marquerchapitre} [1]
+    {
+        \addcontentsline {toc} {chapter} {#1}
+        \markboth {#1} {#1}
+    }
+    
+    \newcommand {\chapitresanstitre} [1]
+    {
+        \cleardoublepage
+	\marquerchapitre {#1}
+    }
+
+    \newcommand {\titrechapitre} [1]
+    {
+	\begin {center}
+	    \Large \bf #1
+	\end {center}
+	\bigskip
+	\bigskip
+    }
+
+    \newcommand {\chapitre} [1]
+    {
+        \chapitresanstitre {#1}
+        \titrechapitre {#1}
+    }
+
+    \newcounter {td}
+    \newcounter {question} [td]
+    \renewcommand {\thequestion} {\arabic{td}.\arabic {question}}
+
+    \newcommand {\td} [2]
+    {
+        \cleardoublepage
+        %\refstepcounter {td}
+        \setcounter {td}{#1}
+	\marquerchapitre {TP \thetd\ - 2013/2014 - #2}
+	\titrechapitre {TP \thetd\ - #2}
+    }
+
+    \newcommand {\but}
+    {
+        \bigskip
+        {\Large\bf But}
+        \bigskip
+    }
+
+    \newcommand {\question}
+    {
+        \refstepcounter {question}
+        \bigskip
+%         \vspace {2mm}
+        {\Large\bf Exercice \thequestion} % {\Large\bf Question \thequestion}
+        \nopagebreak
+        % \bigskip
+        \vspace {2mm}
+        \nopagebreak
+    }
+
+    \newcommand {\examen} [2]
+    {
+	\chapitresanstitre {Examen : #2}
+	\input {#1}
+    }
+
+    \newcounter {tp}
+    \newcounter {exercice} [tp]
+    \renewcommand {\theexercice} {\arabic{tp}.\arabic {exercice}}
+
+%     \renewcommand {\fig} [2]
+%     {
+%         \vspace {2mm}
+%         \begin {center}
+%         \input {#1}
+%         \end {center}
+%         \vspace {2mm}
+%     }
+
+    \newcommand {\listing} [1]
+    {
+	{\small\verbatiminput {#1}}
+    }
+
+% \renewcommand {\figps} [2] {
+%     \begin {center}
+%         \epsfig {figure=#1.ps, width=#2}
+%     \end {center}
+% }
+
+
+\begin {document}
+
+\td {5}{Authentification centralisée : LDAP}
+
+Pour ce TP on se propose de mettre en place une authentification centralisée pour l'ensemble des services
+de l'entreprise afin de faciliter la gestion des comptes pour l'arrivée et le départ des employées. Nous
+donc intégrer LDAP dans :
+\begin{itemize}
+  \item Authentification Unix des postes.
+  \item Service Jenkins.
+  \item Service redmine.
+  \item Résolution DNS.
+\end{itemize} 
+
+\section* {Rappels sur LDAP}
+
+\question
+
+Quel est l'objectif du protocole LDAP ? 
+
+\question
+
+Dans quel cadre est-il principalement utilisé ? 
+
+\question
+
+Est-il limité à cet usage ?
+
+\question
+
+À quoi doit-on faire attention en ce qui concerne les informations habituelles que l'on place dans LDAP ?
+
+\question
+
+Donner les particularités de LDAP comparé à une base de données classique de type MySQL.
+
+\section* {Mise en place du serveur}
+
+\question
+
+Installez le serveur LDAP sur la machine virtuelle fournie (\textit{ldap-utils} et \textit{slapd}).
+
+\question
+ 
+Créez votre base de données pour votre domaine (\textit{dc=istycorp,dc=fr}) : 
+ 
+\begin{verbatim}
+dpkg-reconfigure -plow slapd  
+\end{verbatim}
+
+Regardez le contenu de la base actuelle avec \textit{slapcat}. Repérez les différents éléments importants.
+
+\question
+
+Créez le schéma de votre annuaire afin de structurer les deux branches habituelles \textit{people} et \textit{groups}.
+Pour ce faire, créez un fichier du type (en remplaçant les champs nécessaires) :
+
+\begin{verbatim}
+dn: ou=people,{{TODO}}
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,{{TODO}}
+objectClass: organizationalUnit
+ou: groups
+\end{verbatim}
+
+Vous pouvez alors charger ce contenu dans LDAP avec la commande :
+
+\begin{verbatim}
+ldapadd -x -D "cn=admin,{{TODO}}" -f create-struct.ldiff -W
+\end{verbatim}
+
+\question
+
+Ajoutez un utilisateur dans la branche \textit{people} :
+
+\begin{verbatim}
+dn: cn={{LOGIN}},{{TODO}}
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: {{LOGIN}}
+uidNumber: {{TODO}}
+gidNumber: {{TODO}}
+userPassword: {{TODO}}
+gecos: {{FULL_NAME}}
+loginShell: /bin/bash
+homeDirectory: {{TODO}}
+\end{verbatim}
+
+\question
+
+Ajoutez un groupe (\textit{user}) et ajoutez-y l'utilisateur précédent :
+
+\begin{verbatim}
+dn: cn={{NAME}},{{TODO}}
+objectClass: top
+objectClass: posixGroup
+cn: {{NAME}}
+memberUid: {{UID}}
+gidNumber: 1000
+\end{verbatim}
+
+\question
+
+Vérifiez le bon fonctionnement de l'authentification avec cet utilisateur en listant ses informations 
+avec une requête de type \textit{ldapsearch} :
+
+\begin{verbatim}
+ldapsearch -x -D "cn={{USER}},{{TODO}}" -W -b"cn={{USER}},{{TODO}}"
+\end{verbatim}
+
+\question
+
+Changez le mot de passe de votre utilisateur avec la commande \textit{ldappasswd} :
+
+\begin{verbatim}
+ldappasswd -x -D 'cn={{USER}},{{TODO}}' -W -S
+\end{verbatim}
+
+\section* {Gestion graphique : phpldapadmin}
+
+\question
+
+Afin de se faciliter la vie, il est possible d'utiliser l'interface graphique \textit{phpldapadmin}.
+Installez le paquet debian et connectez vous-dessus (vérifier la redirection du port de votre VM).
+
+\question
+
+Pensez à adapter le fichier \textit{/etc/phpldapadmin/config.php} pour que l'éditeur travail sur
+le bon chemin LDAP (dc=....).
+
+\question
+
+Créez un deuxième utilisateur avec l'interface et ajoutez-le au groupe.
+
+\section* {Intégration à PAM}
+
+Nous allons maintenant intégrer LDAP dans l'authentification Unix de nos postes de travail. Afin de ne pas compliquer
+la tâche, nous allons effectuer l'opération directeur sur la VM fournie.
+
+\question
+
+Installez les paquets nécessaires au support LDAP pour PAM et NSS: \textit{libpam-ldapd} et \textit{libnss-ldapd}..
+
+\question
+
+Apt-get a fait le travail pour nous, mais cherchez les lignes de configuration LDAP dans les fichiers de configuration
+du dossier /etc/pam.d et dans /etc/nslcd.conf.
+
+\question
+
+Configurez PAM pour qu'il crée automatiquement les dossiers utilisateurs lors de leur première authentification.
+Éditez le fichier \textit{/etc/pam.d/common-session} :
+
+\begin{verbatim}
+session     required      pam_mkhomedir.so skel=/etc/skel umask=0022
+\end{verbatim}
+
+\question
+
+On pourra vérifier le bon fonctionnement entre NSS et LDAP avec la commande :
+
+\begin{verbatim}
+getent passwd
+\end{verbatim}
+
+\textit{En cas d'erreur, vous pouvez arrêter le service \textit{nslcd} et lancer le démon (\textit{nslcd}) à 
+la main en mode debug (option -d) pour obtenir rapidement les messages d'erreurs.}
+
+\question
+
+Vérifiez le bon fonctionnement de l'authentification vers votre utilisateur par ssh ou en local dans la VM.
+
+\pagebreak 
+
+\section* {Intégration à divers services}
+
+\question
+
+Intégrez LDAP dans le service \textit{Jenkins} installé sur le serveur. On fera en sorte que seuls
+les utilisateurs appartenant au groupe \textit{Jenkins} soient pris en compte.
+
+\question
+
+Gérez les noms d'hôtes locaux de votre réseau avec LDAP. On pourra s'inspirer de la documentation d'Archlinux :
+\url{https://wiki.archlinux.org/index.php/LDAP\_Hosts}.
+
+\question
+
+Intégrez LDAP dans le service \textit{redmine} installé sur le serveur.
+
+\section*{Filtrage par groupe dans PAM}
+
+Activez le filtrage pour n'autoriser l'authentification Unix que pour les utilisateurs membres du groupe \textit{Unix}.
+On pourra s'aider de l'aide Debian : \url{https://wiki.debian.org/LDAP/PAM}.
+
+\end {document}

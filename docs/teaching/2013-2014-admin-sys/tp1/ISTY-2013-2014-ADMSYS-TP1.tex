@@ -1,0 +1,276 @@
+%
+% Deuxième année ISTY - Module Administration Système
+%
+% Textes de T.D.
+%
+% Historique
+%   1999/07/07 : pda/dntt : création
+%
+
+\documentclass [a4paper,twocolumn,landscape] {report}
+
+	\usepackage[utf8]{inputenc}
+    \usepackage {verbatim}	% pour la macro "listing"
+    \usepackage [9pt,a4,times] {my2e}
+    \usepackage[margin=2cm,landscape,twocolumn]{geometry}
+
+    \setlength {\parskip} {1mm}
+
+    \pagestyle {myheadings}
+
+    \newcommand {\utilitaire} [1] {\texttt {#1}}
+    \newcommand {\fichier} [1] {\texttt {#1}}
+
+    \newcommand {\marquerchapitre} [1]
+    {
+        \addcontentsline {toc} {chapter} {#1}
+        \markboth {#1} {#1}
+    }
+    
+    \newcommand {\chapitresanstitre} [1]
+    {
+        \cleardoublepage
+	\marquerchapitre {#1}
+    }
+
+    \newcommand {\titrechapitre} [1]
+    {
+	\begin {center}
+	    \Large \bf #1
+	\end {center}
+	\bigskip
+	\bigskip
+    }
+
+    \newcommand {\chapitre} [1]
+    {
+        \chapitresanstitre {#1}
+        \titrechapitre {#1}
+    }
+
+    \newcounter {td}
+    \newcounter {question} [td]
+    \renewcommand {\thequestion} {\arabic{td}.\arabic {question}}
+
+    \newcommand {\td} [1]
+    {
+        \cleardoublepage
+        \refstepcounter {td}
+	\marquerchapitre {TP \thetd\ - 2013/2014 - #1}
+	\titrechapitre {TP \thetd\ - #1}
+    }
+
+    \newcommand {\but}
+    {
+        \bigskip
+        {\Large\bf But}
+        \bigskip
+    }
+
+    \newcommand {\question}
+    {
+        \refstepcounter {question}
+        \bigskip
+%         \vspace {2mm}
+        {\Large\bf Exercice \thequestion} % {\Large\bf Question \thequestion}
+        \nopagebreak
+        % \bigskip
+        \vspace {2mm}
+        \nopagebreak
+    }
+
+    \newcommand {\examen} [2]
+    {
+	\chapitresanstitre {Examen : #2}
+	\input {#1}
+    }
+
+    \newcounter {tp}
+    \newcounter {exercice} [tp]
+    \renewcommand {\theexercice} {\arabic{tp}.\arabic {exercice}}
+
+%     \renewcommand {\fig} [2]
+%     {
+%         \vspace {2mm}
+%         \begin {center}
+%         \input {#1}
+%         \end {center}
+%         \vspace {2mm}
+%     }
+
+    \newcommand {\listing} [1]
+    {
+	{\small\verbatiminput {#1}}
+    }
+
+% \renewcommand {\figps} [2] {
+%     \begin {center}
+%         \epsfig {figure=#1.ps, width=#2}
+%     \end {center}
+% }
+
+
+\begin {document}
+
+
+\td {Installation de base}
+
+Ce TP sera dédié à la prise en main des différents aspects d’un système Linux. 
+Pour ce faire, on se propose d’installer une machine virtuelle avec la distribution 
+Gentoo (www.gentoo.org). Cette distribution a, tout comme Arch (archlinux.org), la 
+particularité de ne fournir qu’un minimum d’automatisation pour laisser le plein 
+contrôle à son utilisateur.
+
+\section* {Initialisation de la machine virtuelle}
+   
+\question
+
+Lancez l’outil de virtualisation VirtualBox et créez une machine virtuelle nommée \textit{client-gentoo}.
+
+Pour les ressources, allouez-lui au minimum 160Mo de RAM, 12Go de disque et autant de CPU que
+votre machine physique.
+
+\question
+
+Téléchargez le LiveCD minimal x86 sur les sites miroirs français de Gentoo 
+(\textit{/releases/x86/current-iso/}). Montez ce CD dans votre machine virtuelle et 
+démarrez là.
+
+\section* {Préparation du disque}
+
+Vous trouverez la documentation complète d'installation disponible en français sur le site
+de gentoo. Le présent sujet synthétise les étapes principales dont vous aurez besoin pour
+ce TP, mais ne vous privez pas de chercher les compléments et explications détaillées
+de la documentation.
+
+\question
+
+Partitionnez votre disque avec \textit{fdisk} ou \textit{cfdisk}. Attention, Gentoo est une distribution
+source, nous aurons donc besoin de place pour la partition /. Vous pouvez viser : 
+
+% \textbf{/boot} : 100Mo en ext2
+% , \textbf{swap} : 256Mo, \textbf{/} : 6Go en ext3/4, \textbf{/home} : 6Go en ext3/4.
+
+\begin{itemize}
+ \item \textbf{/boot} : 100Mo en ext2
+ \item \textbf{swap} : 256Mo (2 fois la RAM jusqu'à 1 ou 2 Go)
+ \item \textbf{/} : 6Go en ext3/4
+ \item \textbf{/home} : 6Go en ext3/4
+\end{itemize}
+
+\question
+
+Formattez les partitions en pensant à leur attribuer un label, regardez les options des commandes
+de formatage pour cela.
+
+\question
+
+Montez votre partition principale sur \textit{/mnt/gentoo}. Créez-y les dossiers \textit{boot} et \textit{home} pour 
+ensuite y monter les deux autres partitions. Activez le swap.
+
+\question
+
+Allez dans ce dossier pour y télécharger l'archive \textit{stage 3} de Gentoo. Utilisez le 
+navigateur \textit{links} pour cela. La touche \textit{d} permet de lancer le téléchargement 
+d'un lien. Téléchargez également le dernier \textit{snapshot} de l'arbre des paquets 
+(\textit{portage}).
+
+\question
+
+Extraire les archives à leur place respective (/mnt/gentoo et /mnt/gentoo/usr), n'oubliez
+pas l'option \textit{-p} de tar pour l'archive \textit{stage 3}.
+
+\section* {Configuration}
+
+Maintenant que les fichiers sont en place, configurez votre Linux pour qu'il démarre correctement
+dans votre environnement.
+
+\question
+
+Afin de travailler dans l'environnement Linux installé, nous allons faire un \textit{chroot} vers
+le dossier \textit{/mnt/gentoo}. Suivez la documentation (6a).
+
+\question
+
+Configuez votre environnement : clavier, localisation utilisant fr\_FR.UTF-8, nom d'hôte,
+heure locale, activation du client dhcp (on utilisera dhcpcd), montage des partitions.
+
+\question
+
+Installez la commande \textit{htop} avec le gestionnaire de paquet (\textit{emerge}) pour 
+surveiller l'utilisation des ressources pendant la compilation du noyau.
+
+\newpage
+\section* {Noyau et amorce}
+
+\question
+
+Gentoo est une distribution source vous devez donc recompiler votre propre noyau.
+Si vous avez peu de RAM, téléchargez les sources du noyau sur le site officiel de Linux
+(www.kernel.org) au format tar.gz. Ceux qui ont assez de RAM peuvent laisser 
+\textit{emerge} installer les sources au format tar.xz comme décrit dans la documentation.
+
+\question
+
+Trouvez les commandes permettant de lister le matériel présent afin de savoir comment configurer
+votre noyau, notamment les périphériques PCI, chipset et carte graphique.
+
+\question
+
+La configuration par défaut contient déjà tout le nécessaire pour une machine virtuelle. 
+Vous devez simplement activer la compilation en statique des systèmes de fichiers que vous 
+utilisez et le support de DEVTMPFS (listing 2.3 de la documentation). Afin d'accélérer la 
+compilation et jouer avec les sources, désactivez le support du debuggage du noyau (kacking), 
+le support de wifi et des Mac.
+
+\question
+
+Compilez puis installez le noyau et ses modes. Installez \textit{grub} puis générez son fichier de 
+configuration (/boot/grub/grub.cfg) avec la commande introduite par grub2. Regardez le contenu
+du fichier.
+
+\question
+
+Configurez le mot de passe root et installez \textit{syslog-ng} et \textit{logrotate} pour gérer 
+les logs.
+
+\question
+
+Sortez du chroot, démontez les partitions et redémarrez sur votre installation.
+
+\section* {Utilisateurs}
+
+\question
+
+Créez un utilisateur à votre nom, assurez-vous qu'il puisse effectuer des commandes d'administration
+avec \textit{su}. Installez et configurez la commande \textit{sudo}.
+
+\question
+
+Activez les quotas pour votre utilisateur, limitez-le à 200 Mo et faites un test en tentant de créer
+un fichier plus gros pour obtenir l'erreur.
+
+% \question
+% 
+% Modifiez la configuration de votre machine virtuelle pour pouvoir
+% vous y connecter en ssh (redirection de port sur l'interface réseau). On utilisera le port local 
+% 2222 sur l'hôte. Redémarrez la VM. Activez le service SSH au démarrage, démarrez-le manuellement et
+% testez la connexion.
+
+\section* {Paquets manuels}
+
+Il peut parfois être nécessaire d'installer des programmes sur une station alors que l'on n’est pas
+administrateur. On procède alors généralement en recompilant manuellement le programme depuis ses
+sources et en l'installant dans un dossier de son home.
+
+\question
+
+Téléchargez les sources de hwloc (http://www.open-mpi.org/projects/hwloc/) et installez-les
+dans /home/\${USE}R/usr.
+
+\question
+
+Configuez les variables d'environnements pour pouvoir utiliser \textit{hwloc-ls} comme tout autre commande
+sans devoir utiliser son chemin complet.
+
+\end {document}

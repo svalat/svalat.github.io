@@ -1,0 +1,285 @@
+%
+% Deuxième année ISTY - Module Administration Système
+%
+% Textes de T.D.
+%
+% Historique
+%   1999/07/07 : pda/dntt : création
+%
+
+\documentclass [a4paper,twocolumn,landscape] {report}
+
+	\usepackage[utf8]{inputenc}
+    \usepackage {verbatim}	% pour la macro "listing"
+    \usepackage [9pt,a4,times] {my2e}
+    \usepackage[margin=2cm,landscape,twocolumn]{geometry}
+
+    \setlength {\parskip} {1mm}
+
+    \pagestyle {myheadings}
+
+    \newcommand {\utilitaire} [1] {\texttt {#1}}
+    \newcommand {\fichier} [1] {\texttt {#1}}
+
+    \newcommand {\marquerchapitre} [1]
+    {
+        \addcontentsline {toc} {chapter} {#1}
+        \markboth {#1} {#1}
+    }
+    
+    \newcommand {\chapitresanstitre} [1]
+    {
+        \cleardoublepage
+	\marquerchapitre {#1}
+    }
+
+    \newcommand {\titrechapitre} [1]
+    {
+	\begin {center}
+	    \Large \bf #1
+	\end {center}
+	\bigskip
+	\bigskip
+    }
+
+    \newcommand {\chapitre} [1]
+    {
+        \chapitresanstitre {#1}
+        \titrechapitre {#1}
+    }
+
+    \newcounter {td}
+    \newcounter {question} [td]
+    \renewcommand {\thequestion} {\arabic{td}.\arabic {question}}
+
+    \newcommand {\td} [2]
+    {
+        \cleardoublepage
+        %\refstepcounter {td}
+        \setcounter {td}{#1}
+	\marquerchapitre {TP \thetd\ - 2013/2014 - #2}
+	\titrechapitre {TP \thetd\ - #2}
+    }
+
+    \newcommand {\but}
+    {
+        \bigskip
+        {\Large\bf But}
+        \bigskip
+    }
+
+    \newcommand {\question}
+    {
+        \refstepcounter {question}
+        \bigskip
+%         \vspace {2mm}
+        {\Large\bf Exercice \thequestion} % {\Large\bf Question \thequestion}
+        \nopagebreak
+        % \bigskip
+        \vspace {2mm}
+        \nopagebreak
+    }
+
+    \newcommand {\examen} [2]
+    {
+	\chapitresanstitre {Examen : #2}
+	\input {#1}
+    }
+
+    \newcounter {tp}
+    \newcounter {exercice} [tp]
+    \renewcommand {\theexercice} {\arabic{tp}.\arabic {exercice}}
+
+%     \renewcommand {\fig} [2]
+%     {
+%         \vspace {2mm}
+%         \begin {center}
+%         \input {#1}
+%         \end {center}
+%         \vspace {2mm}
+%     }
+
+    \newcommand {\listing} [1]
+    {
+	{\small\verbatiminput {#1}}
+    }
+
+% \renewcommand {\figps} [2] {
+%     \begin {center}
+%         \epsfig {figure=#1.ps, width=#2}
+%     \end {center}
+% }
+
+
+\begin {document}
+
+\td {4}{Services SSH / Apache / MySQL / NFS / Tomcat}
+
+Pour ce TP, on considère la mise en place d'un serveur hébergeant les services utiles à notre entreprise 
+\textit{istycorp.fr}. Pour cela nous allons considérer la mise en place de :
+\begin{itemize}
+  \item ssh pour faciliter la gestion distante du serveur.
+  \item Les services habituels Apache / PHP / MySql pour fournir l'hébergement d'un Wordpress.
+  \item Un serveur NFS pour partager les dossiers home en réseaux.
+  \item Un serveur tomcat pour héberger Jenkins.
+\end{itemize}  
+
+\section* {Intégration dans l'infrastructure}
+
+Nous repartirons du réseau mis en place lors du TP 3 à savoir un routeur et un client. Nous ajouterons donc une machine
+\textit{server.istycorp.fr}. De même, cette dernière sera connectée à internet au travers du routeur.
+
+Dans la suite nous allons mettre en place divers services qui devront être exposés à l'extérieur par le routeur. Si rien n'est fait, les connexions
+entrantes arriveront sur le routeur et ne trouveront aucune réponse à leur requête. Nous devons donc faire une redirection de port
+sur ce dernier pour renvoyer les paquets entrant vers le serveur approprié en fonction du port cible.
+
+Pour les services à mettre en place dans la suite vous devrez ajouter des règles au fichier \textit{/etc/iptables/rules.v4} du routeur dans la partie NAT:
+
+\begin{verbatim}
+-I PREROUTING -p tcp --dport {DEST_PORT} -i ${WAN} -j DNAT \
+	--to {REDIRECT_TO_IP}:{REDIRECT_TO_PORT}
+\end{verbatim}
+
+Nous sommes dans des machines virtuelles, les ports doivent donc également être exposés à votre machine locale
+en reconfigurant les cartes réseau de VirtualBox sur le routeur.
+
+\section* {Service SSH}
+
+\question
+
+Installez le serveur SSH (\textit{openssh-server} sous Debian) sur le serveur et vérifiez son fonctionnement. Pensez à
+activer le routage du port 22 (iptables du routeur et VirtualBox).
+
+\question
+
+Mettez en place vos clés SSH pour vous connecter avec ces dernières plutôt qu'avec un mot de passe pour 
+le compte 'isty'. Pour ce faire, il faut copier votre clé publique dans le fichier \textit{.ssh/authorized\_keys}.
+Sous Linux cette tâche peut être automatisée avec la commande :
+\begin{verbatim}
+ssh-copy-id {user}@{hostname}
+\end{verbatim}
+
+\question
+
+Afin de sécuriser l'accès à notre serveur nous n'autoriserons que l'accès par clé SSH et interdirons les
+connexions directes au compte root. Modifiez la configuration du serveur en conséquence (\textit{/etc/ssh/sshd\_config}).
+
+\question
+
+Mettez en place l'outil \textit{fail2ban} afin de bloquer les tentatives d'intrusions par forte brute sur le ssh.
+Vérifiez que vous vous faites bien bannir en échouant plusieurs fois à vous connecter.
+
+\question
+
+Après vous êtes fait bannir, regardez la sortie de la commande \textit{iptables-save} et expliquez.
+
+\question
+
+Observez vos traces dans les fichiers \textit{/var/log/auth.log} et \textit{/var/log/fail2ban.log}.
+
+\question
+
+Retrouvez votre accès en relançant le service après avoir supprimé les lignes dans \textit{auth.log}.
+
+\section*{Apache / PHP / Mysql / Wordpress}
+
+Nous allons considérer ici que notre entreprise a besoin du service WordPress pour diffuser des informations
+sur l'entreprise. Pour cela nous aurons besoin d'un serveur supportant PHP et d'une base de données MySQL.
+
+\question
+
+Installez Apache et PHP, vérifiez le fonctionnement. Comme pour SSH il faudra activer le transfert de port sur
+le routeur et dans VirtualBox.
+
+\question
+
+Installez votre serveur MySQL. Choisissez le mot de passe de son compte root comme demandé par le gestionnaire de paquet.
+
+\question
+
+Sur les distributions de type debian on aime en générale utiliser le script \textit{mysql\_secure\_installation} 
+pour désactiver le compte anonyme et limiter l'accès root à un usage local.
+
+\question
+
+Afin de nous faciliter la gestion de notre base de données, nous installerons l'application \textit{phpmyadmin}.
+
+\question
+
+Installez WordPress et vérifiez son fonctionnement.
+
+\question
+
+Validez le fonctionnement en activant SSL avec un certificat auto signé. Debian fournit déjà la configuration, vous
+n'avez plus qu'à l'activer avec :
+\begin{verbatim}
+a2ensite default-ssl
+a2enmod ssl
+\end{verbatim}
+
+\question
+
+Quelle remarque pouvez-vous faire à propos de la sécurité des certificats auto signés ?
+
+\section*{Serveur NFS}
+
+Nous décidons de partager les dossiers des utilisateurs sur le réseau interne à l'entreprise afin qu'ils puissent y accéder
+depuis n'importe quelle station de travail. 
+
+\question 
+
+Mettez en place et testez le sur une machine cliente.
+
+\question
+
+Discutez la sécurité des droits utilisateurs dans cette configuration, les restrictions d'accès 
+aux fichiers seront-elles nécessairement toujours vérifiées ?
+
+\section*{Jenkins}
+
+Les développeurs de notre entreprise ont besoin d'une plateforme d'intégration continue pour leur travail, nous leur proposons
+Jenkins. Ce service est implémenté en J2EE et nécessite donc la présence d'un serveur applicatif java tel que \textit{tomcat}.
+
+\question
+
+Installez tomcat et déployez y \textit{Jenkins}. Pour ce faire, installez l'archive \textit{war} sans l'extraire dans le dossier
+\textit{/var/lib/tomcat/webapps}.
+
+\question
+
+Avant de lancer tomcat, créez le dossier /var/jenkins, changez ses droits pour qu'ils appartiennent à l'utilisateur et au groupe tomcat7. Ajoutez la ligne suivante au fichier 
+
+\question
+
+On préfère habituellement ne pas exposer directement les serveurs applicatifs, on les cache donc derrière des serveurs frontaux de type apache, réputés plus robustes.
+Apache joue alors le rôle de \textit{reverse proxy}. Pour activer ce fonctionnement :
+\begin{enumerate}
+ \item Activer le connecteur AJP sur le port 8009 dans \textit{/var/lib/tomcat7/conf/server.xml}.
+ \item Activer le module \textit{proxy} et \textit{proxy\_ajp} d'apache avec la commande \textit{a2enmod}.
+ \item Créez un fichier de configuration \textit{proxy-jenkins.conf} dans \textit{/etc/apache/mods-available/} avec le contenu suivant :
+\begin{verbatim}
+<Proxy /jenkins>
+	ProxyPass ajp://localhost:8009/jenkins
+	ProxyPassReverse ajp://localhost:8009/jenkins
+</Proxy>
+\end{verbatim}
+	\item Créez le fichier \textit{proxy-jenkins.load} :
+\begin{verbatim}
+# Depends: proxy_ajp
+\end{verbatim}
+	\item Activez ce module avec a2enmod
+\end{enumerate}
+
+Relancez le serveur et vérifiez l'accès au travers d'apache.
+
+%http://www.jtips.info/index.php?title=Tomcat/Mod_proxy
+
+\section*{Bonus : webmail roundcube}
+
+Installez le webmail Roundcube pour accéder à votre mail étudiant.
+
+\section*{Bonus : redmine}
+
+Installez et configurez le service redmine.
+
+\end {document}

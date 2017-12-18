@@ -1,0 +1,264 @@
+%
+% Deuxième année ISTY - Module Administration Système
+%
+% Textes de T.D.
+%
+% Historique
+%   1999/07/07 : pda/dntt : création
+%
+
+\documentclass [a4paper,twocolumn,landscape] {report}
+
+	\usepackage[utf8]{inputenc}
+    \usepackage {verbatim}	% pour la macro "listing"
+    \usepackage [9pt,a4,times] {my2e}
+    \usepackage[margin=2cm,landscape,twocolumn]{geometry}
+    \usepackage{hyperref}
+
+    \setlength {\parskip} {1mm}
+
+    \pagestyle {myheadings}
+
+    \newcommand {\utilitaire} [1] {\texttt {#1}}
+    \newcommand {\fichier} [1] {\texttt {#1}}
+
+    \newcommand {\marquerchapitre} [1]
+    {
+        \addcontentsline {toc} {chapter} {#1}
+        \markboth {#1} {#1}
+    }
+    
+    \newcommand {\chapitresanstitre} [1]
+    {
+        \cleardoublepage
+	\marquerchapitre {#1}
+    }
+
+    \newcommand {\titrechapitre} [1]
+    {
+	\begin {center}
+	    \Large \bf #1
+	\end {center}
+	\bigskip
+	\bigskip
+    }
+
+    \newcommand {\chapitre} [1]
+    {
+        \chapitresanstitre {#1}
+        \titrechapitre {#1}
+    }
+
+    \newcounter {td}
+    \newcounter {question} [td]
+    \renewcommand {\thequestion} {\arabic{td}.\arabic {question}}
+
+    \newcommand {\td} [2]
+    {
+        \cleardoublepage
+        %\refstepcounter {td}
+        \setcounter {td}{#1}
+	\marquerchapitre {TP \thetd\ - 2013/2014 - #2}
+	\titrechapitre {TP \thetd\ - #2}
+    }
+
+    \newcommand {\but}
+    {
+        \bigskip
+        {\Large\bf But}
+        \bigskip
+    }
+
+    \newcommand {\question}
+    {
+        \refstepcounter {question}
+        \bigskip
+%         \vspace {2mm}
+        {\Large\bf Exercice \thequestion} % {\Large\bf Question \thequestion}
+        \nopagebreak
+        % \bigskip
+        \vspace {2mm}
+        \nopagebreak
+    }
+
+    \newcommand {\examen} [2]
+    {
+	\chapitresanstitre {Examen : #2}
+	\input {#1}
+    }
+
+    \newcounter {tp}
+    \newcounter {exercice} [tp]
+    \renewcommand {\theexercice} {\arabic{tp}.\arabic {exercice}}
+
+%     \renewcommand {\fig} [2]
+%     {
+%         \vspace {2mm}
+%         \begin {center}
+%         \input {#1}
+%         \end {center}
+%         \vspace {2mm}
+%     }
+
+    \newcommand {\listing} [1]
+    {
+	{\small\verbatiminput {#1}}
+    }
+
+% \renewcommand {\figps} [2] {
+%     \begin {center}
+%         \epsfig {figure=#1.ps, width=#2}
+%     \end {center}
+% }
+
+
+\begin {document}
+
+\td {6}{Sauvegarde et restauration}
+
+Pour ce TP on se propose de mettre en place le système de backup et de restauration de notre VM serveur.
+En l'état, le serveur d'istycorp héberge :
+\begin{itemize}
+  \item Une base de données mysql.
+  \item Les homes des utilisateurs.
+  \item Une base LDAP.
+  \item Un service web Wordpress.
+\end{itemize} 
+
+
+L'objectif est de mettre en place une solution de backup automatisée et régulière de l'ensemble des données de ces services.
+Vous devrez dans un second temps, restaurer ces données dans une machine virtuelle similaire disposant des services configurés
+sans leurs données.
+
+À l’issue de ce TP, il sera demandé de rendre la machine virtuelle restaurée ainsi qu'une copie de vos scripts crontab et script de backup. 
+Un rapport sera également attendu dans lequel vous devrez rappeler et expliquer la procédure de backup retenue (commandes et explications) 
+ainsi que les réponses aux questions "théoriques" posées par le sujet. Ce document sera à rendre avant jeudi 3 avril.
+
+
+\section* {Stratégie de sauvegarde}
+
+La mise en place de backup suggère un choix de stratégie visant à organiser les traitements à effectuer et décider
+de leur régularité. Ce choix doit se faire, en fonction : des volumes, du taux de changement des données manipulées 
+, du coût des supports de stockage et de l'impact éventuel sur l'activité des utilisateurs.
+
+\question
+
+Expliquez la notion de sauvegarde incrémentale.
+\textit{(rapport)}
+
+\question
+
+Décidez d'un planning de sauvegarde pour notre serveur en incluant au moins une sauvegarde incrémentale. 
+Justifiez vos choix horaires.
+
+\question
+
+Identifiez les contenus à sauvegarder, estimez grossièrement leurs volumes. Donnez sans entrer dans les détails des options,
+les méthodes de sauvegarde de ces dernières.
+
+\question
+
+Rappelez et discutez rapidement les avantages et inconvénients des différents supports de sauvegarde disponibles.
+\textit{(rapport)}
+
+\question
+
+À quoi doit-on faire attention sur la manière de stocker les supports de sauvegarde ? Citez au moins 4 points.
+\textit{(rapport)}
+
+\section* {Espace de stockage}
+
+Afin de nous faciliter la vie, nous allons effectuer les backups sur un second disque dur que vous ajouterez à votre machine
+virtuelle.
+
+\question
+
+Ajoutez un disque dur de taille suffisante à votre machine virtuelle.
+
+\question
+
+Formattez-le et montez le système de fichier au démarrage de la machine.
+
+\question
+
+Critiquez cette méthode de stockage.
+\textit{(rapport)}
+
+\section* {Sauvegarde}
+
+Mettez en place un script effectuant les backups, ce dernier devra être appelé selon votre planning par cron. 
+
+\question
+
+Décidez d'une organisation des fichiers de sauvegarde en fonction de votre planning et des rotations nécessaires.
+Il est conseillé ici de créer un dossier par (à vous de choisir sa nomenclature) sauvegarde et d'y placer les 
+fichiers/dossiers des différents contenus à sauver.
+
+\question
+
+Écrivez le code de backup des fichiers utilisateurs. Utilisez la méthode de votre choix (tar ou dump). Attention
+à préserver les propriétés (droits, dates...) des fichiers des utilisateurs.
+
+\question
+
+Sans le mettre en pratique ici, à quoi faudrait-il faire attention si l'on désire faire une seconde copie de ces 
+fichiers de backup sur un CD/DVD ?
+\textit{(rapport)}
+
+\question
+
+Écrivez le code de backup des bases de données MySQL.
+
+\question
+
+Dicutez le problème de cohérence des backups de base de donnée, quelles solutions existent ?
+\textit{(rapport)}
+
+\question
+
+Quel problème peut-on rencontrer si notre base de données MySQL occupe plusieurs Go ? Sans les mettre en pratique, proposez des solutions.
+\textit{(rapport)}
+
+\question
+
+Écrivez le code de backup de la base LDAP.
+
+\question
+
+À la fin des sauvegardes, générez un checksum (MD5 ou SHA) des fichiers de sauvegarde pour permettre de vérifier leurs intégrités
+en cas de nécessité.
+
+\question
+
+Configurez les règles cron pour appeler votre script selon votre planning. On pourra valider le fonctionnement de la chaine
+en mettant dans un premier temps des règles appelées toutes les 2-3 minutes.
+
+% \pagebreak 
+\section* {Restauration}
+
+\question
+
+Générez un premier backup selon votre stratégie :
+\begin{itemize}
+ \item Générez un backup entier 
+ \item Exécutez le script next\_day.sh disponible dans le dossier /root
+ \item Générez un backup incrémental avec votre script
+\end{itemize}
+
+\question
+
+Tranférez les dossiers de backups nécessaires dans la seconde VM et effectuez la restauration.
+
+\question
+
+L'utilisateur "raj" vous contacte par mail car il a supprimé par mégarde le dossier "htop-dev" sur lequel il travaillait le premier jour.
+Restaurez son dossier à partir des backups sans écraser les fichiers des autres utilisateurs.
+
+\section* {Bonus}
+
+\question
+
+Utilisez LVM pour assurer la cohérence de la sauvegarde des fichiers homes grâce à son support des snapshots.
+
+
+\end {document}

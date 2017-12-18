@@ -34,7 +34,21 @@
 			</div>
 		</div>
 		
-		<!--<div class="note">
+		<div class="note">
+			<h3>Table of content</h3>
+			<ol>
+				<li><a href='#numaprof'><b>NUMAPROF</b>: NUMA memory accesses profiler</li>
+				<li><a href='#daqpipe'><b>LHCb DAQPIPE</b>: future data acquisision software for LHCb</li>
+				<li><a href='#cmr'><b>CMR (Cartesian Mesh Runtime)</b>: A DSL based on latex for stencil simulations</li>
+				<li><a href='#malt'><b>MALT</b>: a Malloc Tracker</li>
+				<li><a href='#plpc'><b>Process Local Page Cache</b>: remove linux kernel page clearing from allocation path</li>
+				<li><a href='#mpcalloc'><b>MPC memory allocator</b>: a NUMA aware memory allocator</li>
+				<li><a href='#align'>Operating system, cache, memory allocator interactions</a></li>
+				<li><a href='#align'><b>Virtual Huge Pages</b>: A linux kernel module for huge pages</a></li>
+			</ol>
+		</div>
+		
+		<div class="note" id="numaprof">
 			<h3>NUMAPROF</h3>
 			<p class='meta'>2017</p>
 			<p>
@@ -56,9 +70,9 @@
 			<p>
 				We showed the capability to gain a factor 3 in performance on an OpenMP application (which was not known before) on KNL in 45 minutes of work with the tool.
 			</p>
-		</div>-->
+		</div>
 		
-		<div class="note">
+		<div class="note" id="daqpipe">
 			<h3>LHCb DAQPIPE</h3>
 			<p class='meta'>2015 - now</p>
 			<p>
@@ -69,7 +83,7 @@
 			
 			<p>For my postdoc I joined the Online team of LHCb to work in collaboration with Intel on benchmarks to evaluate the feasibility of the approach by using high-speed fabrics coming from the HPC field : Mellanox InfiniBand and Intel Omni-Path. In order to make this evaluation we built DAQPIPE which runs the event building scenario and to be tested at scale.</p>
 			
-			<p>The final system will consist of 500 readout nodes using a home-made acquisition card running at up to 100 Gb/s. We then send the data to 500 event building node to aggregate the fragments coming from the 500 readout nodes. In order to reduce costs, we run the readout and event building on the same group of hosts, meaning that each node will need to send and receive at full speed (estimate 80 Gb/s with margins).</p>
+			<p>The final system will consist of 500 readout nodes using a homemade acquisition card running at up to 100 Gb/s. We then send the data to 500 event building node to aggregate the fragments coming from the 500 readout nodes. In order to reduce costs, we run the readout and event building on the same group of hosts, meaning that each node will need to send and receive at full speed (estimate 80 Gb/s with margins).</p>
 			
 			<center><img width="50%" src="images/daqpipe.png"/></center>
 			
@@ -83,18 +97,18 @@
 			Links:
 			<ul>
 				<li>Repository on <a href='https://gitlab.cern.ch/svalat/lhcb-daqpipe-v2' target="_blank">CERN gitlab</a></li>
-				<li>Repository on <a href='https://gitlab.cern.ch/svalat/lhcb-daqpipe-v2/wikis/home' target="_blank">CERN gitlab Wiki</a></li>
+				<li>Documentation on <a href='https://gitlab.cern.ch/svalat/lhcb-daqpipe-v2/wikis/home' target="_blank">CERN gitlab Wiki</a></li>
 			</ul>
 			</p>
 		</div>
 		
-		<!--<div class="note">
+		<div class="note" id="cmr">
 			<h3>Cartesian Mesh Runtime</h3>
 			<p class='meta'>2013-2014</p>
 			<p>
-			This project started as a simple numerical simulation developed for a lab for students. I wanted to implement the Lattice Boltzmann Method to simulate the Karman street vortices. But, to make this implementation I was forced to cross 2 report, 1 these and 2 existing implementation in mathlab and C. The main issues come from the two points :
+			This project started as a simple numerical simulation developed for a lab for students. I wanted to implement the Lattice Boltzmann Method to simulate the Karman street vortices. But, to make this implementation I was forced to cross 2 report, 1 these and 2 existing implementation in matlab and C. The main issues come from the two points :
 			<ul>
-				<li>The reports and theses provide details on how to obtain the equations of the model. But, they never say clearly what is the final equation to put in the code with all the constants. This is why it is required to cross many documents to get it.</li>
+				<li>Reports and PhD. theses provide details on how to obtain the equations of the model. But, they never say clearly what is the final equation to put in the code with all the constants. This is why it is required to cross many documents to get it.</li>
 				<li>The source code from physicists are most of the time unreadable because they use variables like 'a', 'b', 'cc' which are meaningless and most of the time provides no documentation or comments of their code.</li>
 			</ul>
 			</p>
@@ -107,7 +121,7 @@
 			
 			<p>The idea is to generate two things from the DSL. First we generate the source code to run in parallel on a supercomputer and to explore memory layouts. Second we generate a nice report clearly describing the equations of each step and the constants. The main idea is once we know the good performance choice by testing them we can take a computer scientist to make a more efficient implementation, the DSL serving as a bridge to communicate between the two specialists.</p>
 			
-			<p>Of course it is a DSL so it target only stencil base simulations. The current implementation successfully generates the code for the LBM simulation on OpenMP and get the same performance as the manual C implementation (even better due to a choice which was not explored in the C implementation).</p>
+			<p>Of course it is a DSL so it targets only stencil base simulations. The current implementation successfully generates the code for the LBM simulation on OpenMP and get the same performance as the manual C implementation (even better due to a choice which was not explored in the C implementation).</p>
 			
 			<p>Links:
 			<ul>
@@ -115,17 +129,17 @@
 				<li>InHP@CT <a href='http://localhost:8000/docs/2015-04-cmr.pdf' target="_blank">talk</a></li>
 			</ul>
 			</p>
-		</div>-->
+		</div>
 		
-		<div class="note">
+		<div class="note" id="malt">
 			<h3>MALT, MALloc Tracker</h3>
 			<p class='meta'>2014</p>
 			<p>
 			In 2014 I stared a postdoc at the Exascale Computing Research Lab at Versailles. The purpose of this post-doc was to implement a memory profiler targeting the three main questions:
 			<ul>
-				<li>My application consume too much memory, where it is allocated ?</li>
+				<li>My application consumes too much memory, where it is allocated ?</li>
 				<li>My application is slow down by memory management where are the issues (short life allocations, reallocation pattern...)</li>
-				<li>I have bad allocation patterns, where are they ? (too small allocations, mix of short and long life blocks...)</li>
+				<li>I have bad allocation patterns, where are they ? (Too small allocations, mix of short and long life blocks...)</li>
 			</ul>
 			</p>
 			
@@ -145,7 +159,7 @@
 			</p>
 		</div>
 		
-		<div class="note">
+		<div class="note" id="plpc">
 			<h3>Process Local Page Cache</h3>
 			<p class='meta'>2011-2013</p>
 				<p>
@@ -157,20 +171,21 @@
 				
 				<center><img width="80%" src="images/zero-page-thp.png"/></center>
 				
-				<p>Thanks to this new approach we were able to see a speed up of a factor 60 on huge pages.
+				<p>Thanks to this new approach we were able to see a speed up by a factor 60 on huge pages.
 				On a small NUMA system it shows the same performance as the best tuning with our memory allocator but by not keeping the memory in users space anymore.</p>
 				
 				<p>Links :
 				<ul>
-					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD (french).</a> </li>
-					<li>My <a href='docs/2014-07-phd-defense.pdf' taget="_blank">PhD. defense (english)</a> </li>
+					<li><a href='https://github.com/svalat/linux-PLPC' target='_blank'>Github</a> (partial patch, but contain the semantic)</li>
+					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD (French).</a> </li>
+					<li>My <a href='docs/2014-07-phd-defense.pdf' taget="_blank">PhD. defense (English)</a> </li>
 					<li><a href='https://doi.org/10.1145/2492408.2492414' target='_blank'>Paper presented at MSPC'13</a></li>
 					<li><a href='slides-mspc-2013-valat.pdf' target='_blank'>Slides presented at MSPC'13</a></li>
 				</ul></p>
 			</p>
 		</div>
 		
-		<div class="note">
+		<div class="note" id="mpcalloc">
 			<h3>MPC memory allocator</h3>
 			<p class='meta'>2011-2013</p>
 			<p>
@@ -178,7 +193,7 @@
 				
 				<p>This allocator addressed two issues. First we noticed that some big numerical simulations written in C++ were largely (around 50% of the total runtime) impacted by the cost of the first touch page faults. This is even more true when using jemalloc (the allocator from FreeBSD) which tend to aggressively return the memory to the operating system to keep low memory consumption. In order to avoid this cost, I implemented a cache inside the memory allocator for large memory segments in addition to what is currently done for small segments in common allocators. This was a little bit like what append in tcmalloc, the allocator from google.</p>
 				
-				<p>Caching the memory inside the allocator mean that it becomes responsible of the NUMA mapping of the memory. There is not such support on TCMalloc.</p>
+				<p>Caching the memory inside the allocator means that it becomes responsible of the NUMA mapping of the memory. There is not such support on TCMalloc.</p>
 				
 				<p>I also made the implementation such that there is a minimal lock with minimal contention to make the allocator mostly lock free.</p>
 				
@@ -192,14 +207,14 @@
 				
 				<p>Links :
 				<ul>
-					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD (french).</a> </li>
-					<li>My <a href='docs/2014-07-phd-defense.pdf' taget="_blank">PhD. defense (english)</a> </li>
-					<li>Code embeded into <a href='http://mpc.hpcframework.paratools.com/' taget="_blank">MPC</a> </li>
+					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD (French).</a> </li>
+					<li>My <a href='docs/2014-07-phd-defense.pdf' taget="_blank">PhD. defense (English)</a> </li>
+					<li>Code embedded into <a href='http://mpc.hpcframework.paratools.com/' taget="_blank">MPC</a> </li>
 				</ul></p> 
 			</p>
 		</div>
 		
-		<div class="note">
+		<div class="note" id="align">
 			<h3>Operating system, cache, memory allocator interactions</h3>
 			<p class='meta'>2011-2013</p>
 			<p>During my master internship we observed some strange behavior while playing with a combination of operating systems and memory allocators. We mostly observed that one of our numerical simulation was running 3 times slower on FreeBSD than on Linux which was the opposite than what we expected due to the support of huge pages. The performance on FreeBSD can be improved by using another memory allocator which means there is an unknown interaction between the OS, the memory allocator and the caches for this application.
@@ -207,9 +222,9 @@
 			
 			<p><center><img width="55%" src="images/align-mhd.png"></center></p>
 			
-			<p>I started my PhD. by studying this behavior mostly by looking at the interaction of all 4 components. We showed that the issue comes from too large alignment of the allocated memory by the FreeBSD memory allocator which badly interfere with the huge pages on the CPU caches if the application uses too many arrays in for loop (more than 8 which is the cache associativity). We showed that on huge pages, the memory allocator needs to not aligned the allocated segments not to fall in this unfavorable issue.</p>
+			<p>I started my PhD. by studying this behavior mostly by looking at the interaction of all 4 components. We showed that the issue comes from too large alignment of the allocated memory by the FreeBSD memory allocator which badly interfere with the huge pages on the CPU caches if the application uses too many arrays in for loops (more than 8 which is the cache associativity). We showed that on huge pages, the memory allocator needs to not aligned the allocated segments not to fall in this unfavorable issue.</p>
 			
-			<p>On FreeBSD this was forced by Jemalloc. On OpenSolaris we can observe a similar issue with the page coloring but this time because the OS align all the big requests into the mmap syscall. We built from this some recommendation on the way to implement page coloring to avoid this issue. Luckily Linux does not apply any of those policies so not falling in the trap. Anyway we have to keep track of this issue in case Linux wants to apply the same policy on its transport huge pages. We also showed we can use any number of arrays in for loop if we not aligned the segment showing that enforcing huge alignments is a wrong policy.</p>
+			<p>On FreeBSD this was forced by Jemalloc. On OpenSolaris we can observe a similar issue with the page coloring but this time because the OS align all the big requests into the mmap syscall. We built from this some recommendation on the way to implement page coloring to avoid this issue. Luckily Linux does not apply any of those policies so not falling in the trap. Anyway we have to keep track of this issue in case Linux wants to apply the same policy on its transport huge pages. We also showed we can use any number of arrays in for loops if we not aligned the segment showing that enforcing huge alignments is a wrong policy.</p>
 			
 			<p><center><img width="55%" src="images/align-segs.png"></center></p>
 			
@@ -219,13 +234,14 @@
 			
 			<p>Links :
 				<ul>
-					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD (french).</a> </li>
-					<li>My <a href='docs/valat-unpublished-paper-2012.pdf' taget="_blank">Unpublished paper (english)</a> </li>
+					<li>My <a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf' taget="_blank">PhD (French).</a> </li>
+					<li>My <a href='docs/2014-07-phd-defense.pdf' taget="_blank">PhD. defense (English)</a> </li>
+					<li>My <a href='docs/valat-unpublished-paper-2012.pdf' taget="_blank">Unpublished paper (English)</a> </li>
 				</ul>
 			</p>
 		</div>
 		
-		<div class="note">
+		<div class="note" id="vhp">
 			<h3>Virtual Huge Pages</h3>
 			<p class='meta'>2010</p>
 			<p>This project was done during my master internship at CEA. The goal was to implement support of huge pages into a kernel module. At that time the transparent huge pages were not public and usage of huge pages was painful in the available Linux kernel versions.
@@ -240,7 +256,7 @@
 			
 			<p>Links :
 				<ul>
-					<li>My <a href='docs/2009-09-rapport_VHP.pdf' taget="_blank">Master thesis (french).</a> </li>
+					<li>My <a href='docs/2009-09-rapport_VHP.pdf' taget="_blank">Master thesis (French).</a> </li>
 				</ul>
 			</p>
 		</div>

@@ -643,7 +643,7 @@
 			"end_date":{ "year": "2014", "month": 11},
 			"text": {
 				"headline":"MALT: A Malloc Tracker",
-				"text":"<p>For my first postdoc I developed a memory profiling tool showing where the code allocate the memory and how. It provides source annotation as well as time charts.<p>"
+				"text":"<p>For my first postdoc I developed a memory profiling tool showing where the code allocate the memory and how. It provides source annotation as well as time charts.<p>The project is hosted on <a href='https://memtt.github.io/' target='_blank'>Github</a></p><p>"
 			},
 			"media": {
 				"url":"timeline/images/malt.png",
@@ -654,7 +654,7 @@
 			"end_date":{ "year": "2018", "month": 7},
 			"text": {
 				"headline":"DAQPIPE",
-				"text":"<p>As a postdoc at CERN for the LHCb experiment I developed a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 nodes for the core part and send data to 4000 filter nodes.<p>"
+				"text":"<p>As a postdoc at CERN for the LHCb experiment I developed a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 nodes for the core part and send data to 4000 filter nodes.<p>The project is hosted on <a href='https://gitlab.cern.ch/lhcb-daqpipe/lhcb-daqpipe-v2/' target='_blank'>CERN Gitlab</a></p><p>"
 			},
 			"media": {
 				"url":"timeline/images/daqpipe.png",
@@ -674,7 +674,7 @@
 			"start_date":{ "year": "2017", "month": 7},
 			"text": {
 				"headline":"numaprof",
-				"text":"<p>Developed on my free time during my postdoc at CERN, it provides the same approach as MALT with source annotation but to provide information on NUMA memory accesses. It instrument the binary by using pintool.<p>"
+				"text":"<p>Developed on my free time during my postdoc at CERN, it provides the same approach as MALT with source annotation but to provide information on NUMA memory accesses. It instrument the binary by using pintool.<p><p>The project is hosted on <a href='https://memtt.github.io/' target='_blank'>Github</a></p>"
 			},
 			"media": {
 				"url":"timeline/images/numaprof.png",

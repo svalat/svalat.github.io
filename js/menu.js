@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//define
 	var menuEntries = [
 		{title: 'Home', url: 'index.html'},
-		{title: 'Publications', url: 'publications.html'},
+		{title: 'Research', url: 'research.html'},
 		{title: 'Projects',url: 'projects.html'},
 		{title: 'Teaching',url: 'teaching.html'},
 		{title: 'Timeline',url: 'timeline.html'},

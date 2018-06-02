@@ -38,14 +38,14 @@
 		<div class="note">
 			<h3>Table of content</h3>
 			<ol>
-				<li><a href='#numaprof'><b>NUMAPROF</b>: NUMA memory accesses profiler</li>
-				<li><a href='#daqpipe'><b>LHCb DAQPIPE</b>: future data acquisision software for LHCb</li>
+				<li><a href='#numaprof'><b>NUMAPROF</b>: NUMA memory access profiler</li>
+				<li><a href='#daqpipe'><b>LHCb DAQPIPE</b>: future data acquisition software for LHCb</li>
 				<li><a href='#cmr'><b>CMR (Cartesian Mesh Runtime)</b>: A DSL based on latex for stencil simulations</li>
 				<li><a href='#malt'><b>MALT</b>: a Malloc Tracker</li>
-				<li><a href='#plpc'><b>Process Local Page Cache</b>: remove linux kernel page clearing from allocation path</li>
+				<li><a href='#plpc'><b>Process Local Page Cache</b>: remove Linux kernel page clearing from allocation path</li>
 				<li><a href='#mpcalloc'><b>MPC memory allocator</b>: a NUMA aware memory allocator</li>
 				<li><a href='#align'>Operating system, cache, memory allocator interactions</a></li>
-				<li><a href='#vhp'><b>Virtual Huge Pages</b>: A linux kernel module for huge pages</a></li>
+				<li><a href='#vhp'><b>Virtual Huge Pages</b>: A Linux kernel module for huge pages</a></li>
 			</ol>
 		</div>
 		
@@ -53,8 +53,8 @@
 			<h3>NUMAPROF</h3>
 			<p class='meta'>2017</p>
 			<p>
-				Mostly all current servers are NUMA (Non-Uniform Memory Access) architecture, meaning that each CPU has its own memory and access to a remote memory is slower. It is also now true inside the CPU itself for example when looking at the Intel KNL.
-				I showed during my PhD. that making the wrong choice at memory allocation can severely degrade the performance of an application. 
+				Mostly all current servers are NUMA (Non-Uniform Memory Access) architecture, meaning that each CPU has its own memory and access to a remote memory are slower. It is also now true inside the CPU itself for example when looking at the Intel KNL.
+				I showed during my PhD. that making the wrong choice on memory allocation can severely degrade the performance of an application. 
 			</p>
 			
 			<p>
@@ -88,7 +88,7 @@
 				In particle physics, all the current big detectors rely on hardware filters to reduce the amount of data to read in their data acquisition system. This leads to large physics uncertainties in the measurement and is hard to maintain as commonly based on FPGAs.
 			</p>
 			
-			<p>In 2020 the LHCb detector will be upgraded. For this upgrade, it has been decided to remove the hardware trigger and read in real time all the data produced by the detector. This lead to the requirement of transporting 40 Tb/s.</p>
+			<p>In 2020 the LHCb detector will be upgraded. For this upgrade, it has been decided to remove the hardware trigger and read in real time all the data produced by the detector. This leads to the requirement of transporting 40 Tb/s.</p>
 			
 			<p>For my postdoc I joined the Online team of LHCb to work in collaboration with Intel on benchmarks to evaluate the feasibility of the approach by using high-speed fabrics coming from the HPC field : Mellanox InfiniBand and Intel Omni-Path. In order to make this evaluation we built DAQPIPE which runs the event building scenario and to be tested at scale.</p>
 			
@@ -98,7 +98,7 @@
 			
 			<p>The communication pattern is from the MPI point of view a continuous all-to-all pattern. Hence we look on full fat trees. But notice that it is stressing for the hardware. One can find some theoretical papers on all-to-all communications on fat trees like the one from IBM: <a href='https://doi.org/10.1145/2464996.2465434'>Bandwidth-optimal all-to-all exchanges in fat tree networks</a>. Effectively we confirmed some of the remarks of this paper but encounter several practical issues while running on real systems.</p>
 			
-			<p>One of our major issue is related to the cabling and routing tables. On tested machines, some were prototypes so the cabling was not "clean", meaning there were some missing nodes in switches and nodes were not cleanly ordered. We showed it severely reduce our bandwidth. In addition, even on clean cluster we showed that the routing table can impact us if it does not provide a symmetrical pattern between all the leaf switches.</p>
+			<p>One of our major issue is related to the cabling and routing tables. On tested machines, some were prototypes so the cabling was not "clean", meaning there were some missing nodes in switches and nodes were not cleanly ordered. We showed it severely reduce our bandwidth. In addition, even on a clean cluster, we showed that the routing table can impact us if it does not provide a symmetrical pattern between all the leaf switches.</p>
 			
 			<p>Our current best result is 83 Gb/s on 64 nodes. We also made one test at scale on 512 nodes, but we discovered that the routing tables of this machine was not adequate for our test. The results obtained at this scale is 35 Gb/s so a factor 2.3 too low. This project is still ongoing and we hope progress on the routing tables issues.</p>
 			
@@ -128,13 +128,13 @@
 			
 			<img src='images/out-400.gif' width='100%'/>
 			
-			<p>A second issue relates to the choice of the memory layout which is a major criteria today. Most of the time we decide a layout while starting the project then all the code is glued to it. If we want to change the layout, we have to modify mostly all the code which is so painful that we cannot explore various solutions to find the best one.</p>
+			<p>A second issue relates to the choice of the memory layout which is a major criterion today. Most of the time we decide a layout while starting the project then all the code is glued to it. If we want to change the layout, we have to modify mostly all the codes which is so painful that we cannot explore various solutions to find the best one.</p>
 			
 			<p>In order to solve those issues, I proposed to provide a DSL. It permits to generate the code so we can select a memory layout by the configuration and test it. I also chose to base this DSL on latex. This way all the variables have two names, the latex name which is meaningful for the physicist and a computing name (long name) which is more meaningful for the computer scientist. Also remark that it is easier to check long equations with multiple levels in rendered latex than in C.</p>
 			
 			<center><img width="80%" src="images/cmr.png"/></center>
 			
-			<p>The idea is to generate two things from the DSL. First we generate the source code to run in parallel on a supercomputer and to explore memory layouts. Second we generate a nice report clearly describing the equations of each step and the constants. The main idea is once we know the good performance choice by testing them we can take a computer scientist to make a more efficient implementation, the DSL serving as a bridge to communicate between the two specialists.</p>
+			<p>The idea is to generate two things from the DSL. First we generate the source code to run in parallel with a supercomputer and to explore memory layouts. Second we generate a nice report clearly describing the equations of each step and the constants. The main idea is once we know the good performance choice by testing them we can take a computer scientist to make a more efficient implementation, the DSL serving as a bridge to communicate between the two specialists.</p>
 			
 			<p>Of course it is a DSL so it targets only stencil base simulations. The current implementation successfully generates the code for the LBM simulation on OpenMP and get the same performance as the manual C implementation (even better due to a choice which was not explored in the C implementation).</p>
 			
@@ -158,11 +158,11 @@
 			</ul>
 			</p>
 			
-			<p>The main idea guiding this tool was the couple valgrind (callgrind/cachegring) and the GUI kcachegrind. I wanted to get the same approach by providing annotation of call tree and source code with the memory metrics. MALT also provides a view of some metrics over time. Also MALT uses a special GUI based on web technology.</p>
+			<p>The main idea guiding this tool was the couple valgrind (callgrind/cachegring) and the GUI kcachegrind. I wanted to get the same approach by providing annotation of the call tree and source code with the memory metrics. MALT also provides a view of some metrics over time. Also MALT uses a special GUI based on web technology.</p>
 			
 			<center><img width="80%" src="images/malt.png"/></center>
 			
-			<p>During the development we were able to observe really interesting and unexpected pattern in the tested application showing that we can provide some interesting hints with this approach.</p>
+			<p>During the development we were able to observe really interesting and unexpected patterns in the tested application showing that we can provide some interesting hints with this approach.</p>
 			
 			<p>Links :
 				<ul>
@@ -208,9 +208,9 @@
 			<p>
 				<p>During my PhD. I worked into the MPC (Multi-Processor Computing) project at CEA. This project aimed at providing a thread base MPI implementation. In order to efficiently run on NUMA nodes, I implemented a parallel memory allocator to match the topology of the machine.</p>
 				
-				<p>This allocator addressed two issues. First we noticed that some big numerical simulations written in C++ were largely (around 50% of the total runtime) impacted by the cost of the first touch page faults. This is even more true when using jemalloc (the allocator from FreeBSD) which tend to aggressively return the memory to the operating system to keep low memory consumption. In order to avoid this cost, I implemented a cache inside the memory allocator for large memory segments in addition to what is currently done for small segments in common allocators. This was a little bit like what append in tcmalloc, the allocator from google.</p>
+				<p>This allocator addressed two issues. First we noticed that some big numerical simulations written in C++ were largely (around 50% of the total runtime) impacted by the cost of the first touch page faults. This is even more true when using jemalloc (the allocator from FreeBSD) which tend to aggressively return the memory to the operating system to keep low memory consumption. In order to avoid this cost, I implemented a cache inside the memory allocator for large memory segments in addition to what is currently done for small segments in common allocators. This was a little bit like what append in tcmalloc, the allocator from Google.</p>
 				
-				<p>Caching the memory inside the allocator means that it becomes responsible of the NUMA mapping of the memory. There is not such support on TCMalloc.</p>
+				<p>Caching the memory inside the allocator means that it becomes responsible of the NUMA mapping of memory. There is not such support on TCMalloc.</p>
 				
 				<p>I also made the implementation such that there is a minimal lock with minimal contention to make the allocator mostly lock free.</p>
 				
@@ -234,7 +234,7 @@
 		<div class="note" id="align">
 			<h3>Operating system, cache, memory allocator interactions</h3>
 			<p class='meta'>2011-2013</p>
-			<p>During my master internship we observed some strange behavior while playing with a combination of operating systems and memory allocators. We mostly observed that one of our numerical simulation was running 3 times slower on FreeBSD than on Linux which was the opposite than what we expected due to the support of huge pages. The performance on FreeBSD can be improved by using another memory allocator which means there is an unknown interaction between the OS, the memory allocator and the caches for this application.
+			<p>During my master internship we observed some strange behavior while playing with a combination of operating systems and memory allocators. We mostly observed that one of our numerical simulations was running 3 times slower on FreeBSD than on Linux which was the opposite than what we expected due to the support of huge pages. The performance on FreeBSD can be improved by using another memory allocator which means there is an unknown interaction between the OS, the memory allocator and the caches for this application.
 			</p>
 			
 			<p><center><img width="55%" src="images/align-mhd.png"></center></p>
@@ -263,13 +263,13 @@
 			<p class='meta'>2010</p>
 			<p>This project was done during my master internship at CEA. The goal was to implement support of huge pages into a kernel module. At that time the transparent huge pages were not public and usage of huge pages was painful in the available Linux kernel versions.
 			</p>
-			<p>The main goal was to improve CPU cache usage. Effectively we can show that large caches start to leak when using 4K pages du to the cache associativity colliding with the random selection of the pages. This can be fixed by using huge pages like FreeBSD or making page coloring like OpenSolaris.</p>
+			<p>The main goal was to improve CPU cache usage. Effectively we can show that large caches start to leak when using 4K pages due to the cache associativity colliding with the random selection of the pages. This can be fixed by using huge pages like FreeBSD or making page coloring like OpenSolaris.</p>
 			
 			<p><center><img width="95%" src="timeline/images/vhp.png"></center></p>
 			
 			<p>It appeared we cannot implement strict huge pages into a kernel module so we implemented a contiguous page approach and page coloring. It hows that we can fix the cache issue by using pages of 256k instead of the problematic 2 MB size which is too big and add some issues in its management.</p>
 			
-			<p>As shown on the chart, we succeed in getting the performance on a micro-benchmark, but playing with memory allocators an operating systems showed some strange behavior. On FreeBSD (which use native huge pages) one of our numerical simulation was performing slower than on Linux (which does not have huge pages). This is a problem of memory alignments we started to understand during my PhD. following this internship.</p>
+			<p>As shown on the chart, we succeed in getting the performance on a micro-benchmark, but playing with memory allocators an operating system showed some strange behavior. On FreeBSD (which use native huge pages) one of our numerical simulations was performing slower than on Linux (which does not have huge pages). This is a problem of memory alignments we started to understand during my PhD. following this internship.</p>
 			
 			<p>Links :
 				<ul>

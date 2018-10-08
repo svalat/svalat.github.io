@@ -481,27 +481,6 @@ body {
 	color: #1A4A61;
 }
 
-/********************* SCREENS **************************/
-.screen {
-	width:100%;
-	background-color:#F0F8FC;
-	font-family: "Maven Pro", serif;
-	color:#1A4A61;
-	padding:7px;
-	padding-bottom:40px;
-	text-align:center;
-}
-
-.screen2 {
-	background-color:white;
-	width:100%;
-	font-family: "Maven Pro", serif;
-	color:#1A4A61;
-	padding:7px;
-	padding-bottom:40px;
-	text-align:center;
-}
-
 /********************* CONTRIB ****************************/
 .contrib-description {
 	width:860px;
@@ -510,83 +489,6 @@ body {
 	margin-bottom:60px;
 	font-size:18px;
 	text-align:justify;
-}
-
-/********************* SCRENSHOT SCREEN *********************/
-.screenshot-screen {
-	width:1000px;
-	height:750px;
-	margin:auto;
-	background-image:url("images/screenshot-logo.svg");
-	background-repeat:no-repeat;
-	background-size:1000px;
-	background-position: 50% 0%;
-	margin-top:-400px;
-}
-
-
-/****************** CAROUSEL ********************/
-.screen-carousel-container {
-	width:1000px;
-	height:505px;
-	margin:auto;
-}
-
-.screen-carousel-container  .carousel-control {
-	background-image:none;
-}
-
-.screen-carousel-container .item {
-	padding-left:90px;
-	padding-right:90px;
-	padding-bottom:60px;
-}
-
-.screen-carousel-div {
-	width:100%;
-	padding-top:37px;
-}
-
-.screen-carousel-div .carousel-inner .item, .screen-carousel-div .carousel-inner .item .content
-{
-	width:1000px;
-	height:505px;
-}
-
-.screen-carousel-div .carousel-inner .item, .screen-carousel-div .carousel-inner .item img {
-	height:503px;
-	overflow:hidden;
-/* 	background-color:blue; */
-}
-
-.screen-carousel-div .carousel-indicators {
-	bottom:-35px;
-}
-
-.screen-carousel-div .carousel-control .glyphicon-chevron-left, .carousel-control
-.icon-prev  {
-	left:30px;
-}
-
-.screen-carousel-div .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next  {
-	right:30px;
-}
-
-.screen-carousel-div .title {
-	text-align:center;
-	color:white;
-	vertical-align:middle;
-}
-
-.screen-carousel-div .title h1 {
-	margin-top:220px;
-	font-size: 80px;
-}
-
-.screen-carousel-div .carousel-caption {
-	color: black;
-	background-color:rgba(255,255,255,0.6);
-	box-shadow: 0px 0px 12px rgba(255,255,255,0.6);
 }
 
 .photo-circle {
@@ -616,3 +518,5 @@ body {
 .note p {
 	text-align:"justify"
 }
+
+

@@ -6,6 +6,7 @@ $(document).ready(function() {
 		{title: 'Projects',url: 'projects.html'},
 		{title: 'Teaching',url: 'teaching.html'},
 		{title: 'Timeline',url: 'timeline.html'},
+		{title: 'Others', url: 'others.html'},
 		//{title: 'CV', url: 'docs/2017-11-cv.pdf'},
 		//{title: 'Contribute', url: 'contrib.html'},
 	];

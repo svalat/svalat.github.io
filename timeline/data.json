@@ -33,12 +33,13 @@
 		},
 		{
 			"start_date": {"year": 2018, "month": 10},
+			"end_date": {"year": 2020, "month": 10},
 			"text": "R&D engineer"
 		}
 	],
 	"title": {
 		"text":{
-			"text":"This page try to summarize all the  projects I have worked on from my beginning in computer science. Of course the first projects are simplistic ... or stupid... But this timeline will show all the aspects I have touched during the last 25 year of computing."
+			"text":"This page try to summarize all the  projects I have worked on from my beginning in computer science. Of course the first projects are simplistic ... or stupid... But this timeline will show all the aspects I have touched during the last ~25 year of computing since I was 10 years old. Its going over Basic, VB, C, C++, asm, Go, Rust, Perl, Python, Java, Shell, JavaScript."
 		},
 		"media": {
 			"url":"timeline/images/notes.png",

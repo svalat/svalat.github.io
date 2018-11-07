@@ -680,6 +680,37 @@
 				"url":"timeline/images/numaprof.png",
 				"caption":""
 			}
+		},{
+			"start_date":{ "year": "2018", "month": 5},
+			"end_date":{ "year": "2018", "month": 6},
+			"text": {
+				"headline":"rust-puzzle-solver",
+				"text":"<p>This was a side project to learn rust. The idea is to solve jigsaw puzzles by taking picture and building rules to finish it quicly by parts. This was more a trial I didn't yet finished and didn't fully succeed to make working. But it was fun to learn rust !</p><p>The non finished project is hosted on <a href='https://github.com/svalat/rust-puzzle-solver' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/rust_puzzle_solver.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 6},
+			"text": {
+				"headline":"hpc_allocator_rust",
+				"text":"<p>Developed on my free time during my postdoc at CERN. The project is a reimplementation in Rust of the NUMA memory allocator I implemented during my PhD. at CEA. The idea is to evaluate rust for low level system programming and check performance compared to C implementation by knowing it produce safer and easier to manage code.<p><p>The project still in progress is hosted on <a href='https://github.com/svalat/hpc_allocator_rust' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/mpc_allocator_cpp.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 10},
+			"text": {
+				"headline":"ATOS Bull Smart Burst Buffer and IO-instrumentation",
+				"text":"<p>Moving to Bull Echirolles I joined a team developping a smart burst buffer and IO instrumentation tool for clusters. This is currently a commercial product you can look <a href='https://atos.net/en/products/high-performance-computing-hpc/extreme-data' target='_blank'>on the ATOS website</a>.</p>"
+			},
+			"media": {
+				"url":"https://atos.net/wp-content/uploads/2017/07/extreme-data-IOinst_538-303.png",
+				"caption":"@copyright Bull ATOS Data Managment Team (linked from ATOS website)"
+			}
 		}
 	]
 }

@@ -454,7 +454,7 @@ body {
 }
 
 /******************** NOTES *********************************/
-.note {
+div.note {
 	width:860px;
 	margin:auto;
 	border-radius: 4px;
@@ -464,18 +464,18 @@ body {
 	margin-bottom:30px;
 }
 
-.note h3 {
+div.note h3 {
 	color:#2A7AE2;
 	font-size:24px;
 }
 
-.note .meta {
+div.note .meta {
 	font-size: 14px;
 	color: #828282;
 	margin-bottom:30px;
 }
 
-.note {
+div.note {
 	font-family: "Maven Pro", serif;
 	font-weight: 400;
 	color: #1A4A61;

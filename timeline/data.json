@@ -701,7 +701,7 @@
 			"end_date":{ "year": "2018", "month": 1},
 			"text": {
 				"headline":"knock IPV6 support",
-				"text":"<p>This is rare but this time I made some patches for an existing project to add support of ipv6 to <a href='https://github.com/jvinet/knock'>knock/knockd</a> project. But the <a href='https://github.com/jvinet/knock/pull/53'>PULL request</a> is still not merged :(.</p>"
+				"text":"<p>This is rare except for small patches, but this time I made some patches for an existing project to add support of ipv6 to <a href='https://github.com/jvinet/knock'>knock/knockd</a> project. But the <a href='https://github.com/jvinet/knock/pull/53'>PULL request</a> is still not merged :(.</p>"
 			}
 		},{
 			"start_date":{ "year": "2018", "month": 6},

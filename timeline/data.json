@@ -224,7 +224,7 @@
 			"start_date":{"year": "2002","month":10,"day":1},
 			"text": {
 				"headline":"Cyrpt Einstein",
-				"text":"<p>A cryptographic software totally stupid I made for fun. This was my first real program in Visual Basic and my first work with installers on Windows.</p>"
+				"text":"<p>A cryptographic software totally stupid I made for fun. This was my first real program in Visual Basic and my first work with installers on Windows. Installing software should be simple but is a such complex task it always question myself, you will see in later projects it is a thing I came back on it a lot of times.</p>"
 			},
 			"media": {
 				"url":"timeline/images/cre2.jpg"
@@ -233,7 +233,7 @@
 			"start_date":{"year": "2002"},
 			"text": {
 				"headline":"simugene",
-				"text":"<p>A gene propagation in population simulator following the lectures in biology. It was written in Visual Basic.</p>"
+				"text":"<p>A gene propagation simulator in population following the lectures in biology. It was written in Visual Basic.</p>"
 			},
 			"media2": {
 				"url":"timeline/images/simugen.png",
@@ -243,7 +243,7 @@
 			"start_date":{"year":"2002", "month":8,"day":1},
 			"text": {
 				"headline":"Meta Edit",
-				"text":"<p>A GUI to handle meta-tag in web pages. It was implemented in Visual Basic.</p>"
+				"text":"<p>A GUI to handle meta-tag in web pages of my website. It was implemented in Visual Basic.</p>"
 			},
 			"media": {
 				"url":"timeline/images/meta02.jpg"
@@ -264,7 +264,7 @@
 			"start_date":{"year": "2003", "month": 8},
 			"text": {
 				"headline":"Nostalgy: Linux Mandrake",
-				"text":"<p>First step under Linux with a CD I bought in a magazine (internet was too slow to download with limited monthly data). 3 month of try before succeeding in making my modem working. Had to recompile the related kernel module.</p>"
+				"text":"<p>First step under Linux with a CD I bought in a magazine (internet was too slow to download with limited monthly data). 3 month of try before succeeding in making my win-modem working. Had to recompile the related kernel module.</p>"
 			},
 			"media": {
 				"url":"timeline/images/mandrake.png",
@@ -315,7 +315,7 @@
 			"start_date":{"year": "2004","month":5,"day":30},
 			"text": {
 				"headline":"svreg",
-				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totally successful.</p>"
+				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totally successful. Ok for basic regexp but not with capture of substring...</p>"
 			},
 			"media2": {
 				"url":"timeine/images/svreg.png",
@@ -326,7 +326,7 @@
 			"start_date":{"year": "2004", "month": 12, "day": 25},
 			"text": {
 				"headline":"Nostalgy: building my first PC, and Gentoo",
-				"text":"<p>Building my first PC with AMD64, Nvidia Gforce 6800 LE (unlocking the disabled pipeline to make it like a GT). Moving from Mandrake to Gentoo, only available distribution in 64 bit for free. Building my first Linux Kernel on the fresh new x86_64 platform !</p>"
+				"text":"<p>Building my first PC with AMD64, Nvidia Gforce 6800 LE (unlocking the disabled pipeline to make it like a GT). Moving from Mandrake to Gentoo, only available distribution in 64 bit for free at that time. Building my first Linux Kernel on the fresh new x86_64 platform !</p>"
 			},
 			"media": {
 				"url":"timeline/images/gentoolinux1.png",
@@ -379,7 +379,7 @@
 			"end_date":{"year": "2008", "month":6,"day": 31},
 			"text": {
 				"headline":"cnet-tools",
-				"text":"<p>Tools developed for the Cnet association at the University of Savoy. It contains: <ul><li>A website</li><li>A quota control system for cups</li><li>Network traffic tracking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
+				"text":"<p>Tools developed for the Cnet association at the University of Savoie. It contains: <ul><li>A website</li><li>A quota control system for cups (which was working with Windows/Linux/MacOSX opposed to many open-source solutions.</li><li>Network traffic tracking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
 			},
 			"media": {
 				"url":"timeline/images/cnet_quota.png",
@@ -391,7 +391,7 @@
 			"end_date":{"year": "2008","month": 6, "day": 31},
 			"text": {
 				"headline":"Cortex",
-				"text":"<p>Cluster based open MOSIX with four nodes built at Cnet association in 2007-2008. We also used Xen as hyperviser. It was financed by university.</p>"
+				"text":"<p>Cluster based open MOSIX with four nodes with four cores AMD CPU built at Cnet association in 2007-2008. We also used Xen as hyperviser. I needed to make my first Kernel mini patch to make it working. It was financed by university of Savoie.</p>"
 			},
 			"media": {
 				"url":"timeline/images/cortex.png",
@@ -421,7 +421,7 @@
 			"start_date":{"year":"2008","month":1,"day":30},
 			"text": {
 				"headline":"vzsimu6809",
-				"text":"<p>For one of our physics lab we had to program a microprocessor Motorola 6809 to control an oscilloscope. In order to prepare the session, we, with Julien Zoubian, implemented an emulator linked to a simulated oscilloscope. Hence we were able to prepare our code before the session. The extra goal we wanted (unachieved) was to print the face of the teacher on the oscilloscope. The emulator came with an assembler implemented in perl.</p>"
+				"text":"<p>For one of our physics lab we had to program a microprocessor Motorola 6809 to control an oscilloscope. In order to prepare the session, we, with Julien Zoubian, implemented an emulator linked to a simulated oscilloscope. Hence we were able to prepare our code before the session. The extra goal we wanted (unachieved) was to print the face of the teacher on the oscilloscope. The emulator came with an assembler implemented in perl to build a ROM we were able to load into the chip.</p>"
 			},
 			"media": {
 				"url":"timeline/images/6809.jpg",
@@ -432,7 +432,7 @@
 			"end_date":{"year":"2008", "month":12, "day":8},
 			"text": {
 				"headline":"crackmd5",
-				"text":"<p>Master project to implement rainbow tables to crackmd5. We used SSE in our C++ implementation to compute multiple sum in parallel. Made with Romain Bouleis.</p>"
+				"text":"<p>Master project to implement rainbow tables to crackmd5. My first fectorized code ! We reimplemented the MD5 function using SSE in our C++ implementation to compute multiple sum in parallel obtaining a large speedup. Made with Romain Bouleis.</p>"
 			},
 			"media": {
 				"url":"timeline/images/crackmd5.png",
@@ -443,7 +443,7 @@
 			"start_date":{"year":"2008","month":8,"day":30},
 			"text": {
 				"headline":"svMontage",
-				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magneto scope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be sent to mencoder. It supported HD video.</p>"
+				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magnetoscope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be sent to mencoder. It supported HD video. Was also my first real multi-threaded application.</p>"
 			},
 			"media": {
 				"url":"timeline/images/svmontage.png",
@@ -454,7 +454,7 @@
 			"end_date":{"year":"2009", "month":2,"day":1},
 			"text": {
 				"headline":"tprsa-m2stic",
-				"text":"<p>Master project at the University of Savoy to implement RSA protocol.Made with Romain Bouleis.</p>"
+				"text":"<p>Master project at the University of Savoie to implement RSA protocol.Made with Romain Bouleis.</p>"
 			},
 			"media2": {
 				"url":"timeline/images/rsa.png",
@@ -465,7 +465,7 @@
 			"start_date":{"year": "2009", "month": 12, "day" : 1},
 			"text": {
 				"headline":"Chat.Net",
-				"text":"<p>Master 2 project to implement a chat in C# .Net at the University of Savoy. Made with Romain Bouleis.</p>"
+				"text":"<p>Master 2 project to implement a chat in C# .Net at the University of Savoie. Made with Romain Bouleis.</p>"
 			},
 			"media": {
 				"url":"timeline/images/chat_dotnet.png",
@@ -477,7 +477,7 @@
 			"end_date":{"year": "2009","month": 1,"day": 19},
 			"text": {
 				"headline":"S&R Hotels",
-				"text":"<p>Master project from the University of Savoy. The goal was to manage room reservation in J2EE and hibernate. Was done with Romain Bouleis.</p>"
+				"text":"<p>Master project from the University of Savoie. The goal was to manage room reservation in J2EE and hibernate with multiple servers. Was done with Romain Bouleis.</p>"
 			},
 			"media": {
 				"url":"timeline/images/sr_hotel.png",
@@ -497,7 +497,7 @@
 			"start_date":{"year":"2009", "month": 3, "day":1},
 			"text": {
 				"headline":"VPN spoofing",
-				"text":"<p>For our cryptographic lecture we had to give a talk on security. With Romain Bouleis we chose to hack the VPN of the Wi-Fi connection of our university. It revealed a mistake in the server configuration permitting to fake the Wi-Fi spot and the VPN server. We were able to capture students login and password. The issue was present at three university using the same configuration : Chambery, Grenoble and Lyon.</p>"
+				"text":"<p>For our cryptographic lecture we had to give a talk on security. With Romain Bouleis we chose to hack the Cisco VPN of the Wi-Fi connection of our university. I was not happy with it because it was really badly working with Linux at that time and was pretty sure there might be a security issue in the way they explained the connection procdure for students.... It revealed a mistake in the server configuration permitting to fake the Wi-Fi spot and the VPN server. Coupled with a Wifi signal for disconnect/reconnect everyone on the spot, we were able to capture students login and password. The issue was present at three university using the same configuration : Chambery, Grenoble and Lyon.</p>"
 			},
 			"media": {
 				"url":"timeline/images/vpn_spoof.png",
@@ -590,7 +590,7 @@
 			"end_date":{"year": "2013","month":5,"day":9},
 			"text": {
 				"headline":"LBM",
-				"text":"<p>A numerical simulation in MPI + (OpenMP or CUDA) based on the Lattice Bolzmann Method (LBM) to solve the Karman street vortices. It was made for a lab courses in master at University of Versailles. The student had to optimize out suboptimal version.</p>"
+				"text":"<p>A numerical simulation in MPI + (OpenMP or CUDA) based on the Lattice Bolzmann Method (LBM) to solve the Karman street vortices. It was made for a lab courses in master at University of Versailles. The student had to optimize out suboptimal version.</p><p>The code and subject is on my <a href='teaching.html'>teaching page</a></p>"
 			},
 			"media": {
 				"url":"timeline/images/lbm.png",
@@ -695,6 +695,13 @@
 			"media": {
 				"url":"timeline/images/rust_puzzle_solver.png",
 				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 1},
+			"end_date":{ "year": "2018", "month": 1},
+			"text": {
+				"headline":"knock IPV6 support",
+				"text":"<p>This is rare but this time I made some patches for an existing project to add support of ipv6 to <a href='https://github.com/jvinet/knock'>knock/knockd</a> project. But the <a href='https://github.com/jvinet/knock/pull/53'>PULL request</a> is still not merged :(.</p>"
 			}
 		},{
 			"start_date":{ "year": "2018", "month": 6},

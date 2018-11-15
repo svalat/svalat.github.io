@@ -659,7 +659,7 @@
 			"end_date":{ "year": "2018", "month": 7},
 			"text": {
 				"headline":"DAQPIPE",
-				"text":"<p>As a postdoc at CERN for the LHCb experiment I developed a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 nodes for the core part and send data to 4000 filter nodes.<p>The project is hosted on <a href='https://gitlab.cern.ch/lhcb-daqpipe/lhcb-daqpipe-v2/' target='_blank'>CERN Gitlab</a></p><p>"
+				"text":"<p>As a postdoc at CERN for the LHCb experiment I developed a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 servers for the core part and send data to 4000 filter servers. If they keep my code for the production next year it will handle one of the largest data aquisition system in physics until some others will follow.</p><p>The project is hosted on <a href='https://gitlab.cern.ch/lhcb-daqpipe/lhcb-daqpipe-v2/' target='_blank'>CERN Gitlab</a></p>"
 			},
 			"media": {
 				"url":"timeline/images/daqpipe.png",

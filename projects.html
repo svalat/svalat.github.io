@@ -37,7 +37,8 @@
 		<div class="note">
 			<h3>Table of content</h3>
 			<ol>
-				<li><a href='#numaprof'><b>NUMAPROF</b>: NUMA memory access profiler</li>
+				<li><a href='#memtt'><b>MemTT</b>: memory profilers suite</li>
+				<li><a href='#numaprof'><b>NumaProf</b>: NUMA memory access profiler</li>
 				<li><a href='#daqpipe'><b>LHCb DAQPIPE</b>: future data acquisition software for LHCb</li>
 				<li><a href='#cmr'><b>CMR (Cartesian Mesh Runtime)</b>: A DSL based on latex for stencil simulations</li>
 				<li><a href='#malt'><b>MALT</b>: a Malloc Tracker</li>
@@ -46,10 +47,22 @@
 				<li><a href='#align'>Operating system, cache, memory allocator interactions</a></li>
 				<li><a href='#vhp'><b>Virtual Huge Pages</b>: A Linux kernel module for huge pages</a></li>
 			</ol>
+			<p>If you want full bibliography to learn by yourself on those topics you can jump to <a href='biblio.html'>this page</a>.</p>
+		</div>
+
+		<div class="note" id="memtt">
+			<h3>MemTT</h3>
+			<p class='meta'>2018</p>
+			<p align="justify">
+				I developped <a href='#malt'>MALT</a> and <a href='#numaprof'>NumaProf</a> during my both post-docs as research projects and decided
+				to make them nicely availble in the same github group with nice website to motivate peoples to use the tools and maybe (I hope)
+				contribute. I like to make beautifull things, this is my artistic part, hope you will enjoy.
+			</p>
+			<a href='https://memtt.github.io/'><img width='100%' src='images/memtt.jpg'></img></a>
 		</div>
 		
 		<div class="note" id="numaprof">
-			<h3>NUMAPROF</h3>
+			<h3>NumaProf</h3>
 			<p class='meta'>2017</p>
 			<p>
 				Mostly all current servers are NUMA (Non-Uniform Memory Access) architecture, meaning that each CPU has its own memory and access to a remote memory are slower. It is also now true inside the CPU itself for example when looking at the Intel KNL.
@@ -99,7 +112,11 @@
 			
 			<p>One of our major issue is related to the cabling and routing tables. On tested machines, some were prototypes so the cabling was not "clean", meaning there were some missing nodes in switches and nodes were not cleanly ordered. We showed it severely reduce our bandwidth. In addition, even on a clean cluster, we showed that the routing table can impact us if it does not provide a symmetrical pattern between all the leaf switches.</p>
 			
-			<p>Our current best result is 83 Gb/s on 64 nodes. We also made one test at scale on 512 nodes, but we discovered that the routing tables of this machine was not adequate for our test. The results obtained at this scale is 35 Gb/s so a factor 2.3 too low. This project is still ongoing and we hope progress on the routing tables issues.</p>
+v			<p>Our current best result is 83 Gb/s on 64 nodes. We also made one test at scale on 512 nodes, but we discovered that the routing tables of this machine was not adequate for our test. The results obtained at this scale is 35 Gb/s so a factor 2.3 too low. This project is still ongoing and we hope progress on the routing tables issues.</p>
+
+			<p>Last news before leaving CERN showed it should work by considering some sub-detectors will send less (~60 Gb/s) than some others (~90 Gbs/), top estimation with of course margins. In this case, the asycnhone
+			implementation I made automatically adapt and balance the bandwidth and permit to well handle on IB/EDR the sub-detected chalanging us with 90 Gb/s. This is opposed to some other tries
+			we made with synchrone implementation which fail to handle this case. I Still hope IB/HDR will be there before buying the servers and switches to have more margins to better sleep.</p>
 			
 			<p>
 			Links:

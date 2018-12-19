@@ -655,6 +655,17 @@
 				"caption":""
 			}
 		},{
+			"start_date":{ "year": "2014", "month": 1},
+			"end_date":{ "year": "2014", "month": 1},
+			"text": {
+				"headline":"Diving Computer Simulator",
+				"text":"<p>A diving computer simulator in web browser with decompression table computation from Haldane laws and 12 compartment constants.<p>"
+			},
+			"media": {
+				"url":"timeline/images/simu-ordi-plongee.png",
+				"caption":""
+			}
+		},{
 			"start_date":{ "year": "2015", "month": 7},
 			"end_date":{ "year": "2018", "month": 7},
 			"text": {

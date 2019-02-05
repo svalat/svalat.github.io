@@ -1,3 +1,29 @@
+@InProceedings{10.1007/978-3-030-10549-5_13,
+author="Valat, S{\'e}bastien and Bouizi, Othman",
+editor="Mencagli, Gabriele
+and B. Heras, Dora
+and Cardellini, Valeria
+and Casalicchio, Emiliano
+and Jeannot, Emmanuel
+and Wolf, Felix
+and Salis, Antonio
+and Schifanella, Claudio
+and Manumachu, Ravi Reddy
+and Ricci, Laura
+and Beccuti, Marco
+and Antonelli, Laura
+and Garcia Sanchez, Jos{\'e} Daniel
+and Scott, Stephen L.",
+title="NUMAPROF, A NUMA Memory Profiler",
+booktitle="Euro-Par 2018: Parallel Processing Workshops",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="159--170",
+abstract="The number of cores in HPC systems and servers increased a lot for the last few years. In order to also increase the available memory bandwidth and capacity, most systems became NUMA (Non-Uniform Memory Access) meaning each processor has its own memory and can share it. Although the access to the remote memory is transparent for the developer, it comes with a lower bandwidth and a higher latency. It might heavily impact the performance of the application if it happens too often. Handling this memory locality in multi-threaded applications is a challenging task. In order to help the developer, we developed NUMAPROF, a memory profiling tool pinpointing the local and remote memory accesses onto the source code with the same approach as MALT, a memory allocation profiling tool. The paper offers a full review of the capacity of NUMAPROF on mainstream HPC workloads. In addition to the dedicated interface, the tool also provides hints about unpinned memory accesses (unpinned thread or unpinned page) which can help the developer find portion of codes not safely handling the NUMA binding. The tool also provides dedicated metrics to track access to MCDRAM of the Intel Xeon Phi codenamed Knight's Landing. To operate, the tool instruments the application by using Pin, a parallel binary instrumentation framework from Intel. NUMAPROF also has the particularity of using the OS memory mapping without relying on hardware counters or OS simulation. It permits understanding what really happened on the system without requiring dedicated hardware support.",
+isbn="978-3-030-10549-5",
+doi="10.1007/978-3-030-10549-5_13"
+}
  
 @inproceedings{Valat:2017:MMT:3141865.3141867,
  author = {Valat, S{\'e}bastien and Charif-Rubial, Andres S. and Jalby, William},

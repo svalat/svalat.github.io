@@ -1,4 +1,3 @@
-
 {
 	"eras": [
 		{
@@ -50,7 +49,7 @@
 	"events": [
 		{
 			"start_date": {
-				"year":1985,
+				"year":1985
 			},
 			"text": {
 				"headline":"Bootsrap of my brain in real world",

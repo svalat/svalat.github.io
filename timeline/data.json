@@ -50,6 +50,15 @@
 	"events": [
 		{
 			"start_date": {
+				"year":1985,
+			},
+			"text": {
+				"headline":"Bootsrap of my brain in real world",
+				"text":"My birth year, first time my eyes looked outside and breathing."
+			}
+		},
+		{
+			"start_date": {
 				"year":1994,
 				"month": 12,
 				"day": 25
@@ -315,10 +324,21 @@
 			"start_date":{"year": "2004","month":5,"day":30},
 			"text": {
 				"headline":"svreg",
-				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totally successful. Ok for basic regexp but not with capture of substring...</p>"
+				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totally successful. Ok for basic regexp but not with capture of substring... I never succeded to handle something like ^b(a+)a{3}$..... ok that's a little bit a corner case.... but....</p>"
 			},
 			"media2": {
 				"url":"timeine/images/svreg.png",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2006"},
+			"text": {
+				"headline":"My first modeling with Blender & OpenGL game",
+				"text":"<p>That was while working on an OpenGL implementation of a Risk plate game with another friend we never really finished !</p>"
+			},
+			"media2": {
+				"url":"timeine/images/canon.png",
 				"caption":"TODO"
 			}
 		},
@@ -354,27 +374,32 @@
 				"url":"timeline/images/empdt-php.png"
 			}
 		},{
-			"start_date":{"year":"2005","month":8,"day":30},
+			"start_date":{"year":"2005","month":2,"day":30},
 			"text": {
-				"headline":"tutocpp",
-				"text":"<p>C++ tutorial for Cnet association. We started from list and image manipulation implementation. We then finished by the implementation of a widget management system in SDL and added console rendering in ASCII art. We provided the text box component.</p><p>The project is hosted on <a href='https://github.com/svalat/tutocpp' target='_blank'>Github</a></p>"
+				"headline":"First C++ course",
+				"text":"<p>Giving my first C++ in remove via skype + Gobby. We built string/list/image and then building a mutli-agent system simulating a kitchen garden with ants and salads growing.</p>"
 			},
 			"media": {
-				"url":"timeline/images/tutocpp.png",
+				"url":"timeline/images/potager0056.jpg",
 				"caption":""
 			}
 		},{
 			"start_date": {"year": "2006","month":1,"day":6},
 			"text": {
 				"headline":"gravit",
-				"text":"<p>A numerical simulation done for bachelor. It simulates the impact of an asteroid on a surface composed of solid particles.</p>"
+				"text":"<p>A numerical simulation done for bachelor. It simulates the impact of an asteroid on a surface composed of solid particles. We had a little bit of fun to make the front page of our report with a little bit of artistic image :D oops. This was the first time I was also thinking how to run my app distributed onto multiple workstation of the computer room of my university, but never really did it.</p>"
 			},
 			"media": {
 				"url":"timeline/images/gravit.png",
 				"caption":""
 			}
-		},
-		{
+		},{
+			"start_date": {"year": "2006"},
+			"text": {
+				"headline":"Mail Archiver",
+				"text":"<p>Implemented a MBox format parsor (took from Thunderbird) to extract all mails as .eml files. Wanted to go forward by dumping as html files in order to get a static dump of all mails for archive outside of any mail software to quick search and dig in. Still have in my head to redo this project one day as should be usefull to backup all mails without letting them on Google servers.</p>"
+			}
+		},{
 			"start_date":{"year": "2006", "month": 1, "day": 1},
 			"end_date":{"year": "2008", "month":6,"day": 31},
 			"text": {
@@ -391,7 +416,7 @@
 			"end_date":{"year": "2008","month": 6, "day": 31},
 			"text": {
 				"headline":"Cortex",
-				"text":"<p>Cluster based open MOSIX with four nodes with four cores AMD CPU built at Cnet association in 2007-2008. We also used Xen as hyperviser. I needed to make my first Kernel mini patch to make it working. It was financed by university of Savoie.</p>"
+				"text":"<p>Cluster based open MOSIX (also discussed and get test agreement to use MOSIX from the authors I contacted) with four nodes with four cores AMD CPU built at Cnet association in 2007-2008. We also used Xen as hyperviser. I needed to make my first Kernel mini patch to make it working. It was financed by university of Savoie.</p>"
 			},
 			"media": {
 				"url":"timeline/images/cortex.png",
@@ -421,7 +446,7 @@
 			"start_date":{"year":"2008","month":1,"day":30},
 			"text": {
 				"headline":"vzsimu6809",
-				"text":"<p>For one of our physics lab we had to program a microprocessor Motorola 6809 to control an oscilloscope. In order to prepare the session, we, with Julien Zoubian, implemented an emulator linked to a simulated oscilloscope. Hence we were able to prepare our code before the session. The extra goal we wanted (unachieved) was to print the face of the teacher on the oscilloscope. The emulator came with an assembler implemented in perl to build a ROM we were able to load into the chip.</p>"
+				"text":"<p>For one of our physics lab we had to program a microprocessor Motorola 6809 to control an oscilloscope. In order to prepare the session, we, with Julien Zoubian, implemented an emulator linked to a simulated oscilloscope. Hence we were able to prepare our code before the session. The extra goal we wanted (unachieved) was to print the face of the teacher on the oscilloscope. The second practical session was moved forward so we didn't had time to finish to tune the light loss timing emulation on the simulated screen after measurement during first session to realy work on the image rendering, damn. The emulator came with an assembler implemented in perl to build a ROM we were able to load into the chip. That was lot of fun to learn ASM. I also cheated to handle the overflow bits in add/mul by reusing the one from my X86 CPU instead of rebuilding myself the bit rules.</p>"
 			},
 			"media": {
 				"url":"timeline/images/6809.jpg",
@@ -443,7 +468,7 @@
 			"start_date":{"year":"2008","month":8,"day":30},
 			"text": {
 				"headline":"svMontage",
-				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magnetoscope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be sent to mencoder. It supported HD video. Was also my first real multi-threaded application.</p>"
+				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magnetoscope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be sent to mencoder. It supported HD video. Was also my first real multi-threaded application. I failed to fftw the analogic controled signed to parse it (at least to understand its structure). So we finally used a webcam to captuer the light (without diapositive) projected by plugging only one of the projects so we can detect left to right transition and recompute the signal. Log of fun in perspective to play with video decoding. We also made the stupid thing to scan the diapositve in really high definition (max of our scanner 9600dpi from my memory). Totaly useless for generating at best 4K video. That costed me performance issue to generate the video. So at the end (CPU where not so fast at that time: Core2Duo) I was generating the video on my workstation, sending via network pipes (nc) to my laptop and compressing to x264 on it. Life it so fun !</p>"
 			},
 			"media": {
 				"url":"timeline/images/svmontage.png",
@@ -473,11 +498,19 @@
 			}
 		},
 		{
+			"start_date":{"year": "2009", "month": 10, "day" : 1},
+			"end_date":{"year": "2010", "month": 5, "day" : 1},
+			"text": {
+				"headline":"Evalcomp",
+				"text":"<p>Master 2 project over 6 month at 5 students to make project management. Goal was to build in J2EE/GWT/Bonita a website to guide students up the the registration for our science UFS at university of savoie. I was assigned technical manager of the project.</p>"
+			}
+		},
+		{
 			"start_date":{"year":"2009","month":1,"day": 15},
 			"end_date":{"year": "2009","month": 1,"day": 19},
 			"text": {
 				"headline":"S&R Hotels",
-				"text":"<p>Master project from the University of Savoie. The goal was to manage room reservation in J2EE and hibernate with multiple servers. Was done with Romain Bouleis.</p>"
+				"text":"<p>Master project from the University of Savoie. The goal was to manage room reservation in J2EE and hibernate with multiple servers."
 			},
 			"media": {
 				"url":"timeline/images/sr_hotel.png",
@@ -487,7 +520,7 @@
 			"start_date":{"year":"2009", "month": 10, "day":1},
 			"text": {
 				"headline":"Tchoutchou modeling",
-				"text":"<p>Master exercises to model (all UMLs) a train simulator.</p>"
+				"text":"<p>Master exercises to model (all UMLs) a train simulator. Oopps that was not expected to go so far in the deseign but we handled all cases with switchpoints and signals.</p>"
 			},
 			"media": {
 				"url":"timeline/images/tchoutcou.png",
@@ -497,10 +530,20 @@
 			"start_date":{"year":"2009", "month": 3, "day":1},
 			"text": {
 				"headline":"VPN spoofing",
-				"text":"<p>For our cryptographic lecture we had to give a talk on security. With Romain Bouleis we chose to hack the Cisco VPN of the Wi-Fi connection of our university. I was not happy with it because it was really badly working with Linux at that time and was pretty sure there might be a security issue in the way they explained the connection procdure for students.... It revealed a mistake in the server configuration permitting to fake the Wi-Fi spot and the VPN server. Coupled with a Wifi signal for disconnect/reconnect everyone on the spot, we were able to capture students login and password. The issue was present at three university using the same configuration : Chambery, Grenoble and Lyon.</p>"
+				"text":"<p>For our cryptographic lecture we had to give a talk on security. With Romain Bouleis we chose to hack the Cisco VPN of the Wi-Fi connection of our university. I was not happy with it because it was really badly working with Linux at that time and was pretty sure there might be a security issue in the way they explained the connection procdure for students.... It revealed a mistake in the server configuration permitting to fake the Wi-Fi spot and the VPN server. Coupled with a Wifi signal for disconnect/reconnect everyone on the spot, we were able to capture students login and password. The issue was present at three university using the same configuration : Chambery, Grenoble and Lyon. Of course we notified the DSI providing configuration solutions before making the talk latter in the year for our course.</p>"
 			},
 			"media": {
 				"url":"timeline/images/vpn_spoof.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2009","month":5},
+			"text": {
+				"headline":"tutocpp",
+				"text":"<p>C++ tutorial for Cnet association. We started from list and image manipulation implementation. We then finished by the implementation of a widget management system in SDL and added console rendering in ASCII art. We provided the text box component.</p><p>The project is hosted on <a href='https://github.com/svalat/tutocpp' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/tutocpp.png",
 				"caption":""
 			}
 		},{
@@ -527,6 +570,17 @@
 				"caption":""
 			}
 		},{
+		{
+			"start_date":{"year": "2011"},
+			"text": {
+				"headline":"PPlot (Parallel Plot)",
+				"text":"<p>During my PhD. I was strugling with Gnuplot to plot ~100 millions points about memory allocations of a large app I was tuning. Too slow. So I started to look to introduce threads in Gnuplot and finally started to write my own. Idea were parallel + CSS style. I implemented all the CSS engine following standard definition (interesting to learn). Starting to plot, got my points fairly quicker than Gnuplot and stopped because didn't had time and needs to pursue :(.</p>"
+			},
+			"media": {
+				"url":"timeline/images/pplot.png",
+				"caption":""
+			}
+		},{
 			"start_date":{"year": "2011","month":4,"day":3},
 			"end_date":{"year": "2017", "month": 6},
 			"text": {
@@ -548,6 +602,13 @@
 			"media": {
 				"url":"timeline/images/svpgm2txt.png",
 				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2011"},
+			"text": {
+				"headline":"PageToDoxygen",
+				"text":"<p>I was using Trac a lot for my project management and wanted to export the Wiki into Doxygen format on each release. So I made a hacky plugin to Trac to permit this conversion and export and extraction via wget call in scripts. This was working quite well for my own usage but never convinced me to finish to make it clean enougth to publish, that's a pitty. But juste latter there was the GitHub Markdown in Git approach solving this issue.</p>"
 			}
 		},
 		{
@@ -594,6 +655,29 @@
 			},
 			"media": {
 				"url":"timeline/images/lbm.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012"},
+			"end_date":{"year": "2014"},
+			"text": {
+				"headline":"Initial project leading to JChronoss",
+				"text":"<p>In the MPC team project at CEA I was managing the validation test suite with chalange to handle 10 000 integration tests tooking 1 week to run. With Julien Adam we developped a test scheduler scratching from the original bash scripts I made to run on CEA supercomputers being plugged in Slrum Job manager in order to down testing time to 2H. The tool was implemented in C (I wanted C++ at that time but some constrains....). This as been finally rewritten cleanly in C++ by Julien Adam latter after I left CEA and is now Open Sourced by Paratools <a href='http://jchronoss.hpcframework.paratools.com/'>here</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/jchronoss.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012","month":10},
+			"text": {
+				"headline":"Port of Redmine A1 Theme onto Trac",
+				"text":"<p>Found nice Redmine A1 theme and wanted to port it to track with ack of original author. Available on <a href='https://github.com/svalat/TracThemeRedmineA1'>GitHub</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/trac-theme.png",
 				"caption":""
 			}
 		},
@@ -734,6 +818,17 @@
 				"url":"https://atos.net/wp-content/uploads/2017/07/extreme-data-IOinst_538-303.png",
 				"caption":"@copyright Bull ATOS Data Managment Team (linked from ATOS website)"
 			}
+		},{
+			"start_date":{ "year": "2018", "month": 11},
+			"text": {
+				"headline":"CDeps",
+				"text":"<p>Finding C/C++ headers/libs is still a totaly painfull task even with modern tools like CMake/Meso.... This one is dedicated to this issue with simple syntax to be plugged behind CMake/Autotools/Makefiles/ShellScripts/Meso. This is a work in progress. Anyway you can look maturation on <a href='https://bitbucket.org/svalat/cdeps/'>https://bitbucket.org/svalat/cdeps/</a>. Will move to github when starting to really work over CMake & Shell & Makefile.</p>"
+			},
+			"media": {
+				"url":"images/cdeps.png",
+				"caption":"Example of depenency declaration format."
+			}
+
 		}
 	]
 }

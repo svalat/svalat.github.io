@@ -570,7 +570,6 @@
 				"caption":""
 			}
 		},{
-		{
 			"start_date":{"year": "2011"},
 			"text": {
 				"headline":"PPlot (Parallel Plot)",

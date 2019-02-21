@@ -823,7 +823,7 @@
 				"text":"<p>Finding C/C++ headers/libs is still a totaly painfull task even with modern tools like CMake/Meso.... This one is dedicated to this issue with simple syntax to be plugged behind CMake/Autotools/Makefiles/ShellScripts/Meso. This is a work in progress. Anyway you can look maturation on <a href='https://bitbucket.org/svalat/cdeps/'>https://bitbucket.org/svalat/cdeps/</a>. Will move to github when starting to really work over CMake & Shell & Makefile.</p>"
 			},
 			"media": {
-				"url":"images/cdeps.png",
+				"url":"timeline/images/cdeps.png",
 				"caption":"Example of depenency declaration format."
 			}
 

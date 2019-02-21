@@ -683,7 +683,7 @@
 			"start_date":{"year": "2012", "month": 1, "day": 20},
 			"text": {
 				"headline":"ctags2uml",
-				"text":"<p>UML diagram generation from C++ source code (parsing by ctags). The project provides a converter from CTAGS to GRAPHVIZ. The nice thing compared to existing tools is the ability to automatically based class groups by looking on the links, this help to get a nice layout automatically and not a big mess.</p>"
+				"text":"<p>UML diagram generation from C++ source code (parsing by ctags). The project provides a converter from CTAGS to GRAPHVIZ. The nice thing compared to existing tools is the ability to automatically based class groups by looking on the links, this help to get a nice layout automatically and not a big mess. The picture on the left was generated from my PPlot project seen before in the timeline.</p>"
 			},
 			"media": {
 				"url":"timeline/images/ctags2uml.png",

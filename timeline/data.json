@@ -661,7 +661,7 @@
 			"end_date":{"year": "2014"},
 			"text": {
 				"headline":"Initial project leading to JChronoss",
-				"text":"<p>In the MPC team project at CEA I was managing the validation test suite with chalange to handle 10 000 integration tests tooking 1 week to run. With Julien Adam we developped a test scheduler scratching from the original bash scripts I made to run on CEA supercomputers being plugged in Slrum Job manager in order to down testing time to 2H. The tool was implemented in C (I wanted C++ at that time but some constrains....). This as been finally rewritten cleanly in C++ by Julien Adam latter after I left CEA and is now Open Sourced by Paratools <a href='http://jchronoss.hpcframework.paratools.com/'>here</a></p>"
+				"text":"<p>In the MPC team project at CEA I was managing the validation test suite with chalange to handle 10 000 integration tests tooking 1 week to run. With Julien Adam we developped a test scheduler scratching from the original bash scripts I made to run on CEA supercomputers being plugged in Slrum Job manager in order to down testing time to 2H. The tool was implemented in C (I wanted C++ at that time but some constrains....). This as been finally rewritten cleanly in C++ by Julien Adam latter after I left CEA and is now Open Sourced by Paratools <a href='http://jchronoss.hpcframework.paratools.com/'>here</a>. The screenshot on the left is the rewritted version from Julien.</p>"
 			},
 			"media": {
 				"url":"timeline/images/jchronoss.png",

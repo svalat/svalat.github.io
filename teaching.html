@@ -107,6 +107,37 @@
 			</ul>
 		</div>
 		
+		<div class="note">
+			<h3>Student master course project, parallel MPI/OpenMPI optimization - LBM</h3>
+			<p class='meta'>2010, 2011, 2012, 2014</p>
+			<p>This muti-practical sessions where about training students to discover and tune a "real" application they cannot understand in one second just by reading code. The goal is to get a non
+			optimized MPI simulation and make the work with tools.</p>
+			<img src='images/out-400.gif' width='100%'/>
+			<p>I mainly tried to run students codes myself on large scale cupercomputer up to 512 cores to give them nice feedback to learn scaling issues.</p>
+			<p>My tuned version of this code in MPI+OpenMP with more optimization that what is listed here has run and nicely scaled up to 2000 cores on the Curie supercomputer.</p>
+			<p>You can find in this report (in french sorry, need to take time to translate one day) all the optimization steps if you want to learn way to proceed.</p>
+			<p><b>DISLAMER: before reading and applying blindly those steps, do not forget optimizing is first to think about your requirements and way to adequatly match them to your hardware. There is no magic rules to apply in any case without thinking and checking. Do not forget hardware evolves and way to optimize too and can be 180° compared to old ways.</b></p>
+			<ul>
+				<li><b><a href='docs/teaching/2013-MIHPS/2013-TD4-optim-simu.pdf'>TD 4, Introduction au projet noté, optimisation d’une simulation numérique en MPI</a> </b></li>
+				<li>
+					<a href='docs/teaching/2013-MIHPS/LBM-subject-2013.tar.bz2'>source code non optimisé</a>
+				</li>
+			</ul>
+			<p align='center'>
+				<a href='docs/teaching/2013-MIHPS/2012-M1-MIHPS-TD4-optim-simu-exemple-correction.pdf'>
+				<!--https://icon-icons.com/fr/icone/pdf-filetypes/20170-->
+				<img src='./images/pdf_filetypes_21618.png' width='100px'/><br/>
+				<b>Optimization detailed guide (FR)</b>
+				</a>
+			<p/>
+			<p>
+			<img src='./images/lbm-case-1.png'/>
+			<img src='./images/lbm-case-2.png'/>
+			<img src='./images/lbm-case-3.png'/>
+			<img src='./images/lbm-case-4.png'/>
+			</p>
+		</div>
+		
 		<div class='footer'>
 			<div>Copyright © 2017 Sébastien Valat</div>
 			<div>

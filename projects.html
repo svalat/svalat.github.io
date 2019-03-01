@@ -247,10 +247,9 @@
 		<div class="note" id="mpcalloc">
 			<h3>MPC memory allocator</h3>
 			<p class='meta'>2011-2013</p>
+			<center><a href='http://mpc.hpcframework.paratools.com/'><img src='images/logo_mpc_v4-300x288.png'/></a></center>
 			<p>
 				<p>During my PhD. I worked into the MPC (Multi-Processor Computing) project at CEA. This project aimed at providing a thread base MPI implementation. In order to efficiently run on NUMA nodes, I implemented a parallel memory allocator to match the topology of the machine.</p>
-
-				<center><a href='http://mpc.hpcframework.paratools.com/'><img src='images/logo_mpc_v4-300x288.png' width='120px'/></a></center>
 				
 				<p>This allocator addressed two issues. First we noticed that some big numerical simulations written in C++ were largely (around 50% of the total runtime) impacted by the cost of the first touch page faults. This is even more true when using jemalloc (the allocator from FreeBSD) which tend to aggressively return the memory to the operating system to keep low memory consumption. In order to avoid this cost, I implemented a cache inside the memory allocator for large memory segments in addition to what is currently done for small segments in common allocators. This was a little bit like what append in tcmalloc, the allocator from Google.</p>
 				

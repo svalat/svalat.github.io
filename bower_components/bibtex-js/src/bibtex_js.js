@@ -216,7 +216,7 @@ function BibtexParser() {
   this.entry_body = function(directive) {
     this.currentEntry = this.key();
     this.entries[this.currentEntry] = new Object();
-    this.entries[this.currentEntry]["BIBTEXKEY"] = this.rawCurrentKey;
+    this.entries[this.currentEntry]["BIBTEXKEY"] = this.rawCurrentKey.replace(/[:/.# ]/g,'__');
     if (directive == "@INCOLLECTION") {
       this.entries[this.currentEntry]["BIBTEXTYPE"] = "book chapter";
 	} else if (directive == "@INPROCEEDINGS") {
@@ -284,6 +284,20 @@ function BibtexParser() {
       // In case there is extra stuff in between entries
       this.pos = end + this.input.substring(end,this.input.length).indexOf("@");
       this.entries[this.currentEntry]["BIBTEXRAW"] = this.input.substring(start,end);
+    }
+  }
+
+  // If there is no explicit URL we fallback to DOI
+  // If force equal true, it replaces all URLs by DOI URLs if DOI is availble,
+  // if not, DOI will be used only if URL isn't present.
+  this.enable_doi = function(force) {
+    for (var key in this.entries) {
+      var entry = this.entries[key];
+      if ('DOI' in entry) {
+        if (!('URL' in entry) || force == true) {
+          entry['URL'] = 'https://doi.org/'+entry['DOI'];
+        }
+      }
     }
   }
 }
@@ -586,6 +600,7 @@ function BibtexDisplay() {
     var b = new BibtexParser();
     b.setInput(input);
     b.bibtex();
+    b.enable_doi(false);
     var entries = b.getEntries();
     
     // save old entries to remove them later

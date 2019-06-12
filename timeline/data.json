@@ -403,7 +403,7 @@
 			"end_date":{"year": "2008", "month":6,"day": 31},
 			"text": {
 				"headline":"cnet-tools",
-				"text":"<p>Tools developed for the Cnet association at the University of Savoie. It contains: <ul><li>A website</li><li>A quota control system for cups (which was working with Windows/Linux/MacOSX opposed to many open-source solutions.</li><li>Network traffic tracking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
+				"text":"<p>Tools developed for the Cnet association at the University of Savoie. It contains: <ul><li>A website</li><li>A quota control system for cups (which was working with Windows/Linux/MacOSX opposed to all free open-source solutions at that time).</li><li>Network traffic tracking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
 			},
 			"media": {
 				"url":"timeline/images/cnet_quota.png",

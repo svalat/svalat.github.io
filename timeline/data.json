@@ -190,8 +190,63 @@
 		{
 			"start_date":{ "year": "2001"},
 			"text": {
+				"headline":"Ti-83 classif",
+				"text":"<p>Classification table inside my calculator.</p>"
+			},
+			"media": {
+				"url":"timeline/images/touche_coule.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 battle",
+				"text":"<p>You are a point with a weapon and can move to espace and try to kill the other one (IA or remote calculator player).</p>"
+			},
+			"media": {
+				"url":"timeline/images/touche_coule.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 jackpot",
+				"text":"<p>Just an idiot game I made to better understand statistics.</p>"
+			},
+			"media": {
+				"url":"timeline/images/touche_coule.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
 				"headline":"Ti-83 fight",
 				"text":"<p>You have to fight against the computer with weapons and bomb on various terrains.</p>"
+			},
+			"media": {
+				"url":"timeline/images/combat.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 snake",
+				"text":"<p>Snake game. I know this is soooo common and I could have found one. First I didn't yet had internet nor the Ti-83 PC cable and that was such a fun to make it and have my own one !</p>"
+			},
+			"media": {
+				"url":"timeline/images/combat.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 yahtzee",
+				"text":"<p>Only text and boring Yahzee game more to learn things.</p>"
 			},
 			"media": {
 				"url":"timeline/images/combat.png",
@@ -425,7 +480,7 @@
 			"start_date":{"year": "2007","month":8,"day":30},
 			"text": {
 				"headline":"TSA : Track Svn Admin",
-				"text":"<p>Project used at Cnet for two years to handle svn and trac repository. It was the same idea as gitlab but, of course, largely simpler and developed in perl (I will never redo such a project in perl....).</p>"
+				"text":"<p>Project used at Cnet for two years to handle svn and trac repository. It was the same idea as gitlab but, of course, largely simpler and developed in perl (I will never redo such a project in perl.... especially starting to lear by making wrongly the User class which of course if used everywhere).</p>"
 			},
 			"media": {
 				"url":"timeline/images/tsa.png",

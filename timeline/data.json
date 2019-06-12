@@ -194,7 +194,7 @@
 				"text":"<p>Classification table inside my calculator.</p>"
 			},
 			"media": {
-				"url":"timeline/images/classif.png",
+				"url":"timeline/images/classif.gif",
 				"caption":""
 			}
 		},
@@ -216,7 +216,7 @@
 				"text":"<p>Just an idiot game I made to better understand statistics.</p>"
 			},
 			"media": {
-				"url":"timeline/images/jackpot.png",
+				"url":"timeline/images/jackpot.gif",
 				"caption":""
 			}
 		},
@@ -227,7 +227,7 @@
 				"text":"<p>You have to fight against the computer with weapons and bomb on various terrains.</p>"
 			},
 			"media": {
-				"url":"timeline/images/combat.png",
+				"url":"timeline/images/combat.gif",
 				"caption":""
 			}
 		},
@@ -238,7 +238,7 @@
 				"text":"<p>Snake game. I know this is soooo common and I could have found one. First I didn't yet had internet nor the Ti-83 PC cable and that was such a fun to make it and have my own one !</p>"
 			},
 			"media": {
-				"url":"timeline/images/snake.png",
+				"url":"timeline/images/snake.gif",
 				"caption":""
 			}
 		},
@@ -249,7 +249,7 @@
 				"text":"<p>Only text and boring Yahzee game more to learn things.</p>"
 			},
 			"media": {
-				"url":"timeline/images/yahtzee.png",
+				"url":"timeline/images/yahtzee.gif",
 				"caption":""
 			}
 		},

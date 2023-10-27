@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<meta>
+		<meta charset="utf-8">
+		<title>Sébastien Valat - Teaching</title>
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- Some google fonts -->
+ 		<link href='//fonts.googleapis.com/css?family=Corben:700' rel='stylesheet' type='text/css'/> 
+		<link href="//fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet" type="text/css"/>
+ 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/> 
+		<!-- bootstrap for carousel --> 
+		<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Menu & style -->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</meta>
+	<body>
+		<div class="navbar">
+			<div>
+				<h1 class='title'>Sébastien Valat</h1>
+				<ul class='nav'></ul>
+			</div>
+		</div>
+		
+		<div class='feature-image'>	
+			<div class="photo-circle">
+				<img class="photo" src="images/teaching.png">
+				<!--From http://www.freeiconspng.com/img/11519-->
+				<!--<img class="flag" src="images/flags/france.png">-->
+			</div>
+		</div>
+
+		<div class="note">
+			<h3>Course and TD/TP Testing in programing</h3>
+			<p class='meta'>2023</p>
+			<p>32h of course and pratical sessions for BUT 2nd years</p>
+			<p>Need to bootstrap the course</p>
+			<ul>
+				<li>Project documentation (docstring, sphinx, pdoc, readme)</li>
+				<li>Unit tests (python)</li>
+				<li>Integration tests</li>
+				<li>Contiguous Integration</li>
+				<li>Mocking</li>
+				<li>Code coverage</li>
+			</ul>
+		</div>
+		
+		<div class="note">
+			<h3>TD/TP operating systems</h3>
+			<p class='meta'>2021, 2022</p>
+			<p>24h of pratical sessions in Master 1 l'<a href='https://im2ag.univ-grenoble-alpes.fr/parcours-informatique-classique-1re-annee/'>IM2AG</a> of Grenoble</p>
+			<p>With <a href='https://vmarangozova.github.io/'>Vania Marangozova</a></p>
+			<p>Pre-existing subjects</p>
+			<ul>
+				<li>C recaps</li>
+				<li>Memory allocator</li>
+				<li>Bufferized IO</li>
+				<li>Threading (pthreads)</li>
+				<li>Performance evalutation</li>
+			</ul>
+		</div>
+
+		<div class="note">
+			<h3>C project, graphical library (widgets)</h3>
+			<p class='meta'>2020</p>
+			<p>24h of student project supporting at the engineering school <a href='https://www.grenoble-inp.fr/'>ENSIGMAG</a> at Grenoble</p>
+			<p>Pre-existing subject.</p>
+			<p>With <a href='http://iihm.imag.fr/fberard/'>François Bérard</a></p>
+			<ul>
+				<li>Building a graphical library (widgets)</li>
+				<li>C object oriented</li>
+				<li>Rendering hierarchy of widgets</li>
+				<li>Dispatching events</li>
+				<li>Making line, square, shapes rendering</li>
+				<li>Widget rendering buffer handling</li>
+			</ul>
+		</div>
+
+		<div class="note">
+			<h3>TD/TP parallel programing, MPI OpenMP</h3>
+			<p class='meta'>2019, 2020</p>
+			<p>18h of pratical sessions for the Master 1 of <a href='https://im2ag.univ-grenoble-alpes.fr/parcours-informatique-classique-1re-annee/'>IM2AG</a> from Grenoble</p>
+			<p>Pre-existing subjects, also rewrote a pratical sessions on last year.</p>
+			<p>With <a href='https://tropars.github.io/'>Thomas Ropars</a>.</p>
+			<ul>
+				<li>Basic OpenMP routines</li>
+				<li>Matrix basic operations in OpenMP</li>
+				<li>Sorting algorithms in OpenMP</li>
+				<li>MPI routines, point to point and collectives</li>
+				<li>Matrix operation in MPI</li>
+				<li>Rewrote the evalutation topic : adapting the LBM simulation to learn using MPI on a real stencil case (<a href='docs/teaching/2022-pap/2022-parallel-progr-tp4.pdf'>subject</a>, <a href='docs/teaching/2022-pap/2022-parallel-progr-tp4-sources.tar.gz'>sources</a>).</li>
+			</ul>
+		</div>
+
+		<div class="note">
+			<h3>TD/TP Shell Unix/Linux</h3>
+			<p class='meta'>2019, 2020</p>
+			<p>21h de TP pour les 1ère année de l'<a href='https://iut2.univ-grenoble-alpes.fr/formations/les-departements-de-l-iut2/informatique-info--149104.kjsp'>IUT</a> informatique de Grenoble</p>
+			<p>Sujet pré-existants : <a href='https://www-info.iut2.univ-grenoble-alpes.fr/intranet/enseignements/m1101a/'>ici</a>.</p>
+			<p>With Laurent Bonnaud.</p>
+			<ul>
+				<li>Basic commands to move in directories and list</li>
+				<li>Configuring the environnement</li>
+				<li>Scripting</li>
+				<li>Searching in files</li>
+				<li>Query quotas, storage size, file sizes...</li>
+			</ul>
+		</div>
+
+		<div class="note">
+			<h3>TD/TP system adminitration</h3>
+			<p class='meta'>2013, 2014</p>
+			<p>Practical sessions for <a href='http://www.isty.uvsq.fr/'>ISTY</a> 3rd year.</p>
+			<p>Rebuilt all the pratical sessions from scratch:</p>
+			<ul>
+				<li>
+					<b><a href='docs/teaching/2013-2014-admin-sys/tp1/ISTY-2013-2014-ADMSYS-TP1.pdf'>TP1 : Noyau, amorce et paquets</a></b>. Le but de cette séance est de comprendre l’installation Linux (partition, paquets...) en utilisant la distribution source Gentoo.
+				</li><li>
+					<b><a href='docs/teaching/2013-2014-admin-sys/tp2/ISTY-2013-2014-ADMSYS-TP2.pdf'>TP2 : Suite TP1, Compilation noyau, variable d’environnement, ssh, redimensionnement avec
+					lvm.</a></b> Toujours sous Gentoo, le reste des TP se fait ensuite sous Debian.
+				</li><li>
+					<b><a href='docs/teaching/2013-2014-admin-sys/tp3/ISTY-2013-2014-ADMSYS-TP3.pdf'>TP3 : Routeur réseau, dhcp, cache DNS.</a></b>
+				</li><li>
+					<b><a href='docs/teaching/2013-2014-admin-sys/tp4/ISTY-2013-2014-ADMSYS-TP4.pdf'>TP4 : Server NFS, apache/mysql/tomcat.</a></b>
+				</li><li>
+					<b><a href='docs/teaching/2013-2014-admin-sys/tp5/ISTY-2013-2014-ADMSYS-TP5.pdf'>TP5 : LDAP in intégration au session d’un noeud.</a></b>
+				</li><li>
+					<b><a href='docs/teaching/2013-2014-admin-sys/tp6/ISTY-2013-2014-ADMSYS-TP6.pdf'>TP6 : Sauvegarde et restauration</a></b>, différentes approches et appliqué sur différents services (mysql,
+				home...).</li>
+			</ul>
+		</div>
+		
+		<div class="note">
+			<h3>TD/TP Optimisation parallèle MPI/OpenMPI</h3>
+			<p class='meta'>2011, 2012, 2013</p>
+			<p>With Marc Pérache.</p>
+			<p>Pour le master 1 <a href='http://www.teratec.eu/activites/MIHPS.html'>MIHPS</a>. Séances de 3 heures, sujets créés conjointement avec Jean-Baptiste Besnard. Le cours contenait
+			notamment une double séance sur une simulation numérique MPI à optimiser (LBM: Lattice Boltzmann Method).
+			</p>
+			<img src='images/out-400.gif' width='100%'/>
+			<p>Pour ma partie:</p>
+			<ul>
+				<li>
+					<b><a href='docs/teaching/2013-MIHPS/2013-TD2-avec-correction.pdf'>TD 2, Mesure de temps, débit, latence sur un pingpong, discussion sur la mesure de scalabilité.</a> </b><ul><li><a href='docs/teaching/2013-MIHPS/td2.tar.gz'>exemple de code</a></li></ul>
+				</li><li>
+					<b><a href='docs/teaching/2013-MIHPS/2013-TD4-optim-simu.pdf'>TD 4, Introduction au projet noté, optimisation d’une simulation numérique en MPI</a> </b>
+					<ul>
+						<li>
+							<a href='docs/teaching/2013-MIHPS/LBM-subject-2013.tar.bz2'>source code non optimisé</a>
+						</li><li>
+							<a href='docs/teaching/2013-MIHPS/2012-M1-MIHPS-TD4-optim-simu-exemple-correction.pdf'>correction</a>
+						</li>
+						</li>
+					</ul>
+				</li><li>
+					<b><a href='docs/teaching/2013-MIHPS/2013-TD6-omp1.pdf'>TD 6, Threads (OpenMP) et synchronisation, les couts cachés</a></b>, effets de mutex, cache et opérations atomiques.
+					<ul>
+						<li>
+							<a href='docs/teaching/2013-MIHPS/td6.tar.gz'>Exemple de code</a>
+						</li>
+					</ul>
+				</li><li>
+					<b><a href='docs/teaching/2013-MIHPS/ExamenMIHPS-2013.pdf'>Séance 8 : Séance d’examen</a></b> suivie d’un retour sur le projet et correction. 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="note">
+			<h3>Architectures matérielles (ISTY 2)</h3>
+			<p class='meta'>2010, 2011, 2012, 2014</p>
+			<p>With William Jalby.</p>
+			<p>TP de 3 heures pour les <a href='http://www.isty.uvsq.fr/'>ISTY</a> 3ème année. Pour ma partie:</p>
+			<ul>
+				<li>
+					<b>TD5: Pipelining d’un processeur, construction des vecteurs de collisions d’utilisation de ressource</b>
+				</li><li>
+					<b>TD6 : Achitecture superscalaire</b>, compilation optimisée à la main de petites boucles sur architectures type itanium concernant l’allocation d’unités de traitement.
+				</li><li>
+					<b>TP7 : Programmation d’un protocole expérimental.</b> Méthode de mesure de temps d'exécution de noyau de calcule.
+				</li><li>
+					<b>TP9-10 : Présentation et analyse de résultats</b>, utiliser un protocole expérimental pour comprendre
+					son architecture et son code.
+				</li>
+			</ul>
+		</div>
+		
+		<div class="note">
+			<h3>Student master course project, parallel MPI/OpenMPI optimization - LBM</h3>
+			<p class='meta'>2010, 2011, 2012, 2014</p>
+			<p>This muti-practical sessions where about training students to discover and tune a "real" application (2000 lines) they cannot understand in one second just by reading code. The goal is to get a non
+			optimized MPI simulation and make the work with tools.</p>
+			<img src='images/camion.JPG' width='100%'/>
+			<p>I mainly tried to run students codes myself on large scale cupercomputer up to 512 cores to give them nice feedback to learn scaling issues.</p>
+			<p>My tuned version of this code in MPI+OpenMP with more optimization that what is listed here has run and nicely scaled up to 2000 cores on the Curie supercomputer also at lower scale in a MPI+OpenMP+CUDA mode.</p>
+			<p>You can find in this report (in french sorry, need to take time to translate one day) all the optimization steps if you want to learn way to proceed.</p>
+			<p><b>DISLAMER: before reading and applying blindly those steps, do not forget optimizing is first to think about your requirements and way to adequatly match them to your hardware. There is no magic rules to apply in any case without thinking and checking. Do not forget hardware evolves and way to optimize too and can be 180° compared to old ways.</b></p>
+			<ul>
+				<li><b><a href='docs/teaching/2013-MIHPS/2013-TD4-optim-simu.pdf'>TD 4, Introduction au projet noté, optimisation d’une simulation numérique en MPI</a> </b></li>
+				<li>
+					<a href='docs/teaching/2013-MIHPS/LBM-subject-2013.tar.bz2'>source code non optimisé</a>
+				</li>
+			</ul>
+			<p align='center'>
+				<a href='docs/teaching/2013-MIHPS/2012-M1-MIHPS-TD4-optim-simu-exemple-correction.pdf'>
+				<!--https://icon-icons.com/fr/icone/pdf-filetypes/20170-->
+				<img src='./images/pdf_filetypes_21618.png' width='100px'/><br/>
+				<b>Optimization detailed guide (FR)</b>
+				</a>
+			<p/>
+			<p>
+			<img src='./images/lbm-case-1.png'/>
+			<img src='./images/lbm-case-2.png'/>
+			<img src='./images/lbm-case-3.png'/>
+			<img src='./images/lbm-case-4.png'/>
+			</p>
+		</div>
+		
+		<div class='footer'>
+			<div>Copyright © 2017 Sébastien Valat</div>
+			<div>
+				<a href='http://www.github.com/svalat' class="no-decoration">
+					<i class="fa fa-github fa-lg"></i>
+				</a>
+				<a href='https://www.linkedin.com/in/sébastien-valat-22318164'  target='_blank' class="no-decoration">
+					<i class="fa fa-linkedin fa-lg"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,941 @@
+{
+	"eras": [
+		{
+			"start_date": {"year": 1990, "month": 9},
+			"end_date": {"year": 1996, "month": 7},
+			"text": "primary school"
+		},
+		{
+			"start_date": {"year": 1996, "month": 9},
+			"end_date": {"year": 2000, "month": 7},
+			"text": "College"
+		},
+		{
+			"start_date": {"year": 2000, "month": 9},
+			"end_date": {"year": 2003, "month": 7},
+			"text": "high school"
+		},
+		{
+			"start_date": {"year": 2003, "month": 9},
+			"end_date": {"year": 2009, "month": 7},
+			"text": "University"
+		},
+		{
+			"start_date": {"year": 2010, "month": 3},
+			"end_date": {"year": 2013, "month": 11},
+			"text": "PhD."
+		},
+		{
+			"start_date": {"year": 2013, "month": 11},
+			"end_date": {"year": 2018, "month": 7},
+			"text": "Postdocs"
+		},
+		{
+			"start_date": {"year": 2018, "month": 10},
+			"end_date": {"year": 2022, "month": 1},
+			"text": "ATOS R&D engineer"
+		},
+		{
+			"start_date": {"year": 2022, "month": 2},
+			"end_date": {"year": 2022, "month": 12},
+			"text": "DDN R&D engineer"
+		},
+		{
+			"start_date": {"year": 2023, "month": 1},
+			"end_date": {"year": 2024, "month": 6},
+			"text": "INRIA R&D engineer"
+		}
+	],
+	"title": {
+		"text":{
+			"text":"This page try to summarize all the  projects I have worked on from my beginning in computer science. Of course the first projects are simplistic ... or stupid... But this timeline will show all the aspects I have touched during the last ~25 year of computing since I was 10 years old. Its going over Basic, VB, C, C++, asm, Go, Rust, Perl, Python, Java, Shell, JavaScript."
+		},
+		"media": {
+			"url":"timeline/images/notes.png",
+			"credit":"<a href='http://dribbble.com/shots/221641-iOS-Icon'>iOS Icon by Asher</a>",
+			"caption":""
+		}
+	},
+	"events": [
+		{
+			"start_date": {
+				"year":1985
+			},
+			"text": {
+				"headline":"Bootsrap of my brain in real world",
+				"text":"My birth year, first time my eyes looked outside and breathing."
+			}
+		},
+		{
+			"start_date": {
+				"year":1994,
+				"month": 12,
+				"day": 25
+			},
+			"text": {
+				"headline":"Nostalgy: Amstrad CPC (Basic)",
+				"text":"My first PC."
+			},
+			"media":
+			{
+				"url":"timeline/images/amstrad_cpc_6128.jpg",
+				"thumbnail": "timeline/images/amstrad_cpc_6128.jpg",
+				"credit":"<a href='http://vesta.homelinux.free.fr/site/wiki/fichier_amstrad_cpc_6128.html'>vesta.homelinux.free.fr</a>",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "1995" },
+			"text": {
+				"headline":"Nostalgy: What's your age ?",
+				"text":"<p>My first program in basic, asking for your age and .... saying that you are old or not ! Whaooo.</p>"
+			},
+			"media2": {
+				"url":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date": { "year":"1995" },
+			"text": {
+				"headline":"Nostalgy: Circle",
+				"text":"<p>Not really a project, but one of the program I have rewritten from a book many many times. It uses cosinus/sinus to draw a circle, but at that time I didn't learn about this at school (I was 10 years old) so it was magic to me and was fascinated by this !</p>"
+			},
+			"media": {
+				"url":"timeline/images/circle.png",
+				"thundnail":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": 1995 },
+			"text": {
+				"headline":"Basic Math Tool",
+				"text":"<p>My first real program, it helps to compute surface and perimeter of selected geometric form, following what I was learning at school.</p>"
+			},
+			"media": {
+				"url":"timeline/images/basic-math.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "1996"},
+			"text": {
+				"headline":"Basic Monopoly Text",
+				"text":"<p>My first game, implementation of a monopoly in text mode. It was not really usable, the board was never drawn, the menu was in text  only. I never really finished it. But it was a nice try !</p>"
+			},
+			"media": {
+				"url":"timeline/images/monopoly.jpg",
+				"caption":"",
+				"credit": "<a href='http://www.eonline.com/fr/news/740997/le-monopoly-se-modernise-pour-attirer-la-jeune-generation'>eonline</a>"
+			}
+		},
+		{
+			"start_date":{ "year": "1996", "month": 12, "day": 25 },
+			"text": {
+				"headline":"Nostalgy: Amstrad PC1512",
+				"text":"<p>A nice step forward from 8 KHz to 8 MHz. Discovery of DOS and windows 1.1. Bad luck I had no programing tool on this PC.</p>"
+			},
+			"media": {
+				"url":"timeline/images/amstrad2.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "1998", "month": 8 },
+			"text": {
+				"headline":"Virus script on DOS",
+				"text":"<p>Just a stupid script which inserts itself on boot command and degrades the machine at each boot until nothing works. Was used only on my own PC.... I was reinstalling everything a lot of time to test it !</p>"
+			},
+			"media": {
+				"url":"timeline/images/virus.png",
+				"caption":"",
+				"credit": "<a href='http://www.icone-png.com/corps-humain/tete-de-mort/'>www.icone-png.com</a>"
+			}
+		},
+		{
+			"start_date":{ "year": "1998", "month": 12, "day": 25},
+			"text": {
+				"headline":"Nostalgy: PIII +  Win ME",
+				"text":"<p>First brand new PC, Pentium III, 64 Mo of RAM, equipped with the totally buggy Windows ME. Still no programming tools....</p>"
+			},
+			"media": {
+				"url":"timeline/images/windowsME.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2000", "month": 8} ,
+			"text":{
+				"headline":"Nostalgy: Ti-83",
+				"text":"<p>Return to basic with my first programmable calculator.</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti83.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year":"2001", "month": 1 },
+			"text": {
+				"headline":"Nostalgy: Internet 56K",
+				"text":"<p>First connection to the internet with Wanadoo 56K modem. First mails on Outlook !</p>"
+			},
+			"media": {
+				"url":"timeline/images/wanadoo.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 battleship",
+				"text":"<p>One of my biggest program for Ti-83, battleship playable in network by using cable between two calculators.</p>"
+			},
+			"media": {
+				"url":"timeline/images/touche_coule.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 classif",
+				"text":"<p>Classification table inside my calculator.</p>"
+			},
+			"media": {
+				"url":"timeline/images/classif.gif",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 battle",
+				"text":"<p>You are a point with a weapon and can move to espace and try to kill the other one (IA or remote calculator player).</p>"
+			},
+			"media": {
+				"url":"timeline/images/battle.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 jackpot",
+				"text":"<p>Just an idiot game I made to better understand statistics.</p>"
+			},
+			"media": {
+				"url":"timeline/images/jackpot.gif",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 fight",
+				"text":"<p>You have to fight against the computer with weapons and bomb on various terrains.</p>"
+			},
+			"media": {
+				"url":"timeline/images/combat.gif",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 snake",
+				"text":"<p>Snake game. I know this is soooo common and I could have found one. First I didn't yet had internet nor the Ti-83 PC cable and that was such a fun to make it and have my own one !</p>"
+			},
+			"media": {
+				"url":"timeline/images/snake.gif",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001"},
+			"text": {
+				"headline":"Ti-83 yahtzee",
+				"text":"<p>Only text and boring Yahzee game more to learn things.</p>"
+			},
+			"media": {
+				"url":"timeline/images/yahtzee.gif",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2001", "month": 8},
+			"text": {
+				"headline":"Ti-Net V1",
+				"text":"<p>First website hosted by Wanadoo to distribute my ti-83 programs. Was the time of flashy colors.... horrible from today rules !</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti-net01.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2001", "month": 12},
+			"text": {
+				"headline":"Ti-Net V2",
+				"text":"<p>Progress with nice menu but still flashy yellow colors....</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti-net02.jpg",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2002","month":7,"day":1},
+			"text": {
+				"headline":"Nostalgy: Visual Basic 6",
+				"text":"<p>This was my first real development envrionnement, I got it from a friend and being hacked. I learned a lot on programing on it.</p>"
+			},
+			"media": {
+				"url":"timeline/images/vb6.jpg"
+			}
+		},{
+			"start_date":{"year": "2002","month":10,"day":1},
+			"text": {
+				"headline":"Cyrpt Einstein",
+				"text":"<p>A cryptographic software totally stupid I made for fun. This was my first real program in Visual Basic and my first work with installers on Windows. Installing software should be simple but is a such complex task it always question myself, you will see in later projects it is a thing I came back on it a lot of times but now un Linux.<br/>I was really stupid and putted it as other codes I made on the web and it stayed there until really late and if we search well there is still copies available I failed to remove :(. Damn internet infinit time memory :(. Not totaly happy we still find it but that's the life, I was young and it was sooo fun at that time :D. I can dream one day a reasearch will try it and prove it is the best algorithm ever, but more luck he will immediatly find it is totaly crap :D, I was soooo naive.</p>"
+			},
+			"media": {
+				"url":"timeline/images/cre2.jpg"
+			}
+		},{
+			"start_date":{"year": "2002"},
+			"text": {
+				"headline":"simugene",
+				"text":"<p>A gene propagation simulator in population following the lectures in biology. It was written in Visual Basic.</p>"
+			},
+			"media2": {
+				"url":"timeline/images/simugen.png",
+				"caption":"TODO"
+			}
+		},{
+			"start_date":{"year":"2002", "month":8,"day":1},
+			"text": {
+				"headline":"Meta Edit",
+				"text":"<p>A GUI to handle meta-tag in web pages of my website. It was implemented in Visual Basic.</p>"
+			},
+			"media": {
+				"url":"timeline/images/meta02.jpg"
+			}
+		},
+		{
+			"start_date":{"year": "2003"},
+			"text": {
+				"headline":"Ti-Net V3",
+				"text":"<p>This time a real theme based to Ti calculators.</p>"
+			},
+			"media": {
+				"url":"timeline/images/ti-net03.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2003", "month": 8},
+			"text": {
+				"headline":"Nostalgy: Linux Mandrake",
+				"text":"<p>First step under Linux with a CD I bought in a magazine (internet was too slow to download with limited monthly data). 3 month of try before succeeding in making my win-modem working. Had to recompile the related kernel module.</p>"
+			},
+			"media": {
+				"url":"timeline/images/mandrake.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":2003,"month":3,"day":1},
+			"end_date":{"year": "2002","month": 10,"day":1},
+			"text": {
+				"headline":"audiomix",
+				"text":"<p>An audio mixer with multiple tracks and a nice GUI in Visual Basic. It provided a mix table to control volume in real time and record levels for exportation. It was handline WAV files as input and output.</p>"
+			},
+			"media": {
+				"url":"timeline/images/audiomix.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2002", "month": 12,"day":30},
+			"text": {
+				"headline":"Driving log",
+				"text":"<p>Log of supervised driving for myself. Also made in Visual Basic.</p>"
+			},
+			"media": {
+				"url":"timeline/images/conduite.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2003","month":10,"day":30},
+			"text": {
+				"headline":"svlib",
+				"text":"<p>For fun and to learn, rewrite my own C++ library : strings, list, vector...</p>"
+			},
+			"media2": {
+				"url":"timeline/images/svlib.png",
+				"caption":"TODO"
+			}
+		},{
+			"start_date":{"year":"2004","month":8,"day":30},
+			"end_date":{"year":"2006","month":11,"day":30},
+			"text": {
+				"headline":"progranet",
+				"text":"<p>Last version of my website, this time it hosts my TI programs plus my Visual Basic projects and some tutorial on programming.</p>"
+			},
+			"media": {
+				"url":"timeline/images/progranet.png"
+			}
+		},{
+			"start_date":{"year": "2004","month":5,"day":30},
+			"text": {
+				"headline":"svreg",
+				"text":"<p>For fun, tried to implement my own regular expression parsor in C++. Was not totally successful. Ok for basic regexp but not with capture of substring... I never succeded to handle something like ^b(a+)a{3}$..... ok that's a little bit a corner case.... but....</p>"
+			},
+			"media2": {
+				"url":"timeine/images/svreg.png",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2006"},
+			"text": {
+				"headline":"My first modeling with Blender & OpenGL game",
+				"text":"<p>That was while working on an OpenGL implementation of a Risk plate game with another friend we never really finished !</p>"
+			},
+			"media": {
+				"url":"timeline/images/canon.jpg",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2004", "month": 12, "day": 25},
+			"text": {
+				"headline":"Nostalgy: building my first PC, and Gentoo",
+				"text":"<p>Building my first PC with AMD64, Nvidia Gforce 6800 LE (unlocking the disabled pipeline to make it like a GT). Moving from Mandrake to Gentoo, only available distribution in 64 bit for free at that time. Building my first Linux Kernel on the fresh new x86_64 platform !</p>"
+			},
+			"media": {
+				"url":"timeline/images/gentoolinux1.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2003", "month": 11},
+			"text": {
+				"headline":"emptd-qt",
+				"text":"<p>Custom project made for my first year at university to balance the unreadable excel timetable provided by university. My first real program in QT and C++.</p>"
+			},
+			"media": {
+				"url":"timeline/images/empdt-qt.jpg"
+			}
+		},
+		{
+			"start_date":{"year": "2004", "month": 3, "day": 1},
+			"end_date":{ "year": "2004", "month":6,"day": 31},
+			"text": {
+				"headline":"emptd-php",
+				"text":"<p>Custom project made for my first year at university to balance the unreadable excel timetable provided by university.It was used by many student from my promotion at the end of the year. It was written in PHP. Following this project the university invested during the summer to build their own version for all the timetable and all students.</p>"
+			},
+			"media": {
+				"url":"timeline/images/empdt-php.png"
+			}
+		},{
+			"start_date":{"year":"2005","month":2,"day":30},
+			"text": {
+				"headline":"First C++ course",
+				"text":"<p>Giving my first C++ in remove via skype + Gobby. We built string/list/image and then building a mutli-agent system simulating a kitchen garden with ants and salads growing.</p>"
+			},
+			"media": {
+				"url":"timeline/images/potager0056.jpg",
+				"caption":""
+			}
+		},{
+			"start_date": {"year": "2006","month":1,"day":6},
+			"text": {
+				"headline":"gravit",
+				"text":"<p>A numerical simulation done for bachelor. It simulates the impact of an asteroid on a surface composed of solid particles. We had a little bit of fun to make the front page of our report with a little bit of artistic image :D oops. This was the first time I was also thinking how to run my app distributed onto multiple workstation of the computer room of my university, but never really did it.</p>"
+			},
+			"media": {
+				"url":"timeline/images/gravit.png",
+				"caption":""
+			}
+		},{
+			"start_date": {"year": "2006"},
+			"text": {
+				"headline":"Mail Archiver",
+				"text":"<p>Implemented a MBox format parsor (took from Thunderbird) to extract all mails as .eml files. Wanted to go forward by dumping as html files in order to get a static dump of all mails for archive outside of any mail software to quick search and dig in. Still have in my head to redo this project one day as should be usefull to backup all mails without letting them on Google servers.</p>"
+			}
+		},{
+			"start_date":{"year": "2006", "month": 1, "day": 1},
+			"end_date":{"year": "2008", "month":6,"day": 31},
+			"text": {
+				"headline":"cnet-tools",
+				"text":"<p>Tools developed for the Cnet association at the University of Savoie. It contains: <ul><li>A website</li><li>A quota control system for cups (which was working with Windows/Linux/MacOSX opposed to all free open-source solutions at that time).</li><li>Network traffic tracking to detect movie downloads on the association network.</li><li>Firewall rules</li></p>"
+			},
+			"media": {
+				"url":"timeline/images/cnet_quota.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2007", "month": 1, "day": 1},
+			"end_date":{"year": "2008","month": 6, "day": 31},
+			"text": {
+				"headline":"Cortex",
+				"text":"<p>Cluster based open MOSIX (also discussed and get test agreement to use MOSIX from the authors I contacted) with four nodes with four cores AMD CPU built at Cnet association in 2007-2008. We also used Xen as hyperviser. I needed to make my first Kernel mini patch to make it working. It was financed by university of Savoie.</p>"
+			},
+			"media": {
+				"url":"timeline/images/cortex.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2007","month":8,"day":30},
+			"text": {
+				"headline":"TSA : Track Svn Admin",
+				"text":"<p>Project used at Cnet for two years to handle svn and trac repository. It was the same idea as gitlab but, of course, largely simpler and developed in perl (I will never redo such a project in perl.... especially starting to lear by making wrongly the User class which of course if used everywhere).</p>"
+			},
+			"media": {
+				"url":"timeline/images/tsa.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2007","month":11,"day":30},
+			"text": {
+				"headline":"gvDvdRip",
+				"text":"<p>Starting to implement a GUI to RIP DVDs with mencoder. Made in extreme programming with Roland Gaspard using gobby and Skype. We never really finished this project.</p>"
+			},
+			"media": {
+				"url":"timeline/images/gvdvdrip.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2008","month":1,"day":30},
+			"text": {
+				"headline":"vzsimu6809",
+				"text":"<p>For one of our physics lab we had to program a microprocessor Motorola 6809 to control an oscilloscope. In order to prepare the session, we, with Julien Zoubian, implemented an emulator linked to a simulated oscilloscope. Hence we were able to prepare our code before the session. The extra goal we wanted (unachieved) was to print the face of the teacher on the oscilloscope. The second practical session was moved forward so we didn't had time to finish to tune the light loss timing emulation on the simulated screen after measurement during first session to realy work on the image rendering, damn. The emulator came with an assembler implemented in perl to build a ROM we were able to load into the chip. That was lot of fun to learn ASM. I also cheated to handle the overflow bits in add/mul by reusing the one from my X86 CPU instead of rebuilding myself the bit rules.</p>"
+			},
+			"media": {
+				"url":"timeline/images/6809.jpg",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2008", "month": 11,"day":14},
+			"end_date":{"year":"2008", "month":12, "day":8},
+			"text": {
+				"headline":"crackmd5",
+				"text":"<p>Master project to implement rainbow tables to crackmd5. My first fectorized code ! We reimplemented the MD5 function using SSE in our C++ implementation to compute multiple sum in parallel obtaining a large speedup. Made with Romain Bouleis.</p>"
+			},
+			"media": {
+				"url":"timeline/images/crackmd5.png",
+				"caption":"",
+				"credit":"<a href='https://fr.wikipedia.org/wiki/MD5'>Wikipedia</a>"
+			}
+		},{
+			"start_date":{"year":"2008","month":8,"day":30},
+			"text": {
+				"headline":"svMontage",
+				"text":"<p>My father made a long time ago a slide show with two projectors controlled by a magnetoscope. We wanted to convert it to numeric video. We scanned all the diapositives, dump the control signal and used this software to reassemble the video. It generates a YUV stream to be sent to mencoder. It supported HD video. Was also my first real multi-threaded application. I failed to fftw the analogic controled signed to parse it (at least to understand its structure). So we finally used a webcam to captuer the light (without diapositive) projected by plugging only one of the projects so we can detect left to right transition and recompute the signal. Log of fun in perspective to play with video decoding. We also made the stupid thing to scan the diapositve in really high definition (max of our scanner 9600dpi from my memory). Totaly useless for generating at best 4K video. That costed me performance issue to generate the video. So at the end (CPU where not so fast at that time: Core2Duo) I was generating the video on my workstation, sending via network pipes (nc) to my laptop and compressing to x264 on it. Life it so fun !</p>"
+			},
+			"media": {
+				"url":"timeline/images/svmontage.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2009","month":1,"day":10},
+			"end_date":{"year":"2009", "month":2,"day":1},
+			"text": {
+				"headline":"tprsa-m2stic",
+				"text":"<p>Master project at the University of Savoie to implement RSA protocol.Made with Romain Bouleis.</p>"
+			},
+			"media2": {
+				"url":"timeline/images/rsa.png",
+				"caption":"TODO"
+			}
+		},
+		{
+			"start_date":{"year": "2009", "month": 12, "day" : 1},
+			"text": {
+				"headline":"Chat.Net",
+				"text":"<p>Master 2 project to implement a chat in C# .Net at the University of Savoie. Made with Romain Bouleis.</p>"
+			},
+			"media": {
+				"url":"timeline/images/chat_dotnet.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2009", "month": 10, "day" : 1},
+			"end_date":{"year": "2010", "month": 5, "day" : 1},
+			"text": {
+				"headline":"Evalcomp",
+				"text":"<p>Master 2 project over 6 month at 5 students to make project management. Goal was to build in J2EE/GWT/Bonita a website to guide students up the the registration for our science UFS at university of savoie. I was assigned technical manager of the project.</p>"
+			}
+		},
+		{
+			"start_date":{"year":"2009","month":1,"day": 15},
+			"end_date":{"year": "2009","month": 1,"day": 19},
+			"text": {
+				"headline":"S&R Hotels",
+				"text":"<p>Master project from the University of Savoie. The goal was to manage room reservation in J2EE and hibernate with multiple servers."
+			},
+			"media": {
+				"url":"timeline/images/sr_hotel.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2009", "month": 10, "day":1},
+			"text": {
+				"headline":"Tchoutchou modeling",
+				"text":"<p>Master exercises to model (all UMLs) a train simulator. Oopps that was not expected to go so far in the deseign but we handled all cases with switchpoints and signals.</p>"
+			},
+			"media": {
+				"url":"timeline/images/tchoutcou.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2009", "month": 3, "day":1},
+			"text": {
+				"headline":"VPN spoofing",
+				"text":"<p>For our cryptographic lecture we had to give a talk on security. With Romain Bouleis we chose to hack the Cisco VPN of the Wi-Fi connection of our university. I was not happy with it because it was really badly working with Linux at that time and was pretty sure there might be a security issue in the way they explained the connection procdure for students.... It revealed a mistake in the server configuration permitting to fake the Wi-Fi spot and the VPN server. Coupled with a Wifi signal for disconnect/reconnect everyone on the spot, we were able to capture students login and password. The issue was present at three university using the same configuration : Chambery, Grenoble and Lyon. Of course we notified the DSI providing configuration solutions before making the talk latter in the year for our course.</p>"
+			},
+			"media": {
+				"url":"timeline/images/vpn_spoof.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year":"2009","month":5},
+			"text": {
+				"headline":"tutocpp",
+				"text":"<p>C++ tutorial for Cnet association. We started from list and image manipulation implementation. We then finished by the implementation of a widget management system in SDL and added console rendering in ASCII art. We provided the text box component.</p><p>The project is hosted on <a href='https://github.com/svalat/tutocpp' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/tutocpp.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2010", "month": 5},
+			"end_date":{"year":"2010", "month": 7},
+			"text": {
+				"headline":"Virtual Huge Pages",
+				"text":"<p>For my master internship at CEA, I implemented a kernel module to support huge pages and page coloring in order to improve cache usage efficiency.</p>"
+			},
+			"media": {
+				"url":"timeline/images/vhp.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2010", "month": 1,"day": 26},
+			"end_date":{"year":"2010", "month": 5, "day": 15},
+			"text": {
+				"headline":"KAudioConverter",
+				"text":"<p>A GUI to extract audio files from video using KDE library for the GUI. The backend was based on mencoder/mplayer. This was the first project for which I made packaging in RPM/DEB.</p><p>The project is hosted on <a href='https://app.assembla.com/spaces/kaudioconverter/wiki/Home' target='_blank'>assembla</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/kaudioconverter.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2011"},
+			"text": {
+				"headline":"PPlot (Parallel Plot)",
+				"text":"<p>During my PhD. I was strugling with Gnuplot to plot ~100 millions points about memory allocations of a large app I was tuning. Too slow. So I started to look to introduce threads in Gnuplot and finally started to write my own. Idea were parallel + CSS style. I implemented all the CSS engine following standard definition (interesting to learn). Starting to plot, got my points fairly quicker than Gnuplot and stopped because didn't had time and needs to pursue :(.</p>"
+			},
+			"media": {
+				"url":"timeline/images/pplot.png",
+				"caption":""
+			}
+		},{
+			"start_date":{"year": "2011","month":4,"day":3},
+			"end_date":{"year": "2017", "month": 6},
+			"text": {
+				"headline":"HomeLinux",
+				"text":"<p>It provides a source package manager for your home directory. The idea is the use the same approach as Gentoo but to build a prefix into your home without rebuilding the dependencies provided by the host system. It started during my PhD. due to lack of up-to-date Linux distribution available in our service. At that time we succeed to install a full KDE on an old centos.</p><p>The project is hosted on <a href='https://github.com/svalat/homelinux' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/homelinux.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2011", "month": 8,"day": 27},
+			"end_date":{"year": "2011", "month": 8, "day": 6},
+			"text": {
+				"headline":"svpgm2txt",
+				"text":"<p>Project of text recognition into images to extract DVD subtitles. It considered perfect character representation hence it requires less human intervention than gocr. At some point I tried to implement a kind of neural network to auto-determine the unknown characters from a database.</p><p>The project is hosted on <a href='https://github.com/svalat/svpgm2txt' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/svpgm2txt.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2011"},
+			"text": {
+				"headline":"PageToDoxygen",
+				"text":"<p>I was using Trac a lot for my project management and wanted to export the Wiki into Doxygen format on each release. So I made a hacky plugin to Trac to permit this conversion and export and extraction via wget call in scripts. This was working quite well for my own usage but never convinced me to finish to make it clean enougth to publish, that's a pitty. But juste latter there was the GitHub Markdown in Git approach solving this issue.</p>"
+			}
+		},
+		{
+			"start_date":{ "year": "2011", "month": 11},
+			"end_date":{"year": 2013, "month": 11},
+			"text": {
+				"headline":"MPC_Allocator",
+				"text":"<p>For my PhD. I implemented a parallel memory allocator explicitly supporting NUMA architectures for the MPC project from CEA.</p><p>The code is embedded into <a href='http://mpc.hpcframework.paratools.com/' target='_blank'>MPC</a><p><p>On Github : <a href='https://github.com/cea-hpc/mpc-allocator'>cea-hpc / mpc-allocator</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/mpc_allocator_cpp.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2010", "month": 6, "day": 29 },
+			"end_date":{ "year": "2013", "month": 10, "day": 31},
+			"text": {
+				"headline":"svUnitTest",
+				"text":"<p>C++ unit test library, similar to CPPunit. It was just before the boom of google unit tests, got some ideas similar to it. This is the first project for which I worked on portability over many systems and compilers : Gentoo, Ubuntu, Fedora, FreeBSD. It was also my second step in unit testing and test driven development.</p><p>The code can be found on <a href='https://github.com/svalat/svUnitTest' target='_blank'>Github</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/svunittest.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2012", "month": 11},
+			"text": {
+				"headline":"Kernel patch PLPC",
+				"text":"<p>Process Local Page Cache is an experimental patch I implemented for Linux kernel 2.6.26 to avoid memory clearing in the critical path of page faults<p>"
+			},
+			"media": {
+				"url":"timeline/images/zero-page-thp.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012","month":3,"day":27},
+			"end_date":{"year": "2013","month":5,"day":9},
+			"text": {
+				"headline":"LBM",
+				"text":"<p>A numerical simulation in MPI + (OpenMP or CUDA) based on the Lattice Bolzmann Method (LBM) to solve the Karman street vortices. It was made for a lab courses in master at University of Versailles. The student had to optimize out suboptimal version.</p><p>The code and subject is on my <a href='teaching.html'>teaching page</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/lbm.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012"},
+			"end_date":{"year": "2014"},
+			"text": {
+				"headline":"Initial project leading to JChronoss",
+				"text":"<p>In the MPC team project at CEA I was managing the validation test suite with chalange to handle 10 000 integration tests tooking 1 week to run. With Julien Adam we developped a test scheduler scratching from the original bash scripts I made to run on CEA supercomputers being plugged in Slrum Job manager in order to down testing time to 2H. The tool was implemented in C (I wanted C++ at that time but some constrains....). This as been finally rewritten cleanly in C++ by Julien Adam latter after I left CEA and is now Open Sourced by Paratools <a href='http://jchronoss.hpcframework.paratools.com/'>here</a>. The screenshot on the left is the rewritted version from Julien.</p>"
+			},
+			"media": {
+				"url":"timeline/images/jchronoss.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012","month":10},
+			"text": {
+				"headline":"Port of Redmine A1 Theme onto Trac",
+				"text":"<p>Found nice Redmine A1 theme and wanted to port it to track with ack of original author. Available on <a href='https://github.com/svalat/TracThemeRedmineA1'>GitHub</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/trac-theme.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012", "month": 1, "day": 20},
+			"text": {
+				"headline":"ctags2uml",
+				"text":"<p>UML diagram generation from C++ source code (parsing by ctags). The project provides a converter from CTAGS to GRAPHVIZ. The nice thing compared to existing tools is the ability to automatically based class groups by looking on the links, this help to get a nice layout automatically and not a big mess. The picture on the left was generated from my PPlot project seen before in the timeline.</p>"
+			},
+			"media": {
+				"url":"timeline/images/ctags2uml.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012", "month": 10, "day": 22},
+			"end_date":{"year": "2012", "month": 11,"day": 14},
+			"text": {
+				"headline":"htopml",
+				"text":"<p>A simple tool like htop but with HTML gui. Can work with slurm and can also spy application internals. It had the nice feature to provide a module to display thread binding on topology. New modules can easily be implemented to export applications information.</p><p>The code can be found on <a href='https://github.com/svalat/htopml' target='_blank'>Github</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/htopml.jpg",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{ "year": "2013", "month": 7, "day": 20},
+			"end_date":{"year": 2012, "month": 11, "day": 14},
+			"text": {
+				"headline":"MPC_Allocator_Cpp",
+				"text":"<p>A C++ rewrite (prototype not finished) of MPC_Allocator I developed during my PhD.</p><p>The code can be found on <a href='https://github.com/svalat/mpc_allocator_cpp' target='_blank'>Github</a><p>"
+			},
+			"media": {
+				"url":"timeline/images/mpc_allocator_cpp.png",
+				"caption":""
+			}
+		},
+		{
+			"start_date":{"year": "2012", "month": 11, "day": 4},
+			"end_date":{"year": "2013", "month": 12, "day": 31},
+			"text": {
+				"headline":"Cartesian Mesh Runtime",
+				"text":"<p>Domain Specific Language based on Latex to implement parallel (OpenMP + MPI) simulation on Cartesian mesh. The idea is to use an abstract language and generate a parallel program plus a detail report on the equations used in the code.</p><p>The code can be found on <a href='https://github.com/svalat/CMR' target='_blank'>Github</a><p>."
+			},
+			"media": {
+				"url":"timeline/images/cmr.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2013", "month": 11},
+			"end_date":{ "year": "2014", "month": 11},
+			"text": {
+				"headline":"MALT: A Malloc Tracker",
+				"text":"<p>For my first postdoc I developed a memory profiling tool showing where the code allocate the memory and how. It provides source annotation as well as time charts.<p>The project is hosted on <a href='https://memtt.github.io/' target='_blank'>Github</a></p></p>"
+			},
+			"media": {
+				"url":"timeline/images/malt.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2014", "month": 1},
+			"end_date":{ "year": "2014", "month": 1},
+			"text": {
+				"headline":"Diving Computer Simulator",
+				"text":"<p>A diving computer simulator in web browser with decompression table computation from Haldane laws and 12 compartment constants.<p>"
+			},
+			"media": {
+				"url":"timeline/images/simu-ordi-plongee.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2015", "month": 7},
+			"end_date":{ "year": "2018", "month": 7},
+			"text": {
+				"headline":"DAQPIPE",
+				"text":"<p>As a postdoc at CERN for the LHCb experiment I developed a simulation tool to evaluate capability to build a 40 Tb/s data acquisition system based on InfiniBand or Omni-Path. This application has to scale up to 500 servers for the core part and send data to 4000 filter servers. If they keep my code for the production next year it will handle one of the largest data aquisition system in physics until some others will follow.</p><p>The project is hosted on <a href='https://gitlab.cern.ch/lhcb-daqpipe/lhcb-daqpipe-v2/' target='_blank'>CERN Gitlab</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/daqpipe.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2015", "month": 10},
+			"text": {
+				"headline":"DAQPIPE-GO",
+				"text":"<p>Starting implementation of DAQPIPE in GO, done a big part of the work then take back the cleaner structure into the C++ verson. Never really finished the GO version but it was nice.<p>"
+			},
+			"media": {
+				"url":"timeline/images/daqpipe.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2017", "month": 7},
+			"text": {
+				"headline":"numaprof",
+				"text":"<p>Developed on my free time during my postdoc at CERN, it provides the same approach as MALT with source annotation but to provide information on NUMA memory accesses. It instrument the binary by using pintool.<p><p>The project is hosted on <a href='https://memtt.github.io/' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/numaprof.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 5},
+			"end_date":{ "year": "2018", "month": 6},
+			"text": {
+				"headline":"rust-puzzle-solver",
+				"text":"<p>This was a side project to learn rust. The idea is to solve jigsaw puzzles by taking picture and building rules to finish it quicly by parts. This was more a trial I didn't yet finished and didn't fully succeed to make working. But it was fun to learn rust !</p><p>The non finished project is hosted on <a href='https://github.com/svalat/rust-puzzle-solver' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/rust_puzzle_solver.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 1},
+			"end_date":{ "year": "2018", "month": 1},
+			"text": {
+				"headline":"knock IPV6 support",
+				"text":"<p>This is rare except for small patches, but this time I made some patches for an existing project to add support of ipv6 to <a href='https://github.com/jvinet/knock'>knock/knockd</a> project. But the <a href='https://github.com/jvinet/knock/pull/53'>PULL request</a> is still not merged :(.</p>"
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 6},
+			"text": {
+				"headline":"hpc_allocator_rust",
+				"text":"<p>Developed on my free time during my postdoc at CERN. The project is a reimplementation in Rust of the NUMA memory allocator I implemented during my PhD. at CEA. The idea is to evaluate rust for low level system programming and check performance compared to C implementation by knowing it produce safer and easier to manage code.<p><p>The project still in progress is hosted on <a href='https://github.com/svalat/hpc_allocator_rust' target='_blank'>Github</a></p>"
+			},
+			"media": {
+				"url":"timeline/images/mpc_allocator_cpp.png",
+				"caption":""
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 10},
+			"end_date":{ "year": "2022", "month": 1},
+			"text": {
+				"headline":"ATOS Bull Smart Burst Buffer and IO-instrumentation",
+				"text":"<p>Moving to Bull Echirolles I joined a team developping a smart burst buffer and IO instrumentation tool for clusters. This is currently a commercial product you can look <a href='https://atos.net/en/products/high-performance-computing-hpc/extreme-data' target='_blank'>on the ATOS website</a>.</p>"
+			},
+			"media": {
+				"url":"https://atos.net/wp-content/uploads/2017/07/extreme-data-IOinst_538-303.png",
+				"caption":"@copyright Bull ATOS Data Managment Team (linked from ATOS website)"
+			}
+		},{
+			"start_date":{ "year": "2018", "month": 11},
+			"text": {
+				"headline":"CDeps",
+				"text":"<p>Finding C/C++ headers/libs is still a totaly painfull task even with modern tools like CMake/Meso.... This one is dedicated to this issue with simple syntax to be plugged behind CMake/Autotools/Makefiles/ShellScripts/Meso. This is a work in progress. Anyway you can look maturation on <a href='https://bitbucket.org/svalat/cdeps/'>https://bitbucket.org/svalat/cdeps/</a>. Will move to github when starting to really work over CMake & Shell & Makefile.</p>"
+			},
+			"media": {
+				"url":"timeline/images/cdeps.png",
+				"caption":"Example of depenency declaration format."
+			}
+		},{
+			"start_date":{ "year": "2019", "month": 1},
+			"end_date":{ "year": "2019", "month": 2},
+			"text": {
+				"headline":"mutable-test-runner",
+				"text":"<p>A mutable testing script to be applied on C/C++ or other languages codes.</p>"
+			}
+		},{
+			"start_date":{ "year": "2020", "month": 24},
+			"end_date":{ "year": "2022", "month": 1},
+			"text": {
+				"headline":"ummap-io-v2",
+				"text":"<p>A userspace memory mapping of files based on segfault handler for the SAGE2 european project.</p><p>The project is hosted on <a href='https://github.com/FR-GRE-BDS-HPC-SW-SAGE2-GMA/ummap-io-v2/' target='_blank'>Github</a></p>"
+			}
+		},{
+			"start_date":{ "year": "2020", "month": 14},
+			"end_date":{ "year": "2022", "month": 1},
+			"text": {
+				"headline":"iocatcher",
+				"text":"<p>A RDMA server to store data in a remote NVDIMM device for the SAGE2 european project in conjunction with ummap-io-v2.</p><p>The project is hosted on <a href='https://github.com/FR-GRE-BDS-HPC-SW-SAGE2-GMA/iocatcher/' target='_blank'>Github</a></p>"
+			}
+		},{
+			"start_date":{ "year": "2022", "month": 2},
+			"end_date":{ "year": "2022", "month": 12},
+			"text": {
+				"headline":"DDN Red",
+				"text":"<p>Working at DDN on the developement of RED, a new object storage with performance as target.</p>"
+			}
+		},{
+			"start_date":{ "year": "2022", "month": 10},
+			"text": {
+				"headline":"Helper evalutation GUI",
+				"text":"<p>This is a drafty one day project to provide an helper tool to evalutate labs submited by my students at university.</p>"
+			},
+			"media": {
+				"url": "timeline/images/correction-tool.png",
+				"caption": ""
+			}
+		},{
+			"start_date":{ "year": "2023", "month": 1},
+			"text": {
+				"headline":"CROCO oceanic simulation",
+				"text":"<p>Working at LJK / INRIA / AIRSEA to help on the <a href='https://www.croco-ocean.org/'>CROCO</a> oceanic simulation.</p>"
+			}
+		}
+	]
+}

@@ -1,0 +1,390 @@
+%
+% Le fichier de style personnel que c'est nous-memes qu'on l'a ecrit
+% que c'est nous que d'abord que.
+% A n'utiliser qu'avec LaTeX 2e
+%
+% Historique :
+%   91/04/01 : pda/jt : reunion en enfin un seul fichier commun !
+%   92/08/02 : pda/jt : ajout des tolerances et des accents
+%   93/01/09 : pda    : basculement en ISO Latin 1
+%   97/07/13 : pda    : conversion complete en latex2e
+%   97/08/31 : pda    : ajout options a4 et a5
+%
+
+%
+% Options admises par ce package
+%	times, palatino, newcent, bookman
+%	a4,a5
+%	9pt
+%	
+% Commandes fournies par ce package
+% - Inclusion de fichiers TeX
+%	\fig {fichier} {legende}
+% - Inclusion de fichiers PostScript
+%	\figps {fichier}
+%	\figpsheight {fichier} {hauteur}
+%	\figpswidth {fichier} {largeur}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Identification part
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat {LaTeX2e}
+\ProvidesPackage {my2e} [1997/07/13 0.1 (PDA)]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initial code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\@myfont{0}		% Computer Modern par défaut
+\def\@mypsize{0}	% pas de taille de papier (a4 ou a5) par défaut
+\def\@myfsize{0}	% pas de taille de fonte par défaut
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declaration of options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareOption {times}    {\def\@myfont{1}}
+\DeclareOption {palatino} {\def\@myfont{2}}
+\DeclareOption {newcent}  {\def\@myfont{3}}
+\DeclareOption {bookman}  {\def\@myfont{4}}
+\DeclareOption {a4}       {\def\@mypsize{1}}
+\DeclareOption {a5}       {\def\@mypsize{2}}
+\DeclareOption {9pt}      {\def\@myfsize{1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Execution of options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ProcessOptions
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package loading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Pour écrire en Français
+% (normalement, c'est \usepackage à la place de \RequirePackage)
+%
+\RequirePackage [francais] {babel}
+\RequirePackage [T1] {fontenc}
+\raggedbottom	% par défaut, babel aligne les bas de page. Pas bôôôôô !
+
+%
+% Les packages utiles
+%
+
+\RequirePackage {epsfig}
+\RequirePackage {xspace}
+
+%
+% Définition de la taille de la fonte
+%
+
+\ifcase\@myfsize{\relax}
+    \or				% 9pt
+	\renewcommand\normalsize{%
+	   \@setfontsize\normalsize\@ixpt\@xpt
+	   \abovedisplayskip 8.5\p@ \@plus3\p@ \@minus4\p@
+	   \abovedisplayshortskip \z@ \@plus2\p@
+	   \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+	   \belowdisplayskip \abovedisplayskip
+	   \let\@listi\@listI}
+	\normalsize
+	\renewcommand\small{%
+	   \@setfontsize\small\@viiipt{9.25}%
+	   \abovedisplayskip 6\p@ \@plus2\p@ \@minus4\p@
+	   \abovedisplayshortskip \z@ \@plus2\p@
+	   \belowdisplayshortskip 3\p@ \@plus\p@ \@minus2\p@
+	   \def\@listi{\leftmargin\leftmargini
+		       \topsep 4\p@ \@plus2\p@ \@minus2\p@
+		       \parsep 2\p@ \@plus\p@ \@minus\p@
+		       \itemsep \parsep}%
+	   \belowdisplayskip \abovedisplayskip
+	}
+	\renewcommand\footnotesize{%
+	   \@setfontsize\footnotesize\@viiipt{9.5}%
+	   \abovedisplayskip 6\p@ \@plus2\p@ \@minus4\p@
+	   \abovedisplayshortskip \z@ \@plus\p@
+	   \belowdisplayshortskip 3\p@ \@plus\p@ \@minus2\p@
+	   \def\@listi{\leftmargin\leftmargini
+		       \topsep 3\p@ \@plus\p@ \@minus\p@
+		       \parsep 2\p@ \@plus\p@ \@minus\p@
+		       \itemsep \parsep}%
+	   \belowdisplayskip \abovedisplayskip
+	}
+	\renewcommand\scriptsize{\@setfontsize\scriptsize\@viipt\@viiipt}
+	\renewcommand\tiny{\@setfontsize\tiny\@vpt\@vipt}
+	\renewcommand\large{\@setfontsize\large\@xipt{13.6}}
+	\renewcommand\Large{\@setfontsize\Large\@xiipt{14}}
+	\renewcommand\LARGE{\@setfontsize\LARGE\@xivpt{18}}
+	\renewcommand\huge{\@setfontsize\huge\@xxpt{25}}
+	\renewcommand\Huge{\@setfontsize\Huge\@xxvpt{30}}
+	\if@twocolumn
+	  \setlength\parindent{1em}
+	\else
+	  \setlength\parindent{15\p@}
+	\fi
+	\setlength\smallskipamount{3\p@ \@plus 1\p@ \@minus 1\p@}
+	\setlength\medskipamount{6\p@ \@plus 2\p@ \@minus 2\p@}
+	\setlength\bigskipamount{12\p@ \@plus 4\p@ \@minus 4\p@}
+	\setlength\headheight{12\p@}
+	\setlength\headsep   {25\p@}
+	\setlength\topskip   {10\p@}
+	\setlength\footskip  {30\p@}
+	\if@compatibility \setlength\maxdepth{4\p@} \else
+	\setlength\maxdepth{.5\topskip} \fi
+	\if@compatibility
+	  \if@twocolumn
+	    \setlength\textwidth{410\p@}
+	  \else
+	    \setlength\textwidth{345\p@}
+	  \fi
+	\else
+	  \setlength\@tempdima{\paperwidth}
+	  \addtolength\@tempdima{-2in}
+	  \setlength\@tempdimb{345\p@}
+	  \if@twocolumn
+	    \ifdim\@tempdima>2\@tempdimb\relax
+	      \setlength\textwidth{2\@tempdimb}
+	    \else
+	      \setlength\textwidth{\@tempdima}
+	    \fi
+	  \else
+	    \ifdim\@tempdima>\@tempdimb\relax
+	      \setlength\textwidth{\@tempdimb}
+	    \else
+	      \setlength\textwidth{\@tempdima}
+	    \fi
+	  \fi
+	\fi
+	\if@compatibility\else
+	  \@settopoint\textwidth
+	\fi
+	\if@compatibility
+	  \setlength\textheight{43\baselineskip}
+	\else
+	  \setlength\@tempdima{\paperheight}
+	  \addtolength\@tempdima{-2in}
+	  \addtolength\@tempdima{-1.5in}
+	  \divide\@tempdima\baselineskip
+	  \@tempcnta=\@tempdima
+	  \setlength\textheight{\@tempcnta\baselineskip}
+	\fi
+	\addtolength\textheight{\topskip}
+	\if@twocolumn
+	 \setlength\marginparsep {10\p@}
+	\else
+	  \setlength\marginparsep{11\p@}
+	\fi
+	\setlength\marginparpush{5\p@}
+	\if@compatibility
+	  \if@twoside
+	     \setlength\oddsidemargin   {44\p@}
+	     \setlength\evensidemargin  {82\p@}
+	     \setlength\marginparwidth {107\p@}
+	  \else
+	     \setlength\oddsidemargin   {63\p@}
+	     \setlength\evensidemargin  {63\p@}
+	     \setlength\marginparwidth  {90\p@}
+	  \fi
+	  \if@twocolumn
+	     \setlength\oddsidemargin  {30\p@}
+	     \setlength\evensidemargin {30\p@}
+	     \setlength\marginparwidth {48\p@}
+	  \fi
+	\else
+	  \if@twoside
+	    \setlength\@tempdima        {\paperwidth}
+	    \addtolength\@tempdima      {-\textwidth}
+	    \setlength\oddsidemargin    {.4\@tempdima}
+	    \addtolength\oddsidemargin  {-1in}
+	    \setlength\marginparwidth   {.6\@tempdima}
+	    \addtolength\marginparwidth {-\marginparsep}
+	    \addtolength\marginparwidth {-0.4in}
+	  \else
+	    \setlength\@tempdima        {\paperwidth}
+	    \addtolength\@tempdima      {-\textwidth}
+	    \setlength\oddsidemargin    {.5\@tempdima}
+	    \addtolength\oddsidemargin  {-1in}
+	    \setlength\marginparwidth   {.5\@tempdima}
+	    \addtolength\marginparwidth {-\marginparsep}
+	    \addtolength\marginparwidth {-0.4in}
+	    \addtolength\marginparwidth {-.4in}
+	  \fi
+	  \ifdim \marginparwidth >2in
+	     \setlength\marginparwidth{2in}
+	  \fi
+	  \@settopoint\oddsidemargin
+	  \@settopoint\marginparwidth
+	  \setlength\evensidemargin  {\paperwidth}
+	  \addtolength\evensidemargin{-2in}
+	  \addtolength\evensidemargin{-\textwidth}
+	  \addtolength\evensidemargin{-\oddsidemargin}
+	  \@settopoint\evensidemargin
+	\fi
+	\if@compatibility
+	  \setlength\topmargin{27pt}
+	\else
+	  \setlength\topmargin{\paperheight}
+	  \addtolength\topmargin{-2in}
+	  \addtolength\topmargin{-\headheight}
+	  \addtolength\topmargin{-\headsep}
+	  \addtolength\topmargin{-\textheight}
+	  \addtolength\topmargin{-\footskip}     % this might be wrong!
+	  \addtolength\topmargin{-.5\topmargin}
+	  \@settopoint\topmargin
+	\fi
+	\setlength\footnotesep{6.65\p@}
+	\setlength{\skip\footins}{9\p@ \@plus 4\p@ \@minus 2\p@}
+	\setlength\floatsep    {12\p@ \@plus 2\p@ \@minus 2\p@}
+	\setlength\textfloatsep{20\p@ \@plus 2\p@ \@minus 4\p@}
+	\setlength\intextsep   {12\p@ \@plus 2\p@ \@minus 2\p@}
+	\setlength\dblfloatsep    {12\p@ \@plus 2\p@ \@minus 2\p@}
+	\setlength\dbltextfloatsep{20\p@ \@plus 2\p@ \@minus 4\p@}
+	\setlength\@fptop{0\p@ \@plus 1fil}
+	\setlength\@fpsep{8\p@ \@plus 2fil}
+	\setlength\@fpbot{0\p@ \@plus 1fil}
+	\setlength\@dblfptop{0\p@ \@plus 1fil}
+	\setlength\@dblfpsep{8\p@ \@plus 2fil}
+	\setlength\@dblfpbot{0\p@ \@plus 1fil}
+	\setlength\partopsep{2\p@ \@plus 1\p@ \@minus 1\p@}
+	\def\@listi{\leftmargin\leftmargini
+		    \parsep 4\p@ \@plus2\p@ \@minus\p@
+		    \topsep 8\p@ \@plus2\p@ \@minus4\p@
+		    \itemsep4\p@ \@plus2\p@ \@minus\p@}
+	\let\@listI\@listi
+	\@listi
+	\def\@listii {\leftmargin\leftmarginii
+		      \labelwidth\leftmarginii
+		      \advance\labelwidth-\labelsep
+		      \topsep    4\p@ \@plus2\p@ \@minus\p@
+		      \parsep    2\p@ \@plus\p@  \@minus\p@
+		      \itemsep   \parsep}
+	\def\@listiii{\leftmargin\leftmarginiii
+		      \labelwidth\leftmarginiii
+		      \advance\labelwidth-\labelsep
+		      \topsep    2\p@ \@plus\p@\@minus\p@
+		      \parsep    \z@
+		      \partopsep \p@ \@plus\z@ \@minus\p@
+		      \itemsep   \topsep}
+	\def\@listiv {\leftmargin\leftmarginiv
+		      \labelwidth\leftmarginiv
+		      \advance\labelwidth-\labelsep}
+	\def\@listv  {\leftmargin\leftmarginv
+		      \labelwidth\leftmarginv
+		      \advance\labelwidth-\labelsep}
+	\def\@listvi {\leftmargin\leftmarginvi
+		      \labelwidth\leftmarginvi
+		      \advance\labelwidth-\labelsep}
+    \else{\error}
+    \fi
+
+%
+% Chargement de la police demandée
+%
+
+%\if@mytimes\RequirePackage{times}\renewcommand{\ttdefault}{cmtt}\else\fi
+\ifcase\@myfont{\relax}
+    \or\RequirePackage{times}\renewcommand{\ttdefault}{cmtt}
+    \or\RequirePackage{palatino}\renewcommand{\ttdefault}{cmtt}
+    \or\RequirePackage{newcent}\renewcommand{\ttdefault}{cmtt}
+    \or\RequirePackage{bookman}\renewcommand{\ttdefault}{cmtt}
+    \else{\error}
+    \fi
+
+%
+% Définition de la taille de page
+%
+
+\ifcase\@mypsize{\relax}
+    \or
+	\topmargin=-1.5cm
+	\topskip=0.5cm
+	\headheight=1.0cm
+	\headsep=0.8cm
+	\textheight=23cm
+	\evensidemargin=0cm
+	\oddsidemargin=0cm
+	\textwidth=16cm
+	\columnwidth=\textwidth
+    \or
+	\topmargin=-20mm
+	\headheight=6mm
+	\headsep=5mm
+	\topskip=5mm
+	\textheight=176mm
+	\evensidemargin=-21mm
+	\oddsidemargin=-10mm
+	\textwidth=125mm
+	\columnwidth=\textwidth
+    \else{\error}
+    \fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Definitions classiques
+%
+
+\frenchspacing
+\parskip=5mm
+\parindent=0mm
+
+\newcommand {\tassertoc} { { \setlength {\parskip} {0cm} \tableofcontents } }
+
+%
+% Commandes utiles pour la majorite des textes...
+%
+
+\renewcommand {\arraystretch} {1.4}
+\newcommand {\unix} {Unix}
+\newcommand {\X} {X~Window}
+
+%
+% Macro "fig"
+% Syntaxe : \fig {<fichier>} {<legende>}
+% But : inclut la figure (dessinee avec xfig) contenue dans le fichier en
+%   la centrant, place la legende, et pose un label "fig:<fichier>"
+%
+
+\newcommand {\fig} [2]
+{
+    \begin {figure} [htbp]
+	\hrule
+	\vspace {3mm}
+	\center {\input {#1}}
+	\vspace {2mm}
+	\caption {#2}
+	\vspace {3mm}
+	\hrule
+	\label {fig:#1}
+    \end {figure}
+}
+
+\newcommand {\figps} [1] {
+    \begin {center}
+	\epsfig {figure=#1.ps}
+    \end {center}
+}
+
+\newcommand {\figpsheight} [2] {
+    \begin {center}
+	\epsfig {figure=#1.ps,height=#2}
+    \end {center}
+}
+
+\newcommand {\figpswidth} [2] {
+    \begin {center}
+	\epsfig {figure=#1.ps,width=#2}
+    \end {center}
+}
+
+%
+% Pour le programme "makeindex" (voir le fichier "makeidx.sty" associe)
+%
+
+\def\see#1#2{{ voir\/} #1}

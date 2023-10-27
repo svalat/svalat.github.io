@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<meta>
+		<meta charset="utf-8">
+		<meta name="google-site-verification" content="6JjLIOm--WY72l4UtDT9oE7HKEBCFfTu2J6IKfLFgog" />
+		<title>Sébastien Valat</title>
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- Some google fonts -->
+ 		<link href='//fonts.googleapis.com/css?family=Corben:700' rel='stylesheet' type='text/css'/> 
+		<link href="//fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet" type="text/css"/>
+ 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/> 
+		<!-- bootstrap for carousel --> 
+		<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Menu & style -->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</meta>
+	<body>
+		<div class="navbar">
+			<div>
+				<h1 class='title'>Sébastien Valat</h1>
+				<ul class='nav'></ul>
+			</div>
+		</div>
+		
+		<div class='feature-image'>	
+			<div class="photo-circle">
+				<img class="photo" src="images/sebastien2.jpg">
+				<!--<img class="flag" src="images/flags/france.png">-->
+			</div>
+		</div>
+		
+		<div class="note">
+			<h3>Current position</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>I'm currently working as a research ingineer at <a href='https://www.inria.fr/fr'>INRIA</a> to apply the <a href='https://psyclone.readthedocs.io'>PSyClone</a> Fortran source-to-source compiler to addapt the <a href='https://www.croco-ocean.org/'>CROCO</a> ocean simulation code to GPU and think about a DSL approach. I also passed 2 months at the <a href='https://www.canada.ca/en/environment-climate-change.html'>ECCC</a> (Environment and Climate Change Canada) at Montreal.</p>
+		</div>
+
+		<div class="note">
+			<h3>Previous positions as R&D ingineer</h3>
+
+			<h4><u>DDN</u></h4>
+			<p>I worked for one year at <a href='https://www.ddn.com/'>DDN</a> on the RED object storage developement effort.</p>
+
+			<h4><u>ATOS</u></h4>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>I was previously working in an R&amp;D effort at <a href='https://atos.net/fr/produits/calcul-haute-performance-hpc' target="_blank">ATOS BULL</a> on bust buffers for supercomputer file systems (<a href='https://atos.net/en/products/high-performance-computing-hpc/extreme-data' target='_blank'>ATOS BULL Data Management Tool</a> [<a href='https://atos.net/wp-content/uploads/2018/07/CT_J1103_180616_RY_F_TOOLSTOIMPR_WEB.pdf' target='_bank'>PDF</a>].</p>
+			<p>I worked under the supervision of <a href='https://www.linkedin.com/in/philippe-couvee-21755b12/?originalSubdomain=fr'>Philippe Couvée</a> which I want to thank for the opportunity to work in his team and for his patience.</p>
+			<p>I was also working on H2020 european projects:
+				<ul>
+					<li><a target='_blank' href='http://www.sagestorage.eu/content/sage2-overview'>SAGE2</a> project about object storage.</li>
+					<li><a target='_blank' href='https://iosea-project.eu/'>IO-SEA</a> H2020 storage initiative following SAGE2.</li>
+				</ul>
+			</p>
+		</div>
+
+		<div class="note">
+			<h3>Previous post-docs</h3>
+
+			<h4><u>CERN Fellow</u></h4>
+
+			<p>I was previously a fellow at <a href="http://www.cern.ch" target="_blank">CERN</a> working on the R&amp;D of the future data acquisition system (DAQ) of <a href='http://lhcb.web.cern.ch/lhcb/'>LHCb</a> in collaboration with Intel. The challenge of this project is making a DAQ without any hardware triggers which will be a first time for such a large detector.</p>
+			<p>Removing the first level hardware trigger will imply the capability of handling 40 Tb/s in the DAQ. In order to manage this high throughput we currently study high-speed fabrics coming from the HPC field : Intel Omni-Path and Mellanox InfiniBand. Both run at 100 Gb/s.
+			<p>This work was done under the supervision of <a href='https://www.linkedin.com/in/niko-neufeld-53a81223'>Niko Neufeld</a> which I would thanks a lot for those nice 3 years there with him and all the online team.</p>
+			</p>
+			<p>The final system will need to scale on 500 servers to fulfil the required bandwidth considering 80 Gb/s per node. After being aggregated on those 500 server, the data will need to be dispatched on 4000 server for triggering decision before reaching long term storage for physics analysis.
+			</p>
+			<p>As a side project I derived a NUMA profiling tool from MALT during this post-doc, now also open-sourced: <a href='https://memtt.github.io/numaprof/'>NUMAPROF (NUMA Profiler)</a></p>
+
+			<h4><u>Exascale Computing Reasearch Lab</u></h4>
+
+			<p>
+			I made one year post-doc in the <a href='http://www.maqao.org/' target='_blank'>MAQAO</a> team at the <a href='http://www.exascale-computing.eu/' target='_blank'>Exascale Computing Research Lab</a>.
+			During this post-doc I mostly developped my memory profiling tool <a href='https://memtt.github.io/malt/'>MALT (MALoc Tracker)</a>
+			</p>
+		</div>
+
+		<div class="note">
+			<h3>PhD.</h3>
+			<p>
+			I made my PhD. from 2010 to 2014 at the <a href='http://www.cea.fr'>CEA</a> working on memory management for supercomputers.
+			I mostly developed a parallel memory allocator for NUMA architectures. I also worked on a kernel patch prototype to avoid the cost of memory clearing on page first touch.
+			</p>
+			<p>
+			<b>Title: </b><i>Contribution à l'amélioration des méthodes d'optimisation de la gestion de la mémoire dans le cadre du Calcul Haute Performance</i>.
+			</p>
+			<p>You can find the documents here:
+				<ul>
+					<li><a href='https://hal.archives-ouvertes.fr/tel-01253537/file/2014-valat-pdh-theses.pdf'>thesis</a>.</li>
+					<li><a href='docs/2014-07-phd-defense.pdf'>defense slides</a>.</li>
+				</ul>
+			</p>
+			<p>This work was supervised by Marc Pérache (CEA) and William Jalby (Université de Versailles Saint-Quentin-en-Yvelines), thanks very much to both of them for leading me on this path especially to Marc for the day to day supervision and all the passionate discussions.</p>
+		</div>
+			
+		<div class="note">
+			<h3>Research topics</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>
+				I'm mostly interested in:
+				<ul>
+					<li>Operating systems</li>
+					<li>Memory allocators</li>
+					<li>High Performance Computing</li>
+					<li>Processor caches</li>
+					<li>Memory profiler</li>
+					<li>NUMA architectures</li>
+					<li>High-speed networks (InfiniBand, Omni-Path)</li>
+				</ul>
+			</p>
+			<p>
+				As side projects I also looking on:
+				<ul>
+					<li>Software ingeneering and modeling</li>
+					<li>Unit testing / TDD / CI</li>
+					<li>Build systems</li>
+					<li>Package managment</li>
+					<li>Linux distributions (my favorite one : <a href='https://www.gentoo.org/'>Gentoo</a>)</li>
+					<li>Open-source community</li>
+				</ul>
+			</p>
+		</div>
+
+		<div class='note'>
+			<h3>Programing</h3>
+			<p>As a computer scientist of course I like programing, but mostly thinking on the way
+			of programing. For this I like working around the given langages:</p>
+			<ul>
+				<li>C++</li>
+				<li>C</li>
+				<li>Rust</li>
+				<li>Python</li>
+				<li>JavaScript</li>
+				<li>Bash (ok we can do crappy things)</li>
+			</ul>
+			<h4><u>My philosophy</u></h4>
+			<p>What you do should be beautiful, code should be poetry, and don't forget the code &lt;-&gt; humans' interactions.</p>
+			<h4><u>About optimization</u></h4>
+			<p>Today we make complex sotware in complex environment. Optimization is already first getting something clean and working. Then optimization should be at the global level, not local (not only). Software engineering is the path.
+			</p>
+			<h4><u>In other words</u></h4>
+			<p>First optimize your time of debugging, do not try to stroke faster on your keyboard, take time to think !</p>
+		</div>
+
+		<div class='note'>
+			<h3>The big question</h3>
+			<p>How do we convert our research in a more environment aware path by consuming less and not more ?</p>
+			<p>Sadly I work in a domain which has exponential growth and which should certainly rethink itself.</p>
+			<p>The earth and its life is far more important than our research, and by far more important than the industry it creates and justify. How to tackle peacefully all together this requirement ?</p>
+		</div>
+
+		<div class="note">
+			<h3>Teaching topics</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<p>
+			During my PhD, first postdoc and recent positions I had the chance to teach as assistant :
+			<ul>
+				<li>Testing in programing (BUT - 2nd year) - 2023</li>
+				<li>Operating systems (1st master year) - 2021, 2022</li> 
+				<li>C projects (ensimag) - 2020</li>
+				<li>Parallel programming (1st master year) - 2019, 2020</li>
+				<li>Initiation to Linux (1st year IUT) - 2019, 2020</li>
+				<li>Parallel optimizations (1st master year) - 2010, 2011, 2012, 2013</li>
+				<li>Hardware architectures (2nd year engineering school) - 2010, 2011, 2012, 2014</li>
+				<li>System administration (3rd year engineering school) - 2013, 2014</li>
+			</p>
+		</div>
+
+		<!--<div class="note">
+			<h3>Scaling, scaling</h3>
+			<p>
+				My main topic is memory management which mean looking what append inside one server. Although I worked on 16 processors (128 cores) Bull BCS servers
+				for big part of my PhD. I also made many tests on the Intel former Xeon-Phi and now Knight Landing with 64 codes and 256 hyperthreads.
+			</p>
+			<p>
+				I also ran some codes at large scale on available supercomputers and aquire a little bit of knowledge on the topic :
+				<ul>
+					<li>CEA: ran and schedule the MPC test suite on 3000 cores.</li>
+					<li>CEA <a href='http://www-hpc.cea.fr/fr/complexe/tgcc-curie.htm'>Curie</a>: ran and scale the MPI + OpenMP numerical simulation I implemented for students up to 2500 cores and apply research profiling tools from a collegue <a href='http://malp.hpcframework.paratools.com/'>MALP</a>.</li>
+					<li>CINECA <a href='http://www.hpc.cineca.it/hardware/galileo'>Galileo</a>: pre-scaling analysis of CERN software with up to 128 nodes on IB/FDR network</li>
+					<li>US OSC <a href='https://www.osc.edu/resources/technical_support/supercomputers/owens'>Owens</a>: pre-scaling analysis of CERN software with up to 128 nodes on IB/EDR network.</li>
+					<li>CINECA <a href='https://wiki.u-gov.it/confluence/display/SCAIUS/UG3.1%3A+MARCONI+UserGuide'>Maroni</a>: full run on the 2 PFlop partition (dedicated to only me for two days... that's stressfull....) to test the CERN software at scale exploiting 1000 nodes on Intel Omni-Path just released network.</li>
+					<li>Lenovo cluster: full cluster of 128 nodes dedicated for one week for our CERN software scale tests on IB/EDR.</li>
+					<li>DELL cluster: full cluster of 64 and 160 nodes dedicated for one week for our CERN software scale tests on IB/EDR and Intel Omni-Path.</li>
+				</ul>
+			</p>
+		</div>-->
+		
+		<!--<div class="note">
+			<h3>Curriculum vitæ</h3>
+			<p>You can find <a href='docs/cv-eng-valat.pdf'>my CV here</a></p>
+		</div>-->
+
+		<div class="note">
+			<h3>Contact</h3>
+			<!--<p class='meta'>Dec. 2017</p>-->
+			<!--<p>Mail: sebastien.valat.dev(at)orange.fr</p>-->
+			<p>Mail: svalat (at) inria.fr</p>
+			<p>LinkedIn: <a href='https://www.linkedin.com/in/sébastien-valat-22318164' target='_blank'>here</a></p>
+			<p>Github: <a href='http://www.github.com/svalat/' target='_blank'>here</a>.</p>
+			<p>ResearchGate: <a href='https://www.researchgate.net/profile/Sebastien_Valat' target='_blank'>here</a></p>
+			<p>Dblp database: <img alt="dblp database icon" src="images/dblp-icon.png" style="height: 1.2em;">&nbsp;<a href="https://dblp.uni-trier.de/pers/hd/v/Valat:S=eacute=bastien">here</a></p>
+			<p>HAL open archive (idHAL): <img src="images/hal-icon.png" style="height: 1.2em;">&nbsp;<a href="https://hal.archives-ouvertes.fr/search/index/?q=%2A&authFullName_s=S%C3%A9bastien+Valat">here</a></p>
+			<p>IEEE Xplore : <a href='https://ieeexplore.ieee.org/search/searchresult.jsp?searchWithin=%22First%20Name%22:%22S%C3%A9bastien%22&searchWithin=%22Last%20Name%22:%22Valat%22&newsearch=true&sortType=newest'>here</a></p>
+		</div>
+		
+		<div class='footer'>
+			<div>Copyright © 2017 Sébastien Valat</div>
+			<div>
+				<a href='http://www.github.com/svalat'  target='_blank' class="no-decoration">
+					<i class="fa fa-github fa-lg"></i>
+				</a>
+				<a href='https://www.linkedin.com/in/sébastien-valat-22318164'  target='_blank' class="no-decoration">
+					<i class="fa fa-linkedin fa-lg"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

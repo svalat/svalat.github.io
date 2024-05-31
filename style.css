@@ -591,6 +591,36 @@ h1.title {
 .tag-test {
 	width: 7em;
 	color: #e0ecff;
+	background-color: #6d9351;
+	border-color: #b9ffcd;
+	border: none;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 0 4px;	
+	letter-spacing: .3px;
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	line-height: 18px;
+}
+
+.tag-astro {
+	width: 7em;
+	color: white;
+	background-color: #505050;
+	border-color: black;
+	border: none;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 0 4px;	
+	letter-spacing: .3px;
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	line-height: 18px;
+}
+
+.tag-simu {
+	width: 7em;
+	color: #e0ecff;
 	background-color: #b99aff;
 	border-color: #b99aff;
 	border: none;

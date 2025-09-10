@@ -936,6 +936,17 @@
 				"headline":"CROCO oceanic simulation",
 				"text":"<p>Working at LJK / INRIA / AIRSEA to help on the <a href='https://www.croco-ocean.org/'>CROCO</a> oceanic simulation.</p>"
 			}
-		}
+		},{
+			"start_date":{"year": "2025"},
+			"text": {
+				"headline":"New website for the GAD",
+				"text":"<p>New version of the website for the GAD assocation (an astronomy club).</p>"
+			},
+			"media": {
+				"url":"timeline/images/gadweb.png",
+				"caption":""
+			}
+		},
+
 	]
 }

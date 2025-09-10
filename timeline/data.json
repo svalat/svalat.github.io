@@ -42,7 +42,7 @@
 		},
 		{
 			"start_date": {"year": 2023, "month": 1},
-			"end_date": {"year": 2024, "month": 6},
+			"end_date": {"year": 2025, "month": 11},
 			"text": "INRIA R&D engineer"
 		}
 	],
@@ -946,7 +946,7 @@
 				"url":"timeline/images/gadweb.png",
 				"caption":""
 			}
-		},
+		}
 
 	]
 }

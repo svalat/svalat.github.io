@@ -940,7 +940,7 @@
 			"start_date":{"year": "2025"},
 			"text": {
 				"headline":"New website for the GAD",
-				"text":"<p>New version of the website for the GAD assocation (an astronomy club).</p>"
+				"text":"<p>New version of the website for the GAD assocation (an astronomy club) : <a href='https://www.gad-meylan.fr/'>www.gad-meylan.fr</a>.</p>"
 			},
 			"media": {
 				"url":"timeline/images/gadweb.png",

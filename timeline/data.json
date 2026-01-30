@@ -792,7 +792,7 @@
 			}
 		},{
 			"start_date":{ "year": "2013", "month": 11},
-			"end_date":{ "year": "2014", "month": 11},
+			"end_date":{ "year": "2026", "month": 2},
 			"text": {
 				"headline":"MALT: A Malloc Tracker",
 				"text":"<p>For my first postdoc I developed a memory profiling tool showing where the code allocate the memory and how. It provides source annotation as well as time charts.<p>The project is hosted on <a href='https://memtt.github.io/' target='_blank'>Github</a></p></p>"
@@ -945,6 +945,16 @@
 			"media": {
 				"url":"timeline/images/gadweb.png",
 				"caption":""
+			}
+		},{
+			"start_date":{"year": "2025", "month": 10},
+			"text": {
+				"headline":"Spectr-O-Gad",
+				"text":"<p>A graph base pipeline software (prototype) to analyse the data taken with the <a href='https://www.shelyak.com/produit/spectroscope-star-analyser-100/'>StarAnalyzer</a> from <a href='https://www.shelyak.com'>Skelyak</a> to extract spectrum from stars.</p>"
+			},
+			"media": {
+				"url":"timeline/images/spectr-o-gad.png",
+				"caption":"Spectr-O-Gad"
 			}
 		}
 

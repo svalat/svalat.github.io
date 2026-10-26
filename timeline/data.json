@@ -44,6 +44,11 @@
 			"start_date": {"year": 2023, "month": 1},
 			"end_date": {"year": 2025, "month": 11},
 			"text": "INRIA R&D engineer"
+		},
+		{
+			"start_date": {"year": 2026, "month": 2},
+			"end_date": {"year": 2028, "month": 2},
+			"text": "CNRS R&D engineer"
 		}
 	],
 	"title": {
@@ -955,6 +960,26 @@
 			"media": {
 				"url":"timeline/images/spectr-o-gad.png",
 				"caption":"Spectr-O-Gad"
+			}
+		},{
+			"start_date":{"year": "2026", "month": 2},
+			"text": {
+				"headline":"Idefix",
+				"text":"<p>Helping at <a href='https://ipag.osug.fr/'>IPAG</a> on the <a href='https://github.com/idefix-code/'>Idefix</a> astronmical simulation code about MHD in acretion discs.</p>"
+			},
+			"media": {
+				"url":"https://github.com/idefix-code/.github/raw/main/profile/idefix-disk.jpg?raw=true",
+				"caption":"Idefix"
+			}
+		},{
+			"start_date":{"year": "2026", "month": 2},
+			"text": {
+				"headline":"XShells",
+				"text":"<p>Helping at <a href='https://isterre.osug.fr/'>ISterre</a> on the <a href='https://nschaeff.bitbucket.io/xshells/'>XShells</a> a geodynmo simulation code to simulation the earth magnetic field origin.</p>"
+			},
+			"media": {
+				"url":"https://ndownloader.figshare.com/files/8768917/preview/8768917/preview.jpg",
+				"caption":"XShells"
 			}
 		}
 
